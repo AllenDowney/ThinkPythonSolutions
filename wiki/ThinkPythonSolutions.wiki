@@ -1,11 +1,9 @@
 #summary Solutions for exercises in Think Python, by Allen B. Downey.
 
-= Introduction =
+= Think Python Solutions =
 
 Use this page to keep track of which exercises are done.
 
-
-= Details =
 
 ===Chapter 1===
 
