@@ -1,0 +1,1 @@
+Solutions for exercises from Think Python, by Allen Downey, available from thinkpython.com
