@@ -1,0 +1,268 @@
+\newcommand{\thetitle}{Think Python}
+\newcommand{\thesubtitle}{How to Think Like a Computer Scientist}
+\newcommand{\theauthors}{Allen B. Downey}
+\newcommand{\theversion}{3.0.0}
+
+\title{\thetitle}
+\author{\theauthors}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp} % provide euro and other symbols
+\usepackage{amssymb,amsmath}
+\usepackage[table]{xcolor}
+
+\usepackage{roboto}
+
+\usepackage{setspace}
+\usepackage{graphicx}
+
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+
+\usepackage{bookmark}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+
+% Set default figure placement to h! (here)
+\makeatletter
+\def\fps@figure{h!}
+\makeatother
+
+
+\usepackage{makeidx}
+\usepackage{upquote}
+\usepackage[listings]{tcolorbox}
+\newcommand{\passthrough}[1]{#1}
+
+
+% we need these because pandoc uses them
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{calc}             % https://github.com/jgm/pandoc/issues/8248
+
+
+% don't draw the top and bottom rules
+\renewcommand{\toprule}{}
+\renewcommand{\bottomrule}{}
+
+% don't put space around the midrule
+% https://tex.stackexchange.com/questions/381718/how-to-remove-the-space-after-midrule-in-a-table/381720
+\newcommand{\midsepremove}{\aboverulesep = 0mm
+                           \belowrulesep = 0mm}
+\midsepremove
+
+\newcommand{\midsepdefault}{\aboverulesep = 0.605mm
+                            \belowrulesep = 0.984mm}
+%\midsepdefault
+
+% make tables smaller and sans serif
+% https://en.wikibooks.org/wiki/LaTeX/Tables#Changing_font_size
+\let\oldtabular\tabular
+\renewcommand{\tabular}{\footnotesize\sffamily\oldtabular}
+
+% set the page size
+\usepackage[twoside,centering]{geometry}
+
+% this is what Lulu calls crown quarto
+\geometry{
+    %showframe=true,
+    %showcrop=true,
+    % total document size
+    papersize={195mm,252mm},
+    % book trim size
+    layoutsize={189mm,246mm},
+    layoutoffset={3mm,3mm},
+    % live area = 164mm x 220mm
+    % subtract 10 from width for the binding offset
+    % subtract 10 from both to improve the look
+    total={144mm,210mm},
+    bindingoffset=10mm,
+    includeheadfoot=true,
+    centering=true,
+    nofoot=true,
+}
+
+% paragraph spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{12pt plus 4pt minus 4pt}
+\linespread{1.05}
+\def\arraystretch{1.5}
+
+% list spacing
+%\setlength{\topsep}{5pt plus 2pt minus 3pt}      % 10.0pt plus 4.0pt minus 6.0pt
+%\setlength{\partopsep}{-6pt plus 2pt minus 2pt}  %  3.0pt plus 2.0pt minus 2.0pt
+%\setlength{\itemsep}{0pt}                        %  5.0pt plus 2.5pt minus 1.0pt
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% these are copied from tex/latex/base/book.cls
+% all I changed is afterskip
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{\z@}%
+    {-3.5ex \@plus -1ex \@minus -.2ex}%
+    {0.7ex \@plus.2ex}%
+    {\normalfont\Large\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+    {-3.25ex\@plus -1ex \@minus -.2ex}%
+    {0.3ex \@plus .2ex}%
+    {\normalfont\large\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+    {-3.25ex\@plus -1ex \@minus -.2ex}%
+    {0.3ex \@plus .2ex}%
+    {\normalfont\normalsize\bfseries}}
+\makeatother
+
+% table of contents vertical spacing
+\usepackage{tocloft}
+\setlength\cftparskip{8pt plus 4pt minus 4pt}
+
+% balanced index with TOC entry
+\usepackage[totoc]{idxlayout}
+
+% The following line adds a little extra space to the column
+% where the Section numbers appear in the table of contents
+\makeatletter
+\renewcommand{\l@section}{\@dottedtocline{1}{1.5em}{3.0em}}
+\makeatother
+
+% customize page headers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\renewcommand{\chaptermark}[1]{\markboth{Chapter \thechapter ~~ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection ~~ #1}}
+\lhead[\fancyplain{}{\color{codepurple}\bfseries\thepage}]%
+      {\fancyplain{}{\color{codepurple}\bfseries\rightmark}}
+\rhead[\fancyplain{}{\color{codepurple}\bfseries\leftmark}]%
+      {\fancyplain{}{\color{codepurple}\bfseries\thepage}}
+\cfoot{}
+\renewcommand{\headrulewidth}{0pt}
+%\rfoot{\textcolor{gray}{\tiny Draft \today}}
+
+% tweak captions
+% https://brushingupscience.com/2016/02/13/four-effortless-latex-packages-you-should-use/
+\usepackage[margin=15pt,font=small]{caption}
+
+%\usepackage{floatrow}
+
+% set headings in sans serif fonf
+%\usepackage{sectsty}
+%\allsectionsfont{\sffamily}
+
+
+% colors for lstlistings
+\definecolor{codeblue}{RGB}{8, 68, 136}    % Bl30
+\definecolor{codegreen}{RGB}{0, 109, 44}   % Gr40
+\definecolor{codered}{RGB}{126, 6, 16}     % Rd30
+\definecolor{codeorange}{RGB}{127, 39, 4}  % Or30
+\definecolor{codepurple}{RGB}{83, 38, 143} % Pu30
+
+
+\definecolor{outputgray}{gray}{0.3}
+\definecolor{rulecolor}{gray}{0.7}
+\definecolor{lightgray}{gray}{0.9}
+\definecolor{gray95}{gray}{0.95}
+
+% settings for all listings
+\lstdefinestyle{codestyle}{
+    belowskip=\parskip,
+    basicstyle=\ttfamily,
+    columns=fullflexible,
+    keepspaces=true,
+    showstringspaces=false,
+    upquote=true,
+    xleftmargin=0pt,
+    commentstyle=\color{codepurple},
+    identifierstyle=\color{codeblue},
+    stringstyle=\color{codered},
+    keywordstyle=\color{codegreen},
+}
+
+\lstset{style=codestyle}
+
+% style for source
+\lstdefinestyle{source}{
+    aboveskip=\parskip,
+    belowskip=0pt,
+    backgroundcolor=\color{gray95},
+    rulecolor=\color{rulecolor},
+    basicstyle=\ttfamily\color{outputgray},
+    frame=tblr,
+    frameround=ffff,
+    framerule=0.5pt,
+    framexleftmargin=1pt,
+    morekeywords={as},
+}
+
+% settings for output
+\lstdefinestyle{output}{
+    aboveskip=3pt,
+    backgroundcolor=\color{gray95},
+    rulecolor=\color{gray95},
+    basicstyle=\ttfamily\color{outputgray},
+    %frame=none,
+    frame=tblr,
+    frameround=ffff,
+    framexleftmargin=1pt,
+    keywordstyle=\color{outputgray},
+    commentstyle=\color{outputgray},
+    identifierstyle=\color{outputgray},
+    stringstyle=\color{outputgray},
+}
+
+% pdf hyperlinks, table of contents, and document properties
+\usepackage{hyperref}
+\hypersetup{%
+  pdftitle={\thetitle: \thesubtitle},
+  pdfauthor={\theauthors},
+  pdfsubject={Version \theversion},
+  pdfkeywords={},
+  bookmarksopen=false,
+  colorlinks=true,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=codeblue
+}
+
+
+% TODO: the left and right double quotes are not quite correct,
+% if anyone cares
+
+\lstset{literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {Ã}{{\~A}}1 {ã}{{\~a}}1 {Õ}{{\~O}}1 {õ}{{\~o}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+  {»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1
+  {°}{{\textdegree}}1 {θ}{{$\theta$}}1
+  {’}{{\lq}}1 {“}{{\lq\lq}}1  {‘}{{\rq}}1 {”}{{\rq\rq}}1
+  {—}{{\textemdash}}1
+}
