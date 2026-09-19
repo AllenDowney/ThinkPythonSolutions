@@ -14,18 +14,29 @@ jobs:
     name: Tests (${{ matrix.os }}, Python ${{ matrix.python-version }})
     runs-on: ${{ matrix.os }}
     strategy:
+      # Report every leg; one broken chapter should not hide the others.
+      fail-fast: false
       matrix:
-        # don't test on windows
+        # Windows is deliberately absent. The book teaches `open(filename)`
+        # with no encoding argument, so under a cp1252 locale the Project
+        # Gutenberg texts used in chapters 8, 11 and 12 raise
+        # UnicodeDecodeError on byte 0x9d. That is a real problem for Windows
+        # readers, not just for CI; setting PYTHONUTF8=1 here would make the
+        # build green while leaving those readers broken. Tracked separately.
         os: [ubuntu-latest, macos-latest]
-        python-version: ["3.10"]
+        python-version: ["3.12"]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v7
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
 
       - name: Install dependencies
         run: |
