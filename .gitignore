@@ -12,6 +12,8 @@ __pycache__/
 # -- the .ipynb files are -- so they stay out of version control.
 # ---------------------------------------------------------------------------
 soln/chap*.md
+soln/header.md
+soln/footer.md
 
 # ---------------------------------------------------------------------------
 # Support files the notebooks download from the ThinkPython repo at run time.
