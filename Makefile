@@ -31,4 +31,4 @@ strip_outputs:
 # two globs, chap0[12356789] and chap1[1345678], which silently left chapters
 # 0, 10 and 19 untested for as long as anyone can remember.
 tests: check_outputs
-	cd soln; pytest --nbmake --durations=5 chap*.ipynb
+	cd soln && pytest --nbmake --durations=5 chap*.ipynb

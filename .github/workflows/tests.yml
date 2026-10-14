@@ -17,13 +17,14 @@ jobs:
       # Report every leg; one broken chapter should not hide the others.
       fail-fast: false
       matrix:
-        # Windows is deliberately absent. The book teaches `open(filename)`
-        # with no encoding argument, so under a cp1252 locale the Project
-        # Gutenberg texts used in chapters 8, 11 and 12 raise
-        # UnicodeDecodeError on byte 0x9d. That is a real problem for Windows
-        # readers, not just for CI; setting PYTHONUTF8=1 here would make the
-        # build green while leaving those readers broken. Tracked separately.
-        os: [ubuntu-latest, macos-latest]
+        # Windows is back as of 2026-10-14. It was excluded because the book
+        # taught `open(filename)` with no encoding argument, so under a cp1252
+        # locale the Project Gutenberg texts in chapters 8, 11 and 12 raised
+        # UnicodeDecodeError on byte 0x9d. Those chapters now pass
+        # encoding='utf-8' explicitly, so this leg is what proves the fix --
+        # do not paper over a failure here with PYTHONUTF8=1, because readers
+        # on Windows do not have that set either.
+        os: [ubuntu-latest, macos-latest, windows-latest]
         python-version: ["3.12"]
 
     steps:
@@ -44,5 +45,8 @@ jobs:
           pip install -r requirements-dev.txt
 
       - name: Run tests
+        # bash on every runner: Windows defaults to pwsh, and neither pwsh nor
+        # cmd expands chap*.ipynb, so pytest would be handed the literal glob.
+        shell: bash
         run: |
           make tests
