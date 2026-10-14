@@ -3,7 +3,10 @@
 
 # copy the python modules
 rsync -a ../soln/thinkpython.py .
-rsync -a ../soln/diagram.py .
+# diagram.py is not tracked here; the canonical copy lives in the ThinkPython
+# repo and the notebooks download it at execution time. Copy a local one if
+# there is one, but do not fail the build when there is not.
+[ -f ../soln/diagram.py ] && rsync -a ../soln/diagram.py .
 rsync -a ../soln/structshape.py .
 
 for NOTEBOOK in $@
