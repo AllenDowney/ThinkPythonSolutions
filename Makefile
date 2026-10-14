@@ -13,6 +13,15 @@ requirements:
 	$(PYTHON_INTERPRETER) -m pip install -r requirements.txt
 
 
+## Check that the stored outputs in soln/ are what the builds expect.
+## Read-only; see check_outputs.py for what it guards against.
+check_outputs:
+	$(PYTHON_INTERPRETER) check_outputs.py
+
+## Clear outputs stored for cells that no build target renders.
+strip_outputs:
+	$(PYTHON_INTERPRETER) check_outputs.py --strip
+
 # Test every chapter. The whole suite takes about 2.5 minutes; chapter 4 is
 # roughly a third of that on its own, because jupyturtle sleeps TURTLE_DELAY
 # (0.2s) after each visual command and chapter 4 draws a lot. --durations
@@ -21,5 +30,5 @@ requirements:
 # Use a glob rather than a list of chapter numbers: the previous version used
 # two globs, chap0[12356789] and chap1[1345678], which silently left chapters
 # 0, 10 and 19 untested for as long as anyone can remember.
-tests:
+tests: check_outputs
 	cd soln; pytest --nbmake --durations=5 chap*.ipynb
