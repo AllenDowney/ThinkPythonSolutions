@@ -4,4 +4,5 @@ flake8
 nbformat
 nbmake
 pytest
-
+markdown
+text2qti

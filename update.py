@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Rebuild everything downstream of soln/ and publish it.
 
-soln/*.ipynb is the canonical source. Four targets are generated from it,
+soln/*.ipynb is the canonical source. Five targets are generated from it,
 each by its own build.sh:
 
     chapters/   student notebooks + ThinkPythonNotebooks.zip   commits & pushes
     blank/      code-free notebooks                            commits & pushes
+    quizzes/    LMS quiz files (Canvas, Moodle, Brightspace)   commits & pushes
     jb/         Jupyter Book HTML                              PUBLISHES to Pages
     top level   support files, SVG -> PNG                      commits & pushes
 
@@ -70,6 +71,15 @@ def main():
     else:
         run("make tests", ROOT)
 
+    banner("STEP 1b: parse the quizzes")
+    # soln/quizzes.ipynb -> quizzes/quizzes.md (no jupytext markers) -> parsed JSON,
+    # committed with soln/ below and read by quizzes/build.sh.
+    run("jupytext --to md -o - soln/quizzes.ipynb"
+        " | grep -v -E '^<!-- #(end)?region -->$'"
+        " | sed '/^    split_at_heading: true$/d'"
+        " > soln/quizzes/quizzes.md", ROOT)
+    run("python parse_quizzes.py > /dev/null", ROOT / "soln" / "quizzes")
+
     banner("STEP 2: commit and push soln/")
     # The old version committed here and never pushed, so the solutions repo
     # could sit unpushed indefinitely while ThinkPython went out.
@@ -89,6 +99,9 @@ def main():
     # The old version skipped this target entirely, which is why blank/ drifted.
     run("bash build.sh", BOOK / "blank")
 
+    banner("STEP 4b: build quizzes/ (LMS quiz files)")
+    run("bash build.sh", BOOK / "quizzes")
+
     banner("STEP 5: build and PUBLISH the website")
     print("jb/build.sh ends in `ghp-import -n -p -f`, which pushes straight to")
     print("GitHub Pages. The site goes live as soon as this step finishes.")
@@ -101,7 +114,7 @@ def main():
     banner("STEP 6: top-level support files")
     run("bash build.sh", BOOK)
 
-    banner("Done. All four targets built; the website is live.")
+    banner("Done. All five targets built; the website is live.")
 
 
 if __name__ == "__main__":

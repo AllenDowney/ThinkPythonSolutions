@@ -16,6 +16,7 @@ import re
 import shutil
 import subprocess
 import sys
+import zipfile
 from pathlib import Path
 
 HERE = Path(__file__).parent
@@ -71,6 +72,17 @@ def to_text2qti(quiz):
     return slug, "\n".join(parts)
 
 
+def normalize_zip(path):
+    """Rewrite a zip with fixed timestamps, so an unchanged quiz gives identical bytes."""
+    with zipfile.ZipFile(path) as z:
+        entries = [(info.filename, z.read(info)) for info in z.infolist()]
+    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
+        for name, data in sorted(entries):
+            info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
+            info.external_attr = (0o40755 << 16) | 0x10 if name.endswith("/") else 0o644 << 16
+            z.writestr(info, data, zipfile.ZIP_DEFLATED)
+
+
 def main(out_dir):
     quizzes = json.loads((HERE / "parsed_quizzes.json").read_text(encoding="utf-8"))
     out_dir = Path(out_dir)
@@ -85,6 +97,7 @@ def main(out_dir):
         # text2qti asks for a LaTeX rendering URL on first run; the quizzes have no math
         subprocess.run([text2qti, txt.name], cwd=out_dir, input="\n", text=True,
                        check=True, capture_output=True)
+        normalize_zip(out_dir / f"{slug}.zip")
         print(f"{slug}.zip  {len(quiz['questions'])} questions")
 
 
