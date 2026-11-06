@@ -17,7 +17,7 @@
         "It's legal to compare any two strings.",
         "When we compare characters, the uppercase `'O'` comes before the lowercase `'a'`."
       ],
-      "_end_line": 515
+      "_end_line": 596
     },
     {
       "question_text": "Which of these is the correct way to invoke the `lower` method on a string called `s`?",
@@ -34,7 +34,7 @@
         "The `lower` method doesn't take an argument in parentheses.",
         "This is the correct syntax for invoking a method on an object."
       ],
-      "_end_line": 530
+      "_end_line": 611
     },
     {
       "question_text": "If we use the `search` function in the `re` module, which of the following strings matches this pattern: `r'ab?c$'`?",
@@ -51,7 +51,7 @@
         "The pattern `b?` means that `b` is optional, but it cannot be repeated.",
         "It's OK to have extra letters at the beginning, and the `b` is not required."
       ],
-      "_end_line": 545
+      "_end_line": 626
     }
   ]
 }

@@ -17,7 +17,7 @@
         "If `word` is an empty string, the body of the loop never runs and the function returns `False`, which is correct.",
         "Both branches of the conditional have `return` statements, so this function ends after checking the first letter."
       ],
-      "_end_line": 456
+      "_end_line": 537
     },
     {
       "question_text": "Which of these is a legal way to increment `x`, assuming it has already been assigned a value?",
@@ -34,7 +34,7 @@
         "The value `+1` is the same as `1`, so this statement assigns the value `1` to `x`.",
         "This is a legal way to update the value of `x`."
       ],
-      "_end_line": 471
+      "_end_line": 552
     },
     {
       "question_text": "What does this function do?\n\n```\ndef check(word, letters):\n    for letter in word.lower():\n        if letter in letters.lower():\n            return False\n    return True\n```",
@@ -51,7 +51,7 @@
         "The loop doesn't stop after the first letter -- it only returns early if it finds a letter that is in `letters`, so it checks every letter in `word`.",
         "It returns `True` if it gets to the end of `word` and exits the loop having found none of the letters in `letters`."
       ],
-      "_end_line": 494
+      "_end_line": 575
     }
   ]
 }

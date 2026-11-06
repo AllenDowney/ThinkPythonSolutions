@@ -17,7 +17,7 @@
         "Because of the comma, the value of this expression is a tuple with one element, `'abc'`. The parentheses are not required.",
         "The parentheses alone do not make a tuple, so the value of this expression is just the string `'abc'`."
       ],
-      "_end_line": 737
+      "_end_line": 818
     },
     {
       "question_text": "What is the result of these statements?\n\n```\nt = tuple('abc')\ns = [1, 2, 3]\nd = {t: s}\n```",
@@ -34,7 +34,7 @@
         "The syntax is correct -- if there is a single item in a dictionary, a comma is legal but not required.",
         "These statements create a dictionary with one item that maps from a tuple to a list."
       ],
-      "_end_line": 759
+      "_end_line": 840
     },
     {
       "question_text": "What does this function do?\n\n```\ndef printall(*args):\n    for value in reversed(args):\n        print(value)\n```",
@@ -51,7 +51,7 @@
         "This function can take any number of arguments, not just a single argument.",
         "It takes any number of arguments and \"packs\" them into a tuple, then loops through the tuple in reverse order and prints the elements."
       ],
-      "_end_line": 780
+      "_end_line": 861
     },
     {
       "question_text": "What is the value of this expression?\n\n```\n('a', 3) < ('b', 1)\n```",
@@ -68,7 +68,7 @@
         "The `<` operator compares the first elements of each tuple, and then compares other elements in the event of a tie.",
         "When tuples are compared, the first elements are compared first."
       ],
-      "_end_line": 799
+      "_end_line": 880
     }
   ]
 }

@@ -52,6 +52,23 @@
         "There is nothing wrong with this function."
       ],
       "_end_line": 205
+    },
+    {
+      "question_text": "When a runtime error occurs inside a function, Python displays a traceback. What does the traceback show?",
+      "options": [
+        "Only the line where the error occurred.",
+        "Every function defined in the program, in the order they were defined.",
+        "Nothing, because tracebacks are only displayed for syntax errors.",
+        "The function that was running, the function that called it, and so on, in the same order as the frames in a stack diagram."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The traceback shows a line from each function on the stack, not just the line where the error occurred.",
+        "The traceback includes only the functions that were running when the error occurred, not every function that was defined.",
+        "A syntax error is reported before the program runs; a traceback is displayed when a runtime error occurs.",
+        "The traceback lists the functions that were running, with the one where the error occurred at the bottom, like the frames in a stack diagram."
+      ],
+      "_end_line": 221
     }
   ]
 }

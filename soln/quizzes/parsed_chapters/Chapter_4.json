@@ -17,7 +17,7 @@
         "There is an error!",
         "The size is always `50` -- the value of `length` is never used."
       ],
-      "_end_line": 234
+      "_end_line": 250
     },
     {
       "question_text": "What is it called when you put working statements into a new function definition?",
@@ -34,7 +34,7 @@
         "If the statements are working, they don't have to be debugged.",
         "Encapsulation is the process of transforming a sequence of statements into a function definition."
       ],
-      "_end_line": 249
+      "_end_line": 265
     },
     {
       "question_text": "Here are two versions of the `circle` function.\n\n```\ndef circle(radius):\n    circumference = 2 * math.pi * radius\n    n = 30\n    length = circumference / n\n    polygon(n, length)\n\ndef circle(radius):\n    arc(radius, 360)\n```\n\nWhat can we say about these functions?",
@@ -51,7 +51,24 @@
         "They take the same parameter and have the same effect, so they have the same interface -- but they accomplish the effect in different ways, so they have different implementations.",
         "They take the same parameter and have the same effect, so they have the same interface -- but they accomplish the effect in different ways, so they have different implementations."
       ],
-      "_end_line": 278
+      "_end_line": 294
+    },
+    {
+      "question_text": "The docstring of `polyline` says that `n` must be an integer. If someone calls `polyline(2.5, 30, 60)`, it fails with a `TypeError`. Where is the bug?",
+      "options": [
+        "In `polyline`, because a function should work with any arguments.",
+        "In `range`, because it should accept a float.",
+        "There is no bug, because Python raised an error.",
+        "In the caller, because it violated a precondition of `polyline`."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "A function only promises to work if its preconditions are satisfied; checking for every possible bad argument is not its job.",
+        "`range` requires integers -- that's one of its preconditions, and `polyline` passed along a float it should never have received.",
+        "An error message is a symptom of a bug, not a sign that there isn't one.",
+        "Preconditions are the responsibility of the caller. If the caller violates a precondition and the function doesn't work correctly, the bug is in the caller, not the function."
+      ],
+      "_end_line": 310
     }
   ]
 }

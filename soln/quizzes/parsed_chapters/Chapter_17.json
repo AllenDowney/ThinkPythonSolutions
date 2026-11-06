@@ -17,7 +17,7 @@
         "It is true that class variables can have any type.",
         "This statement is false -- that is, class variables are mutable."
       ],
-      "_end_line": 1159
+      "_end_line": 1240
     },
     {
       "question_text": "Suppose we define a `Card` class like this:\n\n```\nclass Card:\n\n    def __init__(self, suit, rank):\n        self.suit = suit\n        self.rank = rank\n```\n\nIf this class does not provide an `__eq__` method, what happens if we compare two cards using the `==` operator?",
@@ -34,7 +34,7 @@
         "If a class provides no `__eq__`, the `==` operator checks whether objects are identical.",
         "If a class provides no `__eq__`, the `==` operator checks whether objects are identical."
       ],
-      "_end_line": 1185
+      "_end_line": 1266
     },
     {
       "question_text": "Which of the following statements is true when one class inherits from another, like this:\n\n```\nclass Hand(Deck):\n    \"\"\"Represents a hand of playing cards.\"\"\"\n```",
@@ -51,7 +51,7 @@
         "If `Hand` inherits from `Deck`, a `Hand` object should have all of the attributes of a `Deck` object, but it can have more.",
         "If `Hand` inherits from `Deck`, every method defined in the `Deck` class should work with a `Hand` object."
       ],
-      "_end_line": 1206
+      "_end_line": 1287
     },
     {
       "question_text": "What do we call it when one method invokes another to do most or all of the work?",
@@ -68,7 +68,7 @@
         "Specialization is a way of using inheritance to create a new class that is a specialized version of an existing class.",
         "Delegation is when one method passes responsibility to another method to do most or all of the work."
       ],
-      "_end_line": 1220
+      "_end_line": 1301
     }
   ]
 }

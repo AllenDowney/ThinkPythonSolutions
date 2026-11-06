@@ -17,7 +17,7 @@
         "A static method is associated with a class, rather than an object.",
         "A function that works with more than one type is polymorphic."
       ],
-      "_end_line": 1087
+      "_end_line": 1168
     },
     {
       "question_text": "What is wrong with this class definition?\n\n```\nclass Point:\n    \"\"\"Represents a point in 2-D space.\"\"\"\n\n    def __init__(self, x, y):\n        x = self.x\n        y = self.y\n```",
@@ -34,7 +34,7 @@
         "The first parameter of a method is conventionally named `self`.",
         "The assignment statements should be the other way around, as in `self.x = x` and `self.y = y`."
       ],
-      "_end_line": 1113
+      "_end_line": 1194
     },
     {
       "question_text": "Suppose we define a `Line` class so that each `Line` object has two attributes that refer to `Point` objects.\n\n```\nclass Line:\n    def __init__(self, p1, p2):\n        self.p1 = p1\n        self.p2 = p2\n```\n\nIf we import the `copy` function from the `copy` module and use it to make a copy of a `Line` object, which of these statements is true?",
@@ -51,7 +51,7 @@
         "The `copy` function copies the `Line` object but not the `Point` objects it contains.",
         "The `copy` function makes a shallow copy, which copies the `Line` object but not the `Point` objects it contains."
       ],
-      "_end_line": 1138
+      "_end_line": 1219
     }
   ]
 }

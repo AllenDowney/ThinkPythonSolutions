@@ -17,7 +17,7 @@
         "The `//` operator does integer division, so `25 // 10` is `2`, and the `%` operator computes the remainder after division, so `25 % 10` is `5`.",
         "The `//` operator does integer division and the `%` operator computes the remainder after division."
       ],
-      "_end_line": 304
+      "_end_line": 336
     },
     {
       "question_text": "What is the result of these statements?\n```\nx = 5\nprint(x > 5)\nprint(x <= 5)\n```",
@@ -34,7 +34,7 @@
         "If `x` is `5`, `x <= 5` is the same as `5 <= 5`, which is `True`.",
         "If `x` is `5`, `x > 5` is `False` and `x <= 5` is `True`."
       ],
-      "_end_line": 324
+      "_end_line": 356
     },
     {
       "question_text": "What is the result of calling this function?\n```\ndef hello():\n    print('hello')\n    hello()\n```",
@@ -51,7 +51,7 @@
         "After printing `hello` many times, it causes a `RecursionError`.",
         "After printing `hello` many times, it causes a `RecursionError`."
       ],
-      "_end_line": 344
+      "_end_line": 376
     },
     {
       "question_text": "What kind of operator is `or`?",
@@ -68,7 +68,24 @@
         "`or` is a logical operator, along with `and` and `not`.",
         "`or` is a logical operator, along with `and` and `not`."
       ],
-      "_end_line": 359
+      "_end_line": 391
+    },
+    {
+      "question_text": "Here is the function from one of the exercises in this chapter.\n\n```\ndef recurse(n, s):\n    if n == 0:\n        print(s)\n    else:\n        recurse(n-1, n+s)\n```\n\nWhat happens if you call it like this: `recurse(-1, 0)`?",
+      "options": [
+        "It prints `-1`.",
+        "It prints `0`.",
+        "It does nothing, because `n` is not positive.",
+        "It prints nothing and causes a `RecursionError`."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "It only prints when `n` is `0`, and `n` goes -1, -2, -3, and so on, so it never gets there.",
+        "It would print `0` only if it reached the base case, but starting from `-1`, subtracting 1 never makes `n` equal to `0`.",
+        "The condition is `n == 0`, not `n <= 0`, so a negative `n` doesn't stop the recursion; it goes to the `else` branch and makes a recursive call.",
+        "Because `n` never equals `0`, the base case never runs; the recursion goes on until Python reaches its limit on the number of frames and raises a `RecursionError`."
+      ],
+      "_end_line": 417
     }
   ]
 }

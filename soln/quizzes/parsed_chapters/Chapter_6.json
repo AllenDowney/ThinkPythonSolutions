@@ -17,7 +17,7 @@
         "This function works. Because `3 % 2` is `1`, the second branch of the conditional runs, and the result is `3 * 3 + 1`, which is `10`.",
         "Because `3 % 2` is `1`, the second branch of the conditional runs, and the result is `3 * 3 + 1`, which is `10`."
       ],
-      "_end_line": 389
+      "_end_line": 447
     },
     {
       "question_text": "What do we call a function that does not print anything or have any effect other than a return value?",
@@ -34,7 +34,7 @@
         "Incremental development is a way of writing programs by making small changes and testing.",
         "A pure function does not print anything or have any effect other than a return value."
       ],
-      "_end_line": 404
+      "_end_line": 462
     },
     {
       "question_text": "What is the result of calling this function with the values `x=1.5` and `y=1.6`?\n\n```\ndef is_close(x, y):\n    return abs(x - y) < 0.2\n```",
@@ -51,7 +51,24 @@
         "The absolute difference between `1.5` and `1.6` is `0.1`, which is less than `0.2`.",
         "The absolute difference between `1.5` and `1.6` is `0.1`, which is less than `0.2`."
       ],
-      "_end_line": 424
+      "_end_line": 482
+    },
+    {
+      "question_text": "What is the return value if we call this function with the arguments `5` and `3`?\n\n```\ndef is_bigger(num1, num2):\n    if num1 > num2:\n        print(True)\n    else:\n        print(False)\n```",
+      "options": [
+        "`True`",
+        "`False`",
+        "It causes an error.",
+        "`None`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The function displays `True`, but it doesn't return it, because it has no `return` statement.",
+        "Because `5 > 3` is `True`, the first branch runs, and it displays `True`; but the function has no `return` statement.",
+        "This function works. It displays `True` and then ends without a `return` statement.",
+        "A function with no `return` statement returns `None`, even if it displays something."
+      ],
+      "_end_line": 505
     }
   ]
 }

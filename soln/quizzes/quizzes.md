@@ -203,6 +203,22 @@ def bottle_line(n, suffix):
 - There is nothing wrong with this function.
 
 
+### Question
+When a runtime error occurs inside a function, Python displays a traceback. What does the traceback show?
+
+- [ ] Only the line where the error occurred.
+- [ ] Every function defined in the program, in the order they were defined.
+- [ ] Nothing, because tracebacks are only displayed for syntax errors.
+- [X] The function that was running, the function that called it, and so on, in the same order as the frames in a stack diagram.
+
+
+### Rationale
+- The traceback shows a line from each function on the stack, not just the line where the error occurred.
+- The traceback includes only the functions that were running when the error occurred, not every function that was defined.
+- A syntax error is reported before the program runs; a traceback is displayed when a runtime error occurs.
+- The traceback lists the functions that were running, with the one where the error occurred at the bottom, like the frames in a stack diagram.
+
+
 # Title
 Chapter 4
 
@@ -274,6 +290,22 @@ What can we say about these functions?
 - They take the same parameter and have the same effect, so they have the same interface -- but they accomplish the effect in different ways, so they have different implementations.
 - They take the same parameter and have the same effect, so they have the same interface -- but they accomplish the effect in different ways, so they have different implementations.
 - They take the same parameter and have the same effect, so they have the same interface -- but they accomplish the effect in different ways, so they have different implementations.
+
+
+### Question
+The docstring of `polyline` says that `n` must be an integer. If someone calls `polyline(2.5, 30, 60)`, it fails with a `TypeError`. Where is the bug?
+
+- [ ] In `polyline`, because a function should work with any arguments.
+- [ ] In `range`, because it should accept a float.
+- [ ] There is no bug, because Python raised an error.
+- [X] In the caller, because it violated a precondition of `polyline`.
+
+
+### Rationale
+- A function only promises to work if its preconditions are satisfied; checking for every possible bad argument is not its job.
+- `range` requires integers -- that's one of its preconditions, and `polyline` passed along a float it should never have received.
+- An error message is a symptom of a bug, not a sign that there isn't one.
+- Preconditions are the responsibility of the caller. If the caller violates a precondition and the function doesn't work correctly, the bug is in the caller, not the function.
 
 
 # Title
@@ -357,6 +389,32 @@ What kind of operator is `or`?
 - `or` is a logical operator, along with `and` and `not`.
 
 
+### Question
+Here is the function from one of the exercises in this chapter.
+
+```
+def recurse(n, s):
+    if n == 0:
+        print(s)
+    else:
+        recurse(n-1, n+s)
+```
+
+What happens if you call it like this: `recurse(-1, 0)`?
+
+- [ ] It prints `-1`.
+- [ ] It prints `0`.
+- [ ] It does nothing, because `n` is not positive.
+- [X] It prints nothing and causes a `RecursionError`.
+
+
+### Rationale
+- It only prints when `n` is `0`, and `n` goes -1, -2, -3, and so on, so it never gets there.
+- It would print `0` only if it reached the base case, but starting from `-1`, subtracting 1 never makes `n` equal to `0`.
+- The condition is `n == 0`, not `n <= 0`, so a negative `n` doesn't stop the recursion; it goes to the `else` branch and makes a recursive call.
+- Because `n` never equals `0`, the base case never runs; the recursion goes on until Python reaches its limit on the number of frames and raises a `RecursionError`.
+
+
 # Title
 Chapter 6
 
@@ -420,6 +478,29 @@ def is_close(x, y):
 - The function is correct as long as the values of `x` and `y` are numbers.
 - The absolute difference between `1.5` and `1.6` is `0.1`, which is less than `0.2`.
 - The absolute difference between `1.5` and `1.6` is `0.1`, which is less than `0.2`.
+
+
+### Question
+What is the return value if we call this function with the arguments `5` and `3`?
+
+```
+def is_bigger(num1, num2):
+    if num1 > num2:
+        print(True)
+    else:
+        print(False)
+```
+- [ ] `True`
+- [ ] `False`
+- [ ] It causes an error.
+- [X] `None`
+
+
+### Rationale
+- The function displays `True`, but it doesn't return it, because it has no `return` statement.
+- Because `5 > 3` is `True`, the first branch runs, and it displays `True`; but the function has no `return` statement.
+- This function works. It displays `True` and then ends without a `return` statement.
+- A function with no `return` statement returns `None`, even if it displays something.
 
 
 # Title

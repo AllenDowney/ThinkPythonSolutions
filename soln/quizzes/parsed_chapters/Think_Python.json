@@ -17,7 +17,7 @@
         "When we multiply a string by an integer, the result is a string. See Chapter 1, \"Programming as a way of thinking\".",
         "Multiplying a string by the integer `3` repeats the string three times. See Chapter 1, \"Programming as a way of thinking\"."
       ],
-      "_end_line": 1383
+      "_end_line": 1464
     },
     {
       "question_text": "For this function to work without causing an error, what are the preconditions for `n`?\n\n```\ndef countdown(n):\n    if n == 0:\n        print('Blastoff!')\n    else:\n        print(n)\n        countdown(n-1)\n```",
@@ -34,7 +34,7 @@
         "If `n` is `0`, the function prints `'Blastoff!'` and returns without making a recursive call. See Chapter 5, \"Conditionals and Recursion\".",
         "`n` must be non-negative -- that is, positive or `0`. See Chapter 5, \"Conditionals and Recursion\"."
       ],
-      "_end_line": 1409
+      "_end_line": 1490
     },
     {
       "question_text": "What is wrong with the following program?\n\n```\ndef compare(x, y):\n    if x < y:\n        return -1\n    else:\n        return 1\n    return 0\n```",
@@ -51,7 +51,7 @@
         "The syntax of the program is correct, but there is a semantic error because the last line can never run. See Chapter 6, \"Return Values\".",
         "There is a `return` statement in both branches of the `if` statement, so the last line can never run -- it is dead code. See Chapter 6, \"Return Values\"."
       ],
-      "_end_line": 1434
+      "_end_line": 1515
     },
     {
       "question_text": "What is the output of this program, or is there an error?\n```\ndef rectangle_area(length, width):\n    return length * width\n\narea = rectangle_area(3, 5)\nprint(length)\n```",
@@ -68,7 +68,7 @@
         "The variables are part of an arithmetic expression, which can be used in a return statement. See Chapter 6, \"Return Values\".",
         "Parameters and local variables only exist inside the functions where they are defined. See Chapter 6, \"Return Values\"."
       ],
-      "_end_line": 1456
+      "_end_line": 1537
     },
     {
       "question_text": "What is wrong with the following program?\n\n```\ns = int('123')\nfor digit in s:\n    print(digit)\n```",
@@ -85,7 +85,7 @@
         "`int` is a type, but it can be used as a function to convert other types to integers. See Chapter 7, \"Iteration and Search\".",
         "`s` is an integer, which is not a sequence, so it can't be looped over. See Chapter 7, \"Iteration and Search\"."
       ],
-      "_end_line": 1479
+      "_end_line": 1560
     },
     {
       "question_text": "If `s` is a string, which of these is a correct way to convert it to lowercase?",
@@ -102,7 +102,7 @@
         "`s.lower()` creates a new string, but if the string is not assigned to a variable, there is no way to access it. See Chapter 7, \"Iteration and Search\".",
         "`s.lower()` creates a new string -- if we assign it back to `s`, the new string replaces the old one. See Chapter 7, \"Iteration and Search\"."
       ],
-      "_end_line": 1495
+      "_end_line": 1576
     },
     {
       "question_text": "The following function takes two strings as parameters and returns a string.\nWhich of the following docstrings is a correct description of what this function does?\n\n```\ndef compute(word1, word2):\n    t = []\n    for letter in word1:\n        if letter in word2:\n            t.append(letter)\n    return ''.join(t)\n```",
@@ -119,7 +119,7 @@
         "In order to get to the `append` method, `letter` has to appear in both words. See Chapter 7, \"Iteration and Search\".",
         "This function returns a string that contains the letters that appear in both `word1` and `word2`. See Chapter 7, \"Iteration and Search\"."
       ],
-      "_end_line": 1520
+      "_end_line": 1601
     },
     {
       "question_text": "This function is intended to convert the first letter of a word to lowercase and the rest of the letters to uppercase.\n\n```\ndef lower_upper(word):\n    first = word[0]\n    rest = word[1:]\n    word = first.lower() + rest.upper()\n```\n\nWhat is the value of `word` if we call this function like this -- or is there an error?\n\n```\nword = lower_upper('Python')\n```",
@@ -136,7 +136,7 @@
         "The function has no return statement, so it returns `None`. Assigning a new value to the parameter `word` has no effect outside the function. See Chapter 9, \"Lists\".",
         "The function has no return statement, so it returns `None`. Assigning a new value to the parameter `word` has no effect outside the function. See Chapter 9, \"Lists\"."
       ],
-      "_end_line": 1549
+      "_end_line": 1630
     },
     {
       "question_text": "If we use the `search` function in the `re` module, which of the following strings matches this pattern: `r'^a(bc|de)f$'`?",
@@ -153,7 +153,7 @@
         "The pattern `f$` requires the letter `f` at the end of the string. See Chapter 8, \"Strings and Regular Expressions\".",
         "This string has `'a'` at the beginning, `'f'` at the end, and `'de'` in the middle. See Chapter 8, \"Strings and Regular Expressions\"."
       ],
-      "_end_line": 1564
+      "_end_line": 1645
     },
     {
       "question_text": "What is the result of this program?\n\n```\nt = [1, 2, 3, 4]\nt[1:-1]\n```",
@@ -170,7 +170,7 @@
         "The slice index `1:-1` excludes the last element of the list. See Chapter 9, \"Lists\".",
         "The slice index `1:-1` selects elements from the second to the second-to-last, including both. See Chapter 9, \"Lists\"."
       ],
-      "_end_line": 1585
+      "_end_line": 1666
     },
     {
       "question_text": "After these statements run, what are the values of `a` and `b`, or is there an error?\n\n```\na, b = 1, 2\na, b = b, a\n```",
@@ -187,7 +187,7 @@
         "After the first assignment `a` is `1` and `b` is `2`, but the second assignment swaps the values. See Chapter 11, \"Tuples\".",
         "After the first assignment `a` is `1` and `b` is `2`, and then the second assignment swaps the values. See Chapter 11, \"Tuples\"."
       ],
-      "_end_line": 1606
+      "_end_line": 1687
     },
     {
       "question_text": "Why can't a list appear as a key in a dictionary?",
@@ -204,7 +204,7 @@
         "Lists can contain any number of elements, but that's not the reason a list can't appear as a key in a dictionary. See Chapter 10, \"Dictionaries\" and Chapter 11, \"Tuples\".",
         "If an object is mutable, it isn't hashable, which means it can't be used as a key in a dictionary. See Chapter 10, \"Dictionaries\" and Chapter 11, \"Tuples\"."
       ],
-      "_end_line": 1622
+      "_end_line": 1703
     },
     {
       "question_text": "What is the primary difference between a list and a tuple?",
@@ -221,7 +221,7 @@
         "It's the other way around: a list is mutable; a tuple is immutable. See Chapter 11, \"Tuples\".",
         "A tuple is immutable. See Chapter 11, \"Tuples\"."
       ],
-      "_end_line": 1637
+      "_end_line": 1718
     },
     {
       "question_text": "Which of these is a correct way to reverse the elements of a list in place -- that is, by modifying an existing list without creating a new list?",
@@ -238,7 +238,7 @@
         "The return value from `t.reverse()` is `None`, so this statement sets `t` to `None`. See Chapter 11, \"Tuples\".",
         "`t.reverse()` reverses the elements of `t` without creating a new list. See Chapter 11, \"Tuples\"."
       ],
-      "_end_line": 1653
+      "_end_line": 1734
     },
     {
       "question_text": "What is the result of this program?\n\n```\ns = ['bbb', 'aa', 'c']\nsorted(s, key=len, reverse=True)\n```",
@@ -255,7 +255,7 @@
         "`key=len` sorts by length, rather than alphabetical order. See Chapter 12, \"Text Analysis and Generation\".",
         "`key=len` sorts by length, rather than alphabetical order, and `reverse=True` sorts in descending order, so the result is `['bbb', 'aa', 'c']`. See Chapter 12, \"Text Analysis and Generation\"."
       ],
-      "_end_line": 1674
+      "_end_line": 1755
     },
     {
       "question_text": "What does the following function do?\n```\ndef compute(d1, d2):\n    res = {}\n    for key in d1:\n        res[key] = d1[key]\n    for key in d2:\n        res[key] = d2[key]\n    return res\n```",
@@ -272,7 +272,7 @@
         "The new dictionary has all keys from either dictionary. See Chapter 12, \"Text Analysis and Generation\".",
         "The new dictionary has all keys from either dictionary. If the same key appears in both, it gets the value from `d2`. See Chapter 12, \"Text Analysis and Generation\"."
       ],
-      "_end_line": 1699
+      "_end_line": 1780
     },
     {
       "question_text": "Suppose we run the following program to get the current working directory:\n\n```\nimport os\n\nos.getcwd()\n```\n\nAnd the result is `/home/dinsdale/photos`.\nNow suppose we run the following program to check for the existence of a file:\n\n```\nos.path.exists('apr-2023/photo1.jpg')\n```\n\nWhat is the absolute path of the file that gets checked?",
@@ -289,7 +289,7 @@
         "Because `'apr-2023/photo1.jpg'` is a relative path, it gets joined to the current working directory. See Chapter 13, \"Files and Databases\".",
         "Because `'apr-2023/photo1.jpg'` is a relative path, it gets joined to the current working directory. See Chapter 13, \"Files and Databases\"."
       ],
-      "_end_line": 1730
+      "_end_line": 1811
     },
     {
       "question_text": "What is the result of this program?\n```\nclass Day:\n    def __init__(self, day):\n        self.day = day\n\n    def __str__(date):\n        return f'Today is {date.day}'\n\nprint(Day('Wednesday'))\n```",
@@ -306,7 +306,7 @@
         "The `f` before the string indicates that it is a format string, and the expression in curly braces gets replaced by its value. See Chapter 15, \"Classes and Methods\".",
         "In a format string, the expression in curly braces gets replaced by its value. See Chapter 15, \"Classes and Methods\"."
       ],
-      "_end_line": 1754
+      "_end_line": 1835
     },
     {
       "question_text": "Assuming that the `Animal` class exists, what is the output of this program?\n\n```\nclass Cat(Animal):\n    \"\"\"Represents a cat.\"\"\"\n\ncat = Cat()\nisinstance(cat, Animal)\n```",
@@ -323,7 +323,7 @@
         "An instance of a parent class is not an instance of the child class. See Chapter 17, \"Inheritance\".",
         "In this example, `Cat` is a child class of `Animal`, so every `Cat` object is also an instance of `Animal`. See Chapter 17, \"Inheritance\"."
       ],
-      "_end_line": 1778
+      "_end_line": 1859
     },
     {
       "question_text": "What is the result of this program?\n\n```\nfrom collections import namedtuple\n\nPoint = namedtuple('Point', ['x', 'y'])\np = Point(3, 4)\np[1]\n```",
@@ -340,7 +340,7 @@
         "In a named tuple -- as in a tuple -- the index of the first element is `0`. See Chapter 18, \"Python Extras\".",
         "In a named tuple -- as in a tuple -- the index of the second element is `1`. See Chapter 18, \"Python Extras\"."
       ],
-      "_end_line": 1802
+      "_end_line": 1883
     },
     {
       "question_text": "We can call the built-in function `round` like this:\n\n```\nimport math\n\nround(math.pi, ndigits=3)\n```\n\nThe result is the value of `math.pi` rounded off to three decimal places.\nNow suppose we have the positional argument in a tuple and the keyword argument in a dictionary, like this:\n\n```\nargs = (math.pi,)\nkwargs = {\"ndigits\": 3}\n```\n\nWhich of these is a correct way to call `round` and get the same result?",
@@ -357,7 +357,7 @@
         "To pass the elements of `args` as positional arguments, we have to unpack them with the `*` operator. See Chapter 18, \"Python Extras\".",
         "The `*` operator unpacks the elements of `args` and the `**` operator unpacks the items in `kwargs`. See Chapter 18, \"Python Extras\"."
       ],
-      "_end_line": 1834
+      "_end_line": 1915
     }
   ]
 }
