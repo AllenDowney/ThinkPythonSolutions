@@ -17,7 +17,7 @@
         "Only one argument appears in parentheses, but `time` is passed to `increment` as the first argument.",
         "`time` is assigned to the first parameter of the method, which is conventionally called `self`, and `42` is assigned to the second."
       ],
-      "_end_line": 996
+      "_end_line": 1029
     },
     {
       "question_text": "Suppose `int_to_time` is a static method defined in the `Time` class.\nWhat happens when we invoke `int_to_time` like this?\n\n```\nstart = Time.int_to_time(34800)\n```",
@@ -34,7 +34,7 @@
         "Because `Time` is a class, it is not passed as an argument.",
         "`34800` is assigned to the first parameter of `int_to_time`. Because `Time` is a class, it is not passed as an argument."
       ],
-      "_end_line": 1017
+      "_end_line": 1050
     },
     {
       "question_text": "Which of the following statements is NOT correct?",
@@ -51,7 +51,7 @@
         "This statement is correct.",
         "Defining a new class does not invoke its `__init__` method."
       ],
-      "_end_line": 1033
+      "_end_line": 1066
     }
   ]
 }

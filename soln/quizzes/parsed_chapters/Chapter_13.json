@@ -17,7 +17,7 @@
         "This way of using the string concatenation does not put a slash between the directories in the path.",
         "The `os.path.join` function joins the two paths with either a forward or backward slash, depending on which operating system is running."
       ],
-      "_end_line": 856
+      "_end_line": 889
     },
     {
       "question_text": "After these statements run, what is the value of `s`?\n\n```\nx = 1\nt = 1,\ns = f'x is an int, {x}. t is a tuple, {t}'\n```",
@@ -34,7 +34,7 @@
         "Inside the f-string, the expressions in curly braces are replaced with string representations of their values.",
         "Inside the f-string, the expressions in curly braces are replaced with string representations of their values."
       ],
-      "_end_line": 877
+      "_end_line": 910
     },
     {
       "question_text": "After these statements run, what is the value of `db[key]`?\n\n```\ndb = shelve.open('anagram_map', 'n')\nkey = 'opst'\ndb[key] = []\ndb[key].append('stop')\n```",
@@ -51,7 +51,7 @@
         "The `append` method does not work as intended here because it modifies only the list in memory, not the one in the database.",
         "The `append` method does not work as intended here because it modifies only the list in memory, not the one in the database."
       ],
-      "_end_line": 900
+      "_end_line": 933
     }
   ]
 }

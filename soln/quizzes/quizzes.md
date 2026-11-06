@@ -614,6 +614,22 @@ b = [1, 2, 3]
 - `a` and `b` refer to lists with the same value, so they are equivalent, but they refer to different lists, so they are not identical.
 
 
+### Question
+Having more than one name for the same object can lead to subtle bugs, but it is relatively safe with strings. Why?
+
+- [ ] Assigning a string to another variable makes a copy, so the two variables never refer to the same string.
+- [ ] Two strings with the same letters are never identical.
+- [ ] The `is` operator doesn't work with strings.
+- [X] Strings are immutable, so nothing can change the string through one name and surprise the other.
+
+
+### Rationale
+- Assignment doesn't copy: after `b = a`, `a` and `b` refer to the same string, and `b is a` is `True`.
+- In the chapter's example, `a = 'banana'` and `b = 'banana'` create only one string, so `a is b` is `True`.
+- The `is` operator works with any objects, including strings.
+- Strings are immutable, so a string that has two names can't be changed through either one.
+
+
 # Title
 Chapter 10
 
@@ -680,6 +696,23 @@ d2 = {d1: 3}
 - Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary, but that's not a `KeyError`.
 - Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary, but that's not a `ValueError`.
 - Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary.
+
+### Question
+A dictionary is like a list, but more general. Which words complete this sentence?
+
+"The ________ of a dictionary are like the indices of a list, and the ________ of a dictionary are like the elements of a list."
+
+- [ ] items; keys
+- [ ] values; keys
+- [ ] keys; items
+- [X] keys; values
+
+### Rationale
+- An item is a key-value pair, so it's not like an index. The keys play the role of the indices.
+- This is backwards: we use a key to look up a value, the way we use an index to look up an element.
+- The keys are like indices, but an item is a whole key-value pair, not the thing you look up.
+- We use a key to look up its value, just as we use an index to look up an element. Indices have to be integers, but keys can be (almost) any type.
+
 
 # Title
 Chapter 11

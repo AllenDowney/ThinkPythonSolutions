@@ -52,6 +52,23 @@
         "`a` and `b` refer to lists with the same value, so they are equivalent, but they refer to different lists, so they are not identical."
       ],
       "_end_line": 616
+    },
+    {
+      "question_text": "Having more than one name for the same object can lead to subtle bugs, but it is relatively safe with strings. Why?",
+      "options": [
+        "Assigning a string to another variable makes a copy, so the two variables never refer to the same string.",
+        "Two strings with the same letters are never identical.",
+        "The `is` operator doesn't work with strings.",
+        "Strings are immutable, so nothing can change the string through one name and surprise the other."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "Assignment doesn't copy: after `b = a`, `a` and `b` refer to the same string, and `b is a` is `True`.",
+        "In the chapter's example, `a = 'banana'` and `b = 'banana'` create only one string, so `a is b` is `True`.",
+        "The `is` operator works with any objects, including strings.",
+        "Strings are immutable, so a string that has two names can't be changed through either one."
+      ],
+      "_end_line": 632
     }
   ]
 }
