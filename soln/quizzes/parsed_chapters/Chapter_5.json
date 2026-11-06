@@ -17,7 +17,7 @@
         "The `//` operator does integer division, so `25 // 10` is `2`, and the `%` operator computes the remainder after division, so `25 % 10` is `5`.",
         "The `//` operator does integer division and the `%` operator computes the remainder after division."
       ],
-      "_end_line": 328
+      "_end_line": 304
     },
     {
       "question_text": "What is the result of these statements?\n```\nx = 5\nprint(x > 5)\nprint(x <= 5)\n```",
@@ -34,7 +34,7 @@
         "If `x` is `5`, `x <= 5` is the same as `5 <= 5`, which is `True`.",
         "If `x` is `5`, `x > 5` is `False` and `x <= 5` is `True`."
       ],
-      "_end_line": 350
+      "_end_line": 324
     },
     {
       "question_text": "What is the result of calling this function?\n```\ndef hello():\nprint('hello')\nhello()\n```",
@@ -51,7 +51,7 @@
         "After printing `hello` many times, it causes a `RecursionError`.",
         "After printing `hello` many times, it causes a `RecursionError`."
       ],
-      "_end_line": 372
+      "_end_line": 344
     },
     {
       "question_text": "What kind of operator is `or`?",
@@ -68,7 +68,7 @@
         "`or` is a logical operator, along with `and` and `not`.",
         "`or` is a logical operator, along with `and` and `not`."
       ],
-      "_end_line": 389
+      "_end_line": 359
     }
   ]
 }

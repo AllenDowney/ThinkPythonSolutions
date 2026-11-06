@@ -17,7 +17,7 @@
         "`t.pop(1)` removes the second element, which is `2`. `t.append(2)` adds `2` to the end of the list, and `t.remove(3)` removes `3`.",
         "`t.pop(1)` removes the second element, which is `2`. `t.append(2)` adds `2` to the end of the list, and `t.remove(3)` removes `3`."
       ],
-      "_end_line": 623
+      "_end_line": 573
     },
     {
       "question_text": "What is the value of `b` after running these statements?\n\n```\na = [1, 2, 3]\nb = a\na.remove(2)\n```",
@@ -34,7 +34,7 @@
         "These statements run without causing an error.",
         "`a` and `b` refer to the same object, so when we modify `a`, the value of `b` also changes."
       ],
-      "_end_line": 646
+      "_end_line": 594
     },
     {
       "question_text": "What can we say about two lists created like this:\n\n```\na = [1, 2, 3]\nb = [1, 2, 3]\n```",
@@ -51,7 +51,7 @@
         "`a` and `b` refer to lists with the same value, so they are equivalent, but they refer to different lists, so they are not identical.",
         "`a` and `b` refer to lists with the same value, so they are equivalent, but they refer to different lists, so they are not identical."
       ],
-      "_end_line": 670
+      "_end_line": 616
     }
   ]
 }

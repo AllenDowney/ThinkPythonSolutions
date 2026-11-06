@@ -18,24 +18,21 @@ Chapter 1
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 Which of these types is used to represent a number with a fraction part?
 - [ ] `int`
 - [ ] `real`
-- [ ] `string`
+- [ ] `str`
 - [X] `float`
 
 
 ### Rationale
 - `int` values can only be integers.
 - Python does not have a type called `real`.
-- `string` values contain a sequence of characters.
+- `str` values contain a sequence of characters.
 - `float` values represent floating-point numbers, which can have a fraction part.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 Which of these is a legal expression?
 
@@ -45,13 +42,12 @@ Which of these is a legal expression?
 - [X] `'1' * 2`
 
 
-### Rationales
+### Rationale
 - The division operator does not work with strings.
 - With the multiplication operator, the first value can be a string, but the second cannot.  
 - The division operator does not work with strings.
-- When the first operator is a string, the multiplication operator repeats the string, so the result is `'11'`.
+- When the first operand is a string, the multiplication operator repeats the string, so the result is `'11'`.
 
-<!-- #endregion -->
 
 ### Question
 Which of these is the general word for any value used in a mathematical operation like addition or multiplication?
@@ -67,9 +63,8 @@ Which of these is the general word for any value used in a mathematical operatio
 - A "divisor" is one of the values used in division, but it is not the general word for any value used in an operation.
 - An "operand" is a value used in an operation.
 
-
 ### Question
-On the internet, people sometimes argue about the value of an ambiguous mathematical expression like $8 ÷ 2(2+2)$. How do we write this expression in Python?
+On the internet, people sometimes argue about the value of an ambiguous mathematical expression like 8 ÷ 2(2+2). How do we write this expression in Python?
 
 - [ ] `8 ÷ 2 (2 + 2)`
 - [ ] `8 / 2 (2 + 2)`
@@ -83,14 +78,12 @@ On the internet, people sometimes argue about the value of an ambiguous mathemat
 - An alternative is to put `8 / 2` in parentheses so the order of operations is clear. 
 
 
-
 # Title
 Chapter 2
 
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 Which of these is a legal variable name?
 - [ ] `2pi`
@@ -105,7 +98,6 @@ Which of these is a legal variable name?
 - `question?` is not a legal variable name because only letters, numbers, and the underscore character, `_`, are allowed.
 - `import` is not a legal variable name because it is one of Python's keywords.
 - `is_even` is a legal variable name because letters, numbers, and the underscore character, `_`, are allowed.
-<!-- #endregion -->
 
 ### Question
 Which of these is NOT a correct way to raise `2` to the third power?
@@ -116,12 +108,11 @@ Which of these is NOT a correct way to raise `2` to the third power?
 
 ### Rationale
 - Multiplication is a correct way to raise `2` to the third power.
-- The exponentiation operator, `**`,  is a correct way to raise `2` to the third power.
+- The exponentiation operator, `**`, is a correct way to raise `2` to the third power.
 - The `pow` function in the `math` module is a correct way to raise `2` to the third power.
 - In some languages, the `^` operator is used for exponentiation, but in Python it means something else.
 
 
-<!-- #region -->
 ### Question
 When you call a function, what are the values that appear in parentheses?
 - [ ] assignments
@@ -136,9 +127,7 @@ When you call a function, what are the values that appear in parentheses?
 - An exception is an error detected while a program is running.
 - The values you pass to a function are called arguments.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 If a program runs without producing an error message, but it does not do the right thing, what kind of error is that?
 - [ ] syntax error
@@ -153,7 +142,6 @@ If a program runs without producing an error message, but it does not do the rig
 - An exception produces an error message.
 - A semantic error is when a program runs, but does the wrong thing.
 
-<!-- #endregion -->
 
 # Title
 Chapter 3
@@ -161,7 +149,6 @@ Chapter 3
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 When you define a function, what are the variables that appear in parentheses?
 - [ ] arguments
@@ -177,9 +164,7 @@ When you define a function, what are the variables that appear in parentheses?
 - A function object is the result of defining a new function.
 - A parameter is a variable that gets a value when the function is called.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 Which kind of statement can be used to run a line of code more than once?
 - [ ] assignment statement
@@ -194,9 +179,7 @@ Which kind of statement can be used to run a line of code more than once?
 - A print statement displays the value of an expression.
 - A `for` statement can run a line of code, or multiple lines, more than once.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is wrong with this function, if anything?
 
@@ -219,7 +202,6 @@ def bottle_line(n, suffix):
 - All of the statements in the body of the function should be indented.
 - There is nothing wrong with this function.
 
-<!-- #endregion -->
 
 # Title
 Chapter 4
@@ -227,7 +209,6 @@ Chapter 4
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 What is wrong with this function, if anything?
 
@@ -250,9 +231,7 @@ def square(length):
 - There is an error!
 - The size is always `50` -- the value of `length` is never used.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is it called when you put working statements into a new function definition?
 - [ ] generalization
@@ -267,9 +246,7 @@ What is it called when you put working statements into a new function definition
 - If the statements are working, they don't have to be debugged.
 - Encapsulation is the process of transforming a sequence of statements into a function definition.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 Here are two versions of the `circle` function. 
 
@@ -281,7 +258,7 @@ def circle(radius):
     polygon(n, length)
 
 def circle(radius):
-    arc(radius,  360)
+    arc(radius, 360)
 ```
 
 What can we say about these functions?
@@ -298,7 +275,6 @@ What can we say about these functions?
 - They take the same parameter and have the same effect, so they have the same interface -- but they accomplish the effect in different ways, so they have different implementations.
 - They take the same parameter and have the same effect, so they have the same interface -- but they accomplish the effect in different ways, so they have different implementations.
 
-<!-- #endregion -->
 
 # Title
 Chapter 5
@@ -306,7 +282,6 @@ Chapter 5
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 What is the result of these assignment statements?
 
@@ -326,9 +301,7 @@ b = 25 % 10
 - The `//` operator does integer division, so `25 // 10` is `2`, and the `%` operator computes the remainder after division, so `25 % 10` is `5`.
 - The `//` operator does integer division and the `%` operator computes the remainder after division.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is the result of these statements?
 ```
@@ -348,9 +321,7 @@ print(x <= 5)
 - If `x` is `5`, `x <= 5` is the same as `5 <= 5`, which is `True`.
 - If `x` is `5`, `x > 5` is `False` and `x <= 5` is `True`.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is the result of calling this function?
 ```
@@ -370,9 +341,7 @@ def hello():
 - After printing `hello` many times, it causes a `RecursionError`.
 - After printing `hello` many times, it causes a `RecursionError`.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What kind of operator is `or`?
 - [ ] arithmetic
@@ -387,7 +356,6 @@ What kind of operator is `or`?
 - `or` is a logical operator, along with `and` and `not`.
 - `or` is a logical operator, along with `and` and `not`.
 
-<!-- #endregion -->
 
 # Title
 Chapter 6
@@ -395,7 +363,6 @@ Chapter 6
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 What is the return value if we call this function with the value `3`?
 
@@ -419,9 +386,7 @@ def collatz(x):
 - This function works. Because `3 % 2` is `1`, the second branch of the conditional runs, and the result is `3 * 3 + 1`, which is `10`.
 - Because `3 % 2` is `1`, the second branch of the conditional runs, and the result is `3 * 3 + 1`, which is `10`.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What do we call a function that does not print anything or have any effect other than a return value?
 - [ ] recursive
@@ -436,9 +401,7 @@ What do we call a function that does not print anything or have any effect other
 - Incremental development is a way of writing programs by making small changes and testing.
 - A pure function does not print anything or have any effect other than a return value.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is the result of calling this function with the values `x=1.5` and `y=1.6`?
 
@@ -458,7 +421,6 @@ def is_close(x, y):
 - The absolute difference between `1.5` and `1.6` is `0.1`, which is less than `0.2`.
 - The absolute difference between `1.5` and `1.6` is `0.1`, which is less than `0.2`.
 
-<!-- #endregion -->
 
 # Title
 Chapter 7
@@ -466,9 +428,8 @@ Chapter 7
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
-This function is supposed to return `True` if `word` contains with `'A'` or `'a'`, and `False` otherwise. But it doesn't work -- What's wrong?
+This function is supposed to return `True` if `word` contains `'A'` or `'a'`, and `False` otherwise. But it doesn't work -- what's wrong?
 
 ```
 def has_a(word):
@@ -492,11 +453,9 @@ def has_a(word):
 - If `word` is an empty string, the body of the loop never runs and the function returns `False`, which is correct.
 - Both branches of the conditional have `return` statements, so this function ends after checking the first letter.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
-Which of these is a legal way to increment `x`, assuming it has already been assigned a value.
+Which of these is a legal way to increment `x`, assuming it has already been assigned a value?
 - [ ] `x++`
 - [ ] `x + 1 = x`
 - [ ] `x = +1`
@@ -506,12 +465,10 @@ Which of these is a legal way to increment `x`, assuming it has already been ass
 ### Rationale
 - Some programming languages use the `++` operator to increment a variable, but not Python.
 - The left side of an assignment can't be an expression like `x + 1`.
-- The value `+1` is the same as `1`, so this statement assigns the value `1` to`x`.
+- The value `+1` is the same as `1`, so this statement assigns the value `1` to `x`.
 - This is a legal way to update the value of `x`.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What does this function do?
 
@@ -523,18 +480,17 @@ def check(word, letters):
     return True
 ```
 - [ ] Returns `True` if any of the letters in `letters` appear in `word`.
-- [ ] Returns `True` if any of the letters in `word` appear in `letter`.
-- [ ] Returns `True` if none of the letters in `word` appear in `letter`.
+- [ ] Returns `True` if all of the letters in `letters` appear in `word`.
+- [ ] Returns `True` if the first letter of `word` does not appear in `letters`.
 - [X] Returns `True` if none of the letters in `letters` appear in `word`.
 
 
 ### Rationale
 - It only returns `True` if it gets to the end of `word` and exits the loop having found none of the letters in `letters`.
-- It only returns `True` if it gets to the end of `word` and exits the loop having found none of the letters in `letters`.
-- It only returns `True` if it gets to the end of `word` and exits the loop having found none of the letters in `letters`.
+- It returns `False` as soon as it finds a letter in `word` that is also in `letters`, so it only returns `True` if none of them appear.
+- The loop doesn't stop after the first letter -- it only returns early if it finds a letter that is in `letters`, so it checks every letter in `word`.
 - It returns `True` if it gets to the end of `word` and exits the loop having found none of the letters in `letters`.
 
-<!-- #endregion -->
 
 # Title
 Chapter 8
@@ -542,7 +498,6 @@ Chapter 8
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 What is the result of this comparison: `'Orange' < 'apple'`?
 - [ ] `False`
@@ -552,20 +507,18 @@ What is the result of this comparison: `'Orange' < 'apple'`?
 
 
 ### Rationale
-- When we compare characters the uppercase `'O'` comes before the lowercase `'a'`.
+- When we compare characters, the uppercase `'O'` comes before the lowercase `'a'`.
 - The syntax is correct.
 - It's legal to compare any two strings.
-- Because when we compare characters the uppercase `'O'` comes before the lowercase `'a'`.
+- When we compare characters, the uppercase `'O'` comes before the lowercase `'a'`.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 Which of these is the correct way to invoke the `lower` method on a string called `s`?
-- [ ] lower(s)
-- [ ] string.lower(s)
-- [ ] s.lower(string)
-- [X] s.lower()
+- [ ] `lower(s)`
+- [ ] `string.lower(s)`
+- [ ] `s.lower(string)`
+- [X] `s.lower()`
 
 
 ### Rationale
@@ -574,9 +527,7 @@ Which of these is the correct way to invoke the `lower` method on a string calle
 - The `lower` method doesn't take an argument in parentheses.
 - This is the correct syntax for invoking a method on an object.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 If we use the `search` function in the `re` module, which of the following strings matches this pattern: `r'ab?c$'`?
 - [ ] `'ab?c$'`
@@ -591,7 +542,6 @@ If we use the `search` function in the `re` module, which of the following strin
 - The pattern `b?` means that `b` is optional, but it cannot be repeated.
 - It's OK to have extra letters at the beginning, and the `b` is not required.
 
-<!-- #endregion -->
 
 # Title
 Chapter 9
@@ -599,7 +549,6 @@ Chapter 9
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 What is the value of `t` after running these statements?
 
@@ -621,9 +570,7 @@ t.remove(3)
 - `t.pop(1)` removes the second element, which is `2`. `t.append(2)` adds `2` to the end of the list, and `t.remove(3)` removes `3`.
 - `t.pop(1)` removes the second element, which is `2`. `t.append(2)` adds `2` to the end of the list, and `t.remove(3)` removes `3`.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is the value of `b` after running these statements?
 
@@ -644,9 +591,7 @@ a.remove(2)
 - These statements run without causing an error.
 - `a` and `b` refer to the same object, so when we modify `a`, the value of `b` also changes.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What can we say about two lists created like this:
 
@@ -668,14 +613,12 @@ b = [1, 2, 3]
 - `a` and `b` refer to lists with the same value, so they are equivalent, but they refer to different lists, so they are not identical.
 - `a` and `b` refer to lists with the same value, so they are equivalent, but they refer to different lists, so they are not identical.
 
-<!-- #endregion -->
 
 # Title
 Chapter 10
 
 ## Quiz Type
 Formative
-
 
 ### Question
 What is the value of the dictionary `d` after these statements run?
@@ -697,7 +640,6 @@ d['a'] = 3
 - The second assignment statement updates the value associated with the key `'a'`.
 
 
-<!-- #region -->
 ### Question
 What is the value of the dictionary `d` after running these statements?
 
@@ -718,9 +660,7 @@ d['c'] += 1
 - The `+=` operator looks up the key to get the old value before adding `1`.
 - Because `c` does not appear as a key in the dictionary, the second statement causes a `KeyError`.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What happens when the following statements run?
 
@@ -729,7 +669,7 @@ d1 = {'a': 1, 'b': 2}
 d2 = {d1: 3}
 ```
 
-- [ ] They add `d1` as a key in `d3`.
+- [ ] They add `d1` as a key in `d2`.
 - [ ] They cause a `KeyError` because `d1` is not in `d2`.
 - [ ] They cause a `ValueError` because `3` cannot appear as a value in a dictionary.
 - [X] They cause a `TypeError` because a dictionary cannot appear as a key in a dictionary.
@@ -737,10 +677,9 @@ d2 = {d1: 3}
 
 ### Rationale
 - Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary.
-- Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary, but that's not a `KeyError.`
-- Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary, but that's not a `ValueError.`
+- Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary, but that's not a `KeyError`.
+- Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary, but that's not a `ValueError`.
 - Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary.
-<!-- #endregion -->
 
 # Title
 Chapter 11
@@ -748,7 +687,6 @@ Chapter 11
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 Which one of these expressions is NOT a tuple?
 - [ ] `tuple('abc')`
@@ -759,13 +697,11 @@ Which one of these expressions is NOT a tuple?
 
 ### Rationale
 - The value of this expression is a tuple with the elements `'a'`, `'b'`, and `'c'`.
-- Because of the comma at the end, the value if this expression is a tuple with on element, `'abc'`.
-- Because of the comma, the value if this expression is a tuple with on element, `'abc'`. The parentheses are not required.
+- Because of the comma at the end, the value of this expression is a tuple with one element, `'abc'`.
+- Because of the comma, the value of this expression is a tuple with one element, `'abc'`. The parentheses are not required.
 - The parentheses alone do not make a tuple, so the value of this expression is just the string `'abc'`.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is the result of these statements?
 
@@ -787,9 +723,7 @@ d = {t: s}
 - The syntax is correct -- if there is a single item in a dictionary, a comma is legal but not required.
 - These statements create a dictionary with one item that maps from a tuple to a list.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What does this function do?
 
@@ -810,7 +744,6 @@ def printall(*args):
 - This function can take any number of arguments, not just a single argument.
 - It takes any number of arguments and "packs" them into a tuple, then loops through the tuple in reverse order and prints the elements.
 
-<!-- #endregion -->
 
 ### Question
 What is the value of this expression?
@@ -831,14 +764,12 @@ What is the value of this expression?
 - When tuples are compared, the first elements are compared first.
 
 
-
 # Title
 Chapter 12
 
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 Assuming that `t` is a list of strings, what does the following line of code do?
 ```
@@ -847,7 +778,7 @@ sorted(t, key=len)
 
 - [ ] Modifies `t` and sorts the elements in alphabetical order.
 - [ ] Makes a new list that contains the elements in alphabetical order.
-- [ ] Modifies `t` and sorts the elements from shortest to longest
+- [ ] Modifies `t` and sorts the elements from shortest to longest.
 - [X] Makes a new list that contains the elements in order from shortest to longest. 
 
 
@@ -856,9 +787,7 @@ sorted(t, key=len)
 - With `key=len`, `sorted` sorts the elements from shortest to longest. 
 - `sorted` makes a new list -- it doesn't modify `t`.
 - `sorted` makes a new list, and `key=len` sorts the elements from shortest to longest.
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is the effect of running this program?
 
@@ -880,9 +809,7 @@ for line in open(filename):
 - Because `word_counter` is initially empty, the program causes a `KeyError` when it tries to increment a value in `word_counter`.
 - Because `word_counter` is initially empty, the program causes a `KeyError` when it tries to increment a value in `word_counter`.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 
 If we run the following lines of code, what is the probability that the result is `'a'`?
@@ -905,7 +832,6 @@ random.choices(letters, weights=weights)
 - The weight associated with `'a'` is `1` and the total of the weights is `6`.
 - The weight associated with `'a'` is `1` and the total of the weights is `6`, so the probability of choosing `'a'` is `1/6`.
 
-<!-- #endregion -->
 
 # Title
 Chapter 13
@@ -913,10 +839,9 @@ Chapter 13
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 If the current working directory is `/home/dinsdale/photos` and you open a file using the relative path `mar-2023/photo1.jpg`, which of these expressions computes the absolute path of the file that gets opened?
-- [ ] `''.join('/home/dinsdale/photos', 'mar-2023/photo1.jpg')`
+- [ ] `''.join(['/home/dinsdale/photos', 'mar-2023/photo1.jpg'])`
 - [ ] `'mar-2023/photo1.jpg' + '/home/dinsdale/photos'`
 - [ ] `'/home/dinsdale/photos' + 'mar-2023/photo1.jpg'`
 - [X] `os.path.join('/home/dinsdale/photos', 'mar-2023/photo1.jpg')`
@@ -928,9 +853,7 @@ If the current working directory is `/home/dinsdale/photos` and you open a file 
 - This way of using the string concatenation does not put a slash between the directories in the path.
 - The `os.path.join` function joins the two paths with either a forward or backward slash, depending on which operating system is running.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 After these statements run, what is the value of `s`?
 
@@ -951,9 +874,7 @@ s = f'x is an int, {x}. t is a tuple, {t}'
 - Any valid expression can be used in an f-string.
 - Inside the f-string, the expressions in curly braces are replaced with string representations of their values.
 - Inside the f-string, the expressions in curly braces are replaced with string representations of their values.
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 
 After these statements run, what is the value of `db[key]`?
@@ -976,7 +897,6 @@ db[key].append('stop')
 - The `append` method does not work as intended here because it modifies only the list in memory, not the one in the database.
 - The `append` method does not work as intended here because it modifies only the list in memory, not the one in the database.
 - The `append` method does not work as intended here because it modifies only the list in memory, not the one in the database.
-<!-- #endregion -->
 
 # Title
 Chapter 14
@@ -984,7 +904,6 @@ Chapter 14
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 To create an instance of a programmer-defined type, what is the correct order for these steps?
 - [ ] Assign values to attributes, define a class, instantiate an object.
@@ -999,9 +918,7 @@ To create an instance of a programmer-defined type, what is the correct order fo
 - You can't assign attributes before you instantiate an object.
 - You have to define a class, instantiate an object, and assign values to attributes, in that order.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 
 These statements are intended to define a `Date` class and create a `Date` object. What is wrong with them?
@@ -1027,9 +944,7 @@ date.day = 11
 - The attributes of an object can be any type, and they don't have to be the same.
 - Dot notation is used to set the value of an attribute and to read the value.
 - A class definition has to start with `class`. A function definition starts with `def`.
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 Which of these is a correct description of this function? You can assume that `date` is a `Date` object that has a `day` attribute.
 
@@ -1051,7 +966,6 @@ def increment_day(date):
 - This function modifies an attribute of the `Date` object it gets as a parameter, so it is an impure function.
 - This function modifies an attribute of the `Date` object it gets as a parameter, so it is an impure function -- and it returns a reference to the same `Date` object.
 
-<!-- #endregion -->
 
 # Title
 Chapter 15
@@ -1059,7 +973,6 @@ Chapter 15
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 Suppose `time` is a `Time` object, and `increment` is an instance method defined in the `Time` class. 
 What happens when we invoke `increment` like this?
@@ -1069,8 +982,8 @@ time.increment(42)
 ```
 
 - [ ] `42` is assigned to the first parameter of the method, and `time` is assigned to the second.
-- [ ] This is an error because `increment` requires one arguments and two are provided.
-- [ ] This is an error because `increment` requires two argument and only one is provided.
+- [ ] This is an error because `increment` requires one argument and two are provided.
+- [ ] This is an error because `increment` requires two arguments and only one is provided.
 - [X] `time` is assigned to the first parameter of the method and `42` is assigned to the second.
 
 
@@ -1080,11 +993,9 @@ time.increment(42)
 - Only one argument appears in parentheses, but `time` is passed to `increment` as the first argument.
 - `time` is assigned to the first parameter of the method, which is conventionally called `self`, and `42` is assigned to the second.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
-Suppose `time` is a `Time` object, and `int_to_time` is a static method defined in the `Time` class. 
+Suppose `int_to_time` is a static method defined in the `Time` class. 
 What happens when we invoke `int_to_time` like this?
 
 ```
@@ -1103,9 +1014,7 @@ start = Time.int_to_time(34800)
 - Because `Time` is a class, it is not passed as an argument.
 - `34800` is assigned to the first parameter of `int_to_time`. Because `Time` is a class, it is not passed as an argument.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 Which of the following statements is NOT correct?
 
@@ -1121,7 +1030,6 @@ Which of the following statements is NOT correct?
 - This statement is correct. 
 - Defining a new class does not invoke its `__init__` method. 
 
-<!-- #endregion -->
 
 # Title
 Chapter 16
@@ -1129,7 +1037,6 @@ Chapter 16
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 Which of these is the term for a function or method that works with more than one type of object?
 - [ ] pure
@@ -1144,9 +1051,7 @@ Which of these is the term for a function or method that works with more than on
 - A static method is associated with a class, rather than an object.
 - A function that works with more than one type is polymorphic.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 
 What is wrong with this class definition?
@@ -1167,14 +1072,12 @@ class Point:
 
 
 ### Rationale
-- The names of special methods like `__init__` begin and end with a two underscore characters. 
+- The names of special methods like `__init__` begin and end with two underscore characters. 
 - A triple-quoted string inside a class definition is a docstring that provides information about the class.
 - The first parameter of a method is conventionally named `self`.
 - The assignment statements should be the other way around, as in `self.x = x` and `self.y = y`.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 Suppose we define a `Line` class so that each `Line` object has two attributes that refer to `Point` objects.
 
@@ -1199,7 +1102,6 @@ If we import the `copy` function from the `copy` module and use it to make a cop
 - The `copy` function copies the `Line` object but not the `Point` objects it contains.
 - The `copy` function makes a shallow copy, which copies the `Line` object but not the `Point` objects it contains.
 
-<!-- #endregion -->
 
 # Title
 Chapter 17
@@ -1207,9 +1109,8 @@ Chapter 17
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
-Which of the following is NOT a correct statement about class variables.
+Which of the following is NOT a correct statement about class variables?
 - [ ] They are defined inside a class definition, but not inside a method definition.
 - [ ] They can be accessed using a class object.
 - [ ] They can have any type.
@@ -1217,14 +1118,12 @@ Which of the following is NOT a correct statement about class variables.
 
 
 ### Rationale
-- It is true that class variables are defined inside a class definition, but not inside a method definition
+- It is true that class variables are defined inside a class definition, but not inside a method definition.
 - It is true that class variables can be accessed using a class object.
 - It is true that class variables can have any type.
 - This statement is false -- that is, class variables are mutable.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 Suppose we define a `Card` class like this:
 
@@ -1236,7 +1135,7 @@ class Card:
         self.rank = rank
 ```
 
-If this class does not provide an `__eq__` method, what happens if we compare two cards using the `==` operator.
+If this class does not provide an `__eq__` method, what happens if we compare two cards using the `==` operator?
 
 - [ ] That's an error.
 - [ ] By default, only the first attribute is compared.
@@ -1250,9 +1149,7 @@ If this class does not provide an `__eq__` method, what happens if we compare tw
 - If a class provides no `__eq__`, the `==` operator checks whether objects are identical. 
 - If a class provides no `__eq__`, the `==` operator checks whether objects are identical.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 Which of the following statements is true when one class inherits from another, like this:
 
@@ -1273,9 +1170,7 @@ class Hand(Deck):
 - If `Hand` inherits from `Deck`, a `Hand` object should have all of the attributes of a `Deck` object, but it can have more.
 - If `Hand` inherits from `Deck`, every method defined in the `Deck` class should work with a `Hand` object.
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What do we call it when one method invokes another to do most or all of the work?
 - [ ] inheritance
@@ -1289,7 +1184,6 @@ What do we call it when one method invokes another to do most or all of the work
 - Generalization is when we add a parameter to a function to make its capabilities more general.
 - Specialization is a way of using inheritance to create a new class that is a specialized version of an existing class.
 - Delegation is when one method passes responsibility to another method to do most or all of the work.
-<!-- #endregion -->
 
 # Title
 Chapter 18
@@ -1297,7 +1191,6 @@ Chapter 18
 ## Quiz Type
 Formative
 
-<!-- #region -->
 ### Question
 What is the result of this operation?
 
@@ -1313,14 +1206,13 @@ set('abba') <= set('abc')
 
 ### Rationale
 - With `set` objects, the `<=` operator checks whether one set is a subset of another -- it does not compare the length of the strings.
-- When the set is create, the duplicate elements of the string are removed.
+- When the set is created, the duplicate elements of the string are removed.
 - The `set` function creates a new set -- it does not modify the string.
 - With `set` objects, the `<=` operator checks whether one set is a subset of another -- including the possibility that they are equal.
 
-<!-- #endregion -->
 
 ### Question
-What is the value of counter after these statements run?
+What is the value of `counter` after these statements run?
 
 ```
 from collections import Counter
@@ -1338,9 +1230,8 @@ counter = Counter(t)
 - The result is a `Counter` object, not a tuple.
 - The result is a `Counter` object, not a dictionary.
 - The result is a `Counter` object that contains items like a dictionary, not a tuple.
-- The result is a `Counter` object that contains the elements of the list and the number of times each one appears.
+- The result is a `Counter` object that contains the elements of the tuple and the number of times each one appears.
 
-<!-- #region -->
 ### Question
 Which comment about this class definition is correct?
 
@@ -1349,7 +1240,7 @@ class Game:
     """Represents a game with a dictionary that maps from teams to scores."""
     
     def __init__(self, scores={}):
-        self.scores = score
+        self.scores = scores
 ```
 
 - [ ] All `Game` objects refer to different dictionaries.
@@ -1363,9 +1254,7 @@ class Game:
 - All `Game` objects created with the default value get a reference to it, but a `Game` object that overrides `scores` will refer to a different dictionary.
 - The initial value of `scores` is an empty dictionary, but items might be added to it later. 
 - All `Game` objects created with the default value get a reference to the same dictionary -- so if any of them modify it, they all see the change.
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 
 What is the value of this expression?
@@ -1385,9 +1274,7 @@ all(number < 10 for number in [2, 4, 6, 8])
 - The expression in parentheses is correct -- it is a generator expression, not a list comprehension.
 - The values produced by the generator expression are all `True`.
 - The values produced by the generator expression are all `True`, so the result from the `all` function is `True`.
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is the value of `d[key]` after these statements run, or is there an error?
 
@@ -1408,9 +1295,8 @@ d[key].append('woods')
 ### Rationale
 - A tuple can appear as a key in a `defaultdict`, same as in a dictionary.
 - When you look up a key that is not already in this `defaultdict`, the key is added with a new empty list as the value.
-- When the key is added to the `defaultdict`, the corresponding value is an empty list. Then the `append` method add an element to the list.
+- When the key is added to the `defaultdict`, the corresponding value is an empty list. Then the `append` method adds an element to the list.
 - When the key is added to the `defaultdict`, the corresponding value is an empty list. After the `append` method is invoked, the list contains a single element, the string `'woods'`.
-<!-- #endregion -->
 
 ### Question
 
@@ -1435,17 +1321,12 @@ pack_and_print(a=1, b=2)
 - The pack operator, `**`, packs the keyword arguments into a dictionary that maps from keyword names to values.
 
 
-```python
-
-```
-
 # Title
 Think Python
 
 ## Quiz Type
 Summative
 
-<!-- #region -->
 ### Question
 What is the output of this program?
 
@@ -1461,14 +1342,12 @@ str(s) * int(s)
 
 
 ### Rationale
-- `str(s)` is the string `'3'`, and `int(s)` is the integer `3`. See Chapter 1, "chaptertitle".
-- Multiplying a string by the integer `3` repeats the string three times. See Chapter 1, "chaptertitle".
-- When we multiply a string by an integer, the result is a string. See Chapter 1, "chaptertitle".
-- Multiplying a string by the integer `3` repeats the string three times. See Chapter 1, "chaptertitle".
+- `str(s)` is the string `'3'`, and `int(s)` is the integer `3`. See Chapter 1, "Programming as a way of thinking".
+- Multiplying a string by the integer `3` repeats the string three times. See Chapter 1, "Programming as a way of thinking".
+- When we multiply a string by an integer, the result is a string. See Chapter 1, "Programming as a way of thinking".
+- Multiplying a string by the integer `3` repeats the string three times. See Chapter 1, "Programming as a way of thinking".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 For this function to work without causing an error, what are the preconditions for `n`?
 
@@ -1489,14 +1368,12 @@ def countdown(n):
 
 
 ### Rationale
-- `n` can be a `float` with no fraction part, but it can also be an `int`. See Chapter 5, "chaptertitle".
-- If `n` is negative, it recurses until the stack reaches its limit and causes a `RecursionError`. See Chapter 5, "chaptertitle".
-- If `n` is `0`, the function prints `'Blastoff!'` and returns without making a recursive call. See Chapter 5, "chaptertitle".
-- `n` must be non-negative -- that is, positive or `0`. See Chapter 5, "chaptertitle".
+- `n` can be a `float` with no fraction part, but it can also be an `int`. See Chapter 5, "Conditionals and Recursion".
+- If `n` is negative, it recurses until the stack reaches its limit and causes a `RecursionError`. See Chapter 5, "Conditionals and Recursion".
+- If `n` is `0`, the function prints `'Blastoff!'` and returns without making a recursive call. See Chapter 5, "Conditionals and Recursion".
+- `n` must be non-negative -- that is, positive or `0`. See Chapter 5, "Conditionals and Recursion".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is wrong with the following program?
 
@@ -1512,18 +1389,16 @@ def compare(x, y):
 - [ ] It has a syntax error because the last line is not indented.
 - [ ] It has a runtime error because the return value cannot be negative. 
 - [ ] It has a syntax error because it has more than one return statement.
-- [X] It has a logic error because the last line is dead code.
+- [X] It has a semantic error because the last line is dead code.
 
 
 ### Rationale
-- The syntax of the program is correct, but there is an error. See Chapter 6, "chaptertitle".
-- Any value is a legal return value -- but there is a logic error because the last line can never run. See Chapter 6, "chaptertitle".
-- The syntax of the program is correct, but there is a logic error because the last line can never run. See Chapter 6, "chaptertitle".
-- There is a `return` statement in both branches of the `if` statement, so the last line can never run -- it is dead code. See Chapter 6, "chaptertitle".
+- The syntax of the program is correct, but there is an error. See Chapter 6, "Return Values".
+- Any value is a legal return value -- but there is a semantic error because the last line can never run. See Chapter 6, "Return Values".
+- The syntax of the program is correct, but there is a semantic error because the last line can never run. See Chapter 6, "Return Values".
+- There is a `return` statement in both branches of the `if` statement, so the last line can never run -- it is dead code. See Chapter 6, "Return Values".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is the output of this program, or is there an error?
 ```
@@ -1540,14 +1415,12 @@ print(length)
 
 
 ### Rationale
-- `3` does get assigned to `length`, but the parameter only exists inside the function. See Chapter 6, "chaptertitle".
-- The first argument gets assigned to `length`, but the parameter only exists inside the function. See Chapter 6, "chaptertitle".
-- The variables are part of an arithmetic expression, which can be used in a return statement. See Chapter 6, "chaptertitle".
-- Parameters and local variables only exist inside the functions where they are defined. See Chapter 6, "chaptertitle".
+- `3` does get assigned to `length`, but the parameter only exists inside the function. See Chapter 6, "Return Values".
+- The first argument gets assigned to `length`, but the parameter only exists inside the function. See Chapter 6, "Return Values".
+- The variables are part of an arithmetic expression, which can be used in a return statement. See Chapter 6, "Return Values".
+- Parameters and local variables only exist inside the functions where they are defined. See Chapter 6, "Return Values".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is wrong with the following program?
 
@@ -1565,32 +1438,28 @@ for digit in s:
 
 
 ### Rationale
-- The program generates a `TypeError`. See Chapter 7, "chaptertitle".
-- Any legal variable name can be used as a loop variable. See Chapter 7, "chaptertitle".
-- `int` is a type, but it can be used as a function to convert other types to integers. See Chapter 7, "chaptertitle".
-- `s` is an integer, which is not a sequence, so it can't be looped over. See Chapter 7, "chaptertitle".
+- The program generates a `TypeError`. See Chapter 7, "Iteration and Search".
+- Any legal variable name can be used as a loop variable. See Chapter 7, "Iteration and Search".
+- `int` is a type, but it can be used as a function to convert other types to integers. See Chapter 7, "Iteration and Search".
+- `s` is an integer, which is not a sequence, so it can't be looped over. See Chapter 7, "Iteration and Search".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
-Which of these is a correct way to convert a string to lowercase?
+If `s` is a string, which of these is a correct way to convert it to lowercase?
 
-- [ ] `lower(str)`
-- [ ] `str = lower(str)`
-- [ ] `str.lower()`
-- [X] `str = str.lower()`
+- [ ] `lower(s)`
+- [ ] `s = lower(s)`
+- [ ] `s.lower()`
+- [X] `s = s.lower()`
 
 
 ### Rationale
-- `lower` is a method, so it has to be invoked on a string, as in `str.lower()`; and it creates a new string, which should be assigned to a variable. See Chapter 7, "chaptertitle".
-- `lower` is a method, so it has to be invoked on a string, as in `str.lower()`. See Chapter 7, "chaptertitle".
-- `str.lower()` creates a new string, but if the string is not assigned to a variable, there is no way to access it. See Chapter 7, "chaptertitle".
-- `str.lower()` creates a new string -- if we assign it back to `str`, the new string replaces the old one. See Chapter 7, "chaptertitle".
+- `lower` is a method, so it has to be invoked on a string, as in `s.lower()`; and it creates a new string, which should be assigned to a variable. See Chapter 7, "Iteration and Search".
+- `lower` is a method, so it has to be invoked on a string, as in `s.lower()`. See Chapter 7, "Iteration and Search".
+- `s.lower()` creates a new string, but if the string is not assigned to a variable, there is no way to access it. See Chapter 7, "Iteration and Search".
+- `s.lower()` creates a new string -- if we assign it back to `s`, the new string replaces the old one. See Chapter 7, "Iteration and Search".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 The following function takes two strings as parameters and returns a string.
 Which of the following docstrings is a correct description of what this function does?
@@ -1606,18 +1475,16 @@ def compute(word1, word2):
 
 - [ ] Returns the letters that appear in either `word1` or `word2` or both.
 - [ ] Returns the letters that appear in either `word1` or `word2` but not both.
-- [ ] Returns the letters that appear in `word1` but not  `word2`.
+- [ ] Returns the letters that appear in `word1` but not `word2`.
 - [X] Returns the letters that appear in both `word1` and `word2`.
 
 
 ### Rationale
-- In order to get to the `append` method, `letter` has to appear in both words. See Chapter 7, "chaptertitle".
-- In order to get to the `append` method, `letter` has to appear in both words. See Chapter 7, "chaptertitle".
-- In order to get to the `append` method, `letter` has to appear in both words. See Chapter 7, "chaptertitle".
-- This function returns a string that contains the letters that appear in both `word1` and `word2`. See Chapter 7, "chaptertitle".
-<!-- #endregion -->
+- In order to get to the `append` method, `letter` has to appear in both words. See Chapter 7, "Iteration and Search".
+- In order to get to the `append` method, `letter` has to appear in both words. See Chapter 7, "Iteration and Search".
+- In order to get to the `append` method, `letter` has to appear in both words. See Chapter 7, "Iteration and Search".
+- This function returns a string that contains the letters that appear in both `word1` and `word2`. See Chapter 7, "Iteration and Search".
 
-<!-- #region -->
 ### Question
 This function is intended to convert the first letter of a word to lowercase and the rest of the letters to uppercase.
 
@@ -1637,18 +1504,16 @@ word = lower_upper('Python')
 - [ ] The result is a syntax error because a `:` character cannot appear inside the bracket operator.
 - [ ] The result is a runtime error because `0` is not a valid index.
 - [ ] The program is correct -- the value of `word` is `'pYTHON'`.
-- [X] The program contains a logic error -- the value of `word` is `None`.
+- [X] The program contains a semantic error -- the value of `word` is `None`.
 
 
 ### Rationale
-- A colon inside a bracket operator indicates a slice -- in this case, it selects all characters from the second to the end. See Chapter 8, "chaptertitle".
-- `0` is a valid index -- it select the first character in the string. See Chapter 8, "chaptertitle".
-- The function has no return statement, so it returns `None`. Assigning a new value to the parameter `word` has no effect outside the function. See Chapter 9, "chaptertitle".
-- The function has no return statement, so it returns `None`. Assigning a new value to the parameter `word` has no effect outside the function. See Chapter 9, "chaptertitle".
+- A colon inside a bracket operator indicates a slice -- in this case, it selects all characters from the second to the end. See Chapter 8, "Strings and Regular Expressions".
+- `0` is a valid index -- it selects the first character in the string. See Chapter 8, "Strings and Regular Expressions".
+- The function has no return statement, so it returns `None`. Assigning a new value to the parameter `word` has no effect outside the function. See Chapter 9, "Lists".
+- The function has no return statement, so it returns `None`. Assigning a new value to the parameter `word` has no effect outside the function. See Chapter 9, "Lists".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 If we use the `search` function in the `re` module, which of the following strings matches this pattern: `r'^a(bc|de)f$'`?
 - [ ] `'abcdef'`
@@ -1658,14 +1523,12 @@ If we use the `search` function in the `re` module, which of the following strin
 
 
 ### Rationale
-- The pattern `'(bc|de)'` requires either `'bc'` or `'de'` but not both. See Chapter 8, "chaptertitle".
-- The pattern `^a` requires the letter `a` at the beginning of the string. See Chapter 8, "chaptertitle".
-- The pattern `f$` requires the letter `f` at the end of the string. See Chapter 8, "chaptertitle".
-- This string has `'a'` at the beginning `'f'` at the end, and `'de'` in the middle. See Chapter 8, "chaptertitle".
+- The pattern `'(bc|de)'` requires either `'bc'` or `'de'` but not both. See Chapter 8, "Strings and Regular Expressions".
+- The pattern `^a` requires the letter `a` at the beginning of the string. See Chapter 8, "Strings and Regular Expressions".
+- The pattern `f$` requires the letter `f` at the end of the string. See Chapter 8, "Strings and Regular Expressions".
+- This string has `'a'` at the beginning, `'f'` at the end, and `'de'` in the middle. See Chapter 8, "Strings and Regular Expressions".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is the result of this program?
 
@@ -1681,14 +1544,12 @@ t[1:-1]
 
 
 ### Rationale
-- Negative indices count backward from the end of the sequence, so the slice index `1:-1` selects elements from the second to the second-to-last, including both. See Chapter 9, "chaptertitle".
-- The slice index `1:-1` excludes the first element of the list. See Chapter 9, "chaptertitle".
-- The slice index `1:-1` excludes the last element of the list. See Chapter 9, "chaptertitle".
-- The slice index `1:-1` selects elements from the second to the second-to-last, including both. See Chapter 9, "chaptertitle".
+- Negative indices count backward from the end of the sequence, so the slice index `1:-1` selects elements from the second to the second-to-last, including both. See Chapter 9, "Lists".
+- The slice index `1:-1` excludes the first element of the list. See Chapter 9, "Lists".
+- The slice index `1:-1` excludes the last element of the list. See Chapter 9, "Lists".
+- The slice index `1:-1` selects elements from the second to the second-to-last, including both. See Chapter 9, "Lists".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 After these statements run, what are the values of `a` and `b`, or is there an error?
 
@@ -1704,14 +1565,12 @@ a, b = b, a
 
 
 ### Rationale
-- The values on the right are tuples, but these are legal assignment statements. See Chapter 11, "chaptertitle".
-- An assignment statement can have a tuple of variables on the left. See Chapter 11, "chaptertitle".
-- After the first assignment `a` is `1` and `b` is `2`, but the second assignment swaps the values. See Chapter 11, "chaptertitle".
-- After the first assignment `a` is `1` and `b` is `2`, and then the second assignment swaps the values. See Chapter 11, "chaptertitle".
+- The values on the right are tuples, but these are legal assignment statements. See Chapter 11, "Tuples".
+- An assignment statement can have a tuple of variables on the left. See Chapter 11, "Tuples".
+- After the first assignment `a` is `1` and `b` is `2`, but the second assignment swaps the values. See Chapter 11, "Tuples".
+- After the first assignment `a` is `1` and `b` is `2`, and then the second assignment swaps the values. See Chapter 11, "Tuples".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 Why can't a list appear as a key in a dictionary?
 
@@ -1722,14 +1581,12 @@ Why can't a list appear as a key in a dictionary?
 
 
 ### Rationale
-- If the elements of a list are not totally ordered, they are not sortable, but that's not the reason a list can't appear as a key in a dictionary. See Chapter 10, "chaptertitle" and Chapter 11, "chaptertitle".
-- The elements in a list can be different types, but that's not the reason a list can't appear as a key in a dictionary. See Chapter 10, "chaptertitle" and Chapter 11, "chaptertitle".
-- Lists can contain any number of elements, but that's not the reason a list can't appear as a key in a dictionary. See Chapter 10, "chaptertitle" and Chapter 11, "chaptertitle".
-- If an object is mutable, it isn't hashable, which means it can't be used as a key in a dictionary. See Chapter 10, "chaptertitle" and Chapter 11, "chaptertitle".
+- If the elements of a list are not totally ordered, they are not sortable, but that's not the reason a list can't appear as a key in a dictionary. See Chapter 10, "Dictionaries" and Chapter 11, "Tuples".
+- The elements in a list can be different types, but that's not the reason a list can't appear as a key in a dictionary. See Chapter 10, "Dictionaries" and Chapter 11, "Tuples".
+- Lists can contain any number of elements, but that's not the reason a list can't appear as a key in a dictionary. See Chapter 10, "Dictionaries" and Chapter 11, "Tuples".
+- If an object is mutable, it isn't hashable, which means it can't be used as a key in a dictionary. See Chapter 10, "Dictionaries" and Chapter 11, "Tuples".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is the primary difference between a list and a tuple?
 - [ ] A list can contain any type; a tuple can only contain hashable types.
@@ -1739,14 +1596,12 @@ What is the primary difference between a list and a tuple?
 
 
 ### Rationale
-- Both lists and tuples can contain any type. Keys in dictionaries must be hashable. See Chapter 11, "chaptertitle".
-- Both lists and tuples can contain any type. Keys in dictionaries must be hashable. See Chapter 11, "chaptertitle".
-- It's the other way around: a list is mutable; a tuple is immutable. See Chapter 11, "chaptertitle".
-- A tuple is immutable. See Chapter 11, "chaptertitle".
+- Both lists and tuples can contain any type. Keys in dictionaries must be hashable. See Chapter 11, "Tuples".
+- Both lists and tuples can contain any type. Keys in dictionaries must be hashable. See Chapter 11, "Tuples".
+- It's the other way around: a list is mutable; a tuple is immutable. See Chapter 11, "Tuples".
+- A tuple is immutable. See Chapter 11, "Tuples".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 Which of these is a correct way to reverse the elements of a list in place -- that is, by modifying an existing list without creating a new list?
 
@@ -1757,14 +1612,12 @@ Which of these is a correct way to reverse the elements of a list in place -- th
 
 
 ### Rationale
-- This statement works, but it creates a new list and does not modify `t`. See Chapter 11, "chaptertitle".
-- `reverse(t)` creates a new list, but if the list is not assigned to a variable, there is no way to access it. See Chapter 11, "chaptertitle".
-- The return value from `t.reverse()` is `None`, so this statement sets `t` to `None`. See Chapter 11, "chaptertitle".
-- `t.reverse()` reverses the elements of `t` without creating a new list. See Chapter 11, "chaptertitle".
+- `reversed` does not modify `t` -- it returns an iterator that loops through the elements in reverse order, so this statement replaces the list with the iterator. See Chapter 11, "Tuples".
+- `reversed(t)` does not modify `t` -- it returns an iterator, and if the iterator is not assigned to a variable, there is no way to use it. See Chapter 11, "Tuples".
+- The return value from `t.reverse()` is `None`, so this statement sets `t` to `None`. See Chapter 11, "Tuples".
+- `t.reverse()` reverses the elements of `t` without creating a new list. See Chapter 11, "Tuples".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is the result of this program?
 
@@ -1780,14 +1633,12 @@ sorted(s, key=len, reverse=True)
 
 
 ### Rationale
-- `key=len` sorts by length, rather than alphabetical order, and `reverse=True` sorts in descending order. See Chapter 12, "chaptertitle".
-- `reverse=True` sorts in descending order. See Chapter 12, "chaptertitle".
-- `key=len` sorts by length, rather than alphabetical order. See Chapter 12, "chaptertitle".
-- `key=len` sorts by length, rather than alphabetical order, and `reverse=True` sorts in descending order, so the result is `['bbb', 'aa', 'c']`. See Chapter 12, "chaptertitle".
+- `key=len` sorts by length, rather than alphabetical order, and `reverse=True` sorts in descending order. See Chapter 12, "Text Analysis and Generation".
+- `reverse=True` sorts in descending order. See Chapter 12, "Text Analysis and Generation".
+- `key=len` sorts by length, rather than alphabetical order. See Chapter 12, "Text Analysis and Generation".
+- `key=len` sorts by length, rather than alphabetical order, and `reverse=True` sorts in descending order, so the result is `['bbb', 'aa', 'c']`. See Chapter 12, "Text Analysis and Generation".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What does the following function do?
 ```
@@ -1807,14 +1658,12 @@ def compute(d1, d2):
 
 
 ### Rationale
-- This function makes and returns a new dictionary. See Chapter 12, "chaptertitle".
-- This function makes and returns a new dictionary. See Chapter 12, "chaptertitle".
-- The new dictionary has all keys from either dictionary. See Chapter 12, "chaptertitle".
-- The new dictionary has all keys from either dictionary. If the same key appears in both, it gets the value from `d2`. See Chapter 12, "chaptertitle".
+- This function makes and returns a new dictionary. See Chapter 12, "Text Analysis and Generation".
+- This function makes and returns a new dictionary. See Chapter 12, "Text Analysis and Generation".
+- The new dictionary has all keys from either dictionary. See Chapter 12, "Text Analysis and Generation".
+- The new dictionary has all keys from either dictionary. If the same key appears in both, it gets the value from `d2`. See Chapter 12, "Text Analysis and Generation".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 Suppose we run the following program to get the current working directory:
 
@@ -1840,14 +1689,12 @@ What is the absolute path of the file that gets checked?
 
 
 ### Rationale
-- Because `'apr-2023/photo1.jpg'` is a relative path, it gets joined to the current working directory. See Chapter 13, "chaptertitle".
-- Because `'apr-2023/photo1.jpg'` is a relative path, it gets joined to the current working directory. See Chapter 13, "chaptertitle".
-- Because `'apr-2023/photo1.jpg'` is a relative path, it gets joined to the current working directory. See Chapter 13, "chaptertitle".
-- Because `'apr-2023/photo1.jpg'` is a relative path, it gets joined to the current working directory. See Chapter 13, "chaptertitle".
+- Because `'apr-2023/photo1.jpg'` is a relative path, it gets joined to the current working directory. See Chapter 13, "Files and Databases".
+- Because `'apr-2023/photo1.jpg'` is a relative path, it gets joined to the current working directory. See Chapter 13, "Files and Databases".
+- Because `'apr-2023/photo1.jpg'` is a relative path, it gets joined to the current working directory. See Chapter 13, "Files and Databases".
+- Because `'apr-2023/photo1.jpg'` is a relative path, it gets joined to the current working directory. See Chapter 13, "Files and Databases".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is the result of this program?
 ```
@@ -1861,19 +1708,17 @@ class Day:
 print(Day('Wednesday'))
 ```
 - [ ] `f'Today is Wednesday'`
-- [ ] `'Today is {Wednesday}'`
-- [ ] `f'Today is {date.day}'`
-- [X] `'Today is Wednesday'`
+- [ ] `Today is {Wednesday}`
+- [ ] `Today is {date.day}`
+- [X] `Today is Wednesday`
 
 
 ### Rationale
-- The `f` before the string indicates that it is a format string. See Chapter 15, "chaptertitle".
-- The curly braces don't appear in the return value. See Chapter 15, "chaptertitle".
-- The `f` before the string indicates that it is a format string, and the expression in curly braces gets replaced by its value. See Chapter 15, "chaptertitle".
-- In a format string, the expression in curly braces gets replaced by its value. See Chapter 15, "chaptertitle".
-<!-- #endregion -->
+- The `f` before the string indicates that it is a format string. See Chapter 15, "Classes and Methods".
+- The curly braces don't appear in the return value. See Chapter 15, "Classes and Methods".
+- The `f` before the string indicates that it is a format string, and the expression in curly braces gets replaced by its value. See Chapter 15, "Classes and Methods".
+- In a format string, the expression in curly braces gets replaced by its value. See Chapter 15, "Classes and Methods".
 
-<!-- #region -->
 ### Question
 Assuming that the `Animal` class exists, what is the output of this program?
 
@@ -1892,14 +1737,12 @@ isinstance(cat, Animal)
 
 
 ### Rationale
-- It's true that an instance of a parent class is not an instance of the child class, but that's not what's being checked here. See Chapter 17, "chaptertitle".
-- Every instance of a child class is also an instance of the parent class. See Chapter 17, "chaptertitle".
-- An instance of a parent class is not an instance of the child class. See Chapter 17, "chaptertitle".
-- In this example, `Cat` is a child class of `Animal`, so every `Cat` object is also an instance of `Animal`. See Chapter 17, "chaptertitle".
+- It's true that an instance of a parent class is not an instance of the child class, but that's not what's being checked here. See Chapter 17, "Inheritance".
+- Every instance of a child class is also an instance of the parent class. See Chapter 17, "Inheritance".
+- An instance of a parent class is not an instance of the child class. See Chapter 17, "Inheritance".
+- In this example, `Cat` is a child class of `Animal`, so every `Cat` object is also an instance of `Animal`. See Chapter 17, "Inheritance".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 What is the result of this program?
 
@@ -1918,14 +1761,12 @@ p[1]
 
 
 ### Rationale
-- The attributes of `p` are `x` and `y`, but because `p` is a `namedtuple`, we can use the  bracket operator to access the elements by index. See Chapter 18, "chaptertitle".
-- The attributes of `p` are `x` and `y`, but because `p` is a `namedtuple`, we can use the  bracket operator to access the elements by index. See Chapter 18, "chaptertitle".
-- In a named tuple -- as in a tuple -- the index of the first element is `0`. See Chapter 18, "chaptertitle".
-- In a named tuple -- as in a tuple -- the index of the second element is `1`. See Chapter 18, "chaptertitle".
+- The attributes of `p` are `x` and `y`, but because `p` is a `namedtuple`, we can use the bracket operator to access the elements by index. See Chapter 18, "Python Extras".
+- The attributes of `p` are `x` and `y`, but because `p` is a `namedtuple`, we can use the bracket operator to access the elements by index. See Chapter 18, "Python Extras".
+- In a named tuple -- as in a tuple -- the index of the first element is `0`. See Chapter 18, "Python Extras".
+- In a named tuple -- as in a tuple -- the index of the second element is `1`. See Chapter 18, "Python Extras".
 
-<!-- #endregion -->
 
-<!-- #region -->
 ### Question
 We can call the built-in function `round` like this:
 
@@ -1935,7 +1776,7 @@ import math
 round(math.pi, ndigits=3)
 ```
 
-The result is the value of `math.pi` round off to three decimal places.
+The result is the value of `math.pi` rounded off to three decimal places.
 Now suppose we have the positional argument in a tuple and the keyword argument in a dictionary, like this:
 
 ```
@@ -1952,25 +1793,8 @@ Which of these is a correct way to call `round` and get the same result?
 
 
 ### Rationale
-- In order to pass the elements of `args` as positional arguments, we have to unpack them with the `*` operator. Similarly, to pass the items in `kwargs` as keyword arguments, we have to unpack them with the `**` operator. See Chapter 18, "chaptertitle".
-- To pass the items in `kwargs` as keyword arguments, we have to unpack them with the `**` operator. See Chapter 18, "chaptertitle".
-- To pass the elements of `args` as positional arguments, we have to unpack them with the `*` operator. See Chapter 18, "chaptertitle".
-- The `*` operator unpacks the elements of `args` and the `**` operator unpacks the items in `kwargs`. See Chapter 18, "chaptertitle".
+- In order to pass the elements of `args` as positional arguments, we have to unpack them with the `*` operator. Similarly, to pass the items in `kwargs` as keyword arguments, we have to unpack them with the `**` operator. See Chapter 18, "Python Extras".
+- To pass the items in `kwargs` as keyword arguments, we have to unpack them with the `**` operator. See Chapter 18, "Python Extras".
+- To pass the elements of `args` as positional arguments, we have to unpack them with the `*` operator. See Chapter 18, "Python Extras".
+- The `*` operator unpacks the elements of `args` and the `**` operator unpacks the items in `kwargs`. See Chapter 18, "Python Extras".
 
-<!-- #endregion -->
-
-<!-- #region -->
-### Question
-- [ ] 
-- [ ] 
-- [ ] 
-- [X] 
-
-
-### Rationale
-- 
-- 
-- 
-- 
-
-<!-- #endregion -->

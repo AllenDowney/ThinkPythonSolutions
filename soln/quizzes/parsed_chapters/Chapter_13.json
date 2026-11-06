@@ -5,7 +5,7 @@
     {
       "question_text": "If the current working directory is `/home/dinsdale/photos` and you open a file using the relative path `mar-2023/photo1.jpg`, which of these expressions computes the absolute path of the file that gets opened?",
       "options": [
-        "`''.join('/home/dinsdale/photos', 'mar-2023/photo1.jpg')`",
+        "`''.join(['/home/dinsdale/photos', 'mar-2023/photo1.jpg'])`",
         "`'mar-2023/photo1.jpg' + '/home/dinsdale/photos'`",
         "`'/home/dinsdale/photos' + 'mar-2023/photo1.jpg'`",
         "`os.path.join('/home/dinsdale/photos', 'mar-2023/photo1.jpg')`"
@@ -17,7 +17,7 @@
         "This way of using the string concatenation does not put a slash between the directories in the path.",
         "The `os.path.join` function joins the two paths with either a forward or backward slash, depending on which operating system is running."
       ],
-      "_end_line": 930
+      "_end_line": 856
     },
     {
       "question_text": "After these statements run, what is the value of `s`?\n\n```\nx = 1\nt = 1,\ns = f'x is an int, {x}. t is a tuple, {t}'\n```",
@@ -34,7 +34,7 @@
         "Inside the f-string, the expressions in curly braces are replaced with string representations of their values.",
         "Inside the f-string, the expressions in curly braces are replaced with string representations of their values."
       ],
-      "_end_line": 953
+      "_end_line": 877
     },
     {
       "question_text": "After these statements run, what is the value of `db[key]`?\n\n```\ndb = shelve.open('anagram_map', 'n')\nkey = 'opst'\ndb[key] = []\ndb[key].append('stop')\n```",
@@ -51,7 +51,7 @@
         "The `append` method does not work as intended here because it modifies only the list in memory, not the one in the database.",
         "The `append` method does not work as intended here because it modifies only the list in memory, not the one in the database."
       ],
-      "_end_line": 978
+      "_end_line": 900
     }
   ]
 }

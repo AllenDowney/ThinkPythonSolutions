@@ -17,7 +17,7 @@
         "`import` is not a legal variable name because it is one of Python's keywords.",
         "`is_even` is a legal variable name because letters, numbers, and the underscore character, `_`, are allowed."
       ],
-      "_end_line": 107
+      "_end_line": 101
     },
     {
       "question_text": "Which of these is NOT a correct way to raise `2` to the third power?",
@@ -30,11 +30,11 @@
       "correct_answer_index": 3,
       "rationales": [
         "Multiplication is a correct way to raise `2` to the third power.",
-        "The exponentiation operator, `**`,  is a correct way to raise `2` to the third power.",
+        "The exponentiation operator, `**`, is a correct way to raise `2` to the third power.",
         "The `pow` function in the `math` module is a correct way to raise `2` to the third power.",
         "In some languages, the `^` operator is used for exponentiation, but in Python it means something else."
       ],
-      "_end_line": 123
+      "_end_line": 115
     },
     {
       "question_text": "When you call a function, what are the values that appear in parentheses?",
@@ -51,7 +51,7 @@
         "An exception is an error detected while a program is running.",
         "The values you pass to a function are called arguments."
       ],
-      "_end_line": 138
+      "_end_line": 130
     },
     {
       "question_text": "If a program runs without producing an error message, but it does not do the right thing, what kind of error is that?",
@@ -68,7 +68,7 @@
         "An exception produces an error message.",
         "A semantic error is when a program runs, but does the wrong thing."
       ],
-      "_end_line": 155
+      "_end_line": 145
     }
   ]
 }

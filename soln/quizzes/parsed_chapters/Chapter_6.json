@@ -17,7 +17,7 @@
         "This function works. Because `3 % 2` is `1`, the second branch of the conditional runs, and the result is `3 * 3 + 1`, which is `10`.",
         "Because `3 % 2` is `1`, the second branch of the conditional runs, and the result is `3 * 3 + 1`, which is `10`."
       ],
-      "_end_line": 421
+      "_end_line": 389
     },
     {
       "question_text": "What do we call a function that does not print anything or have any effect other than a return value?",
@@ -34,7 +34,7 @@
         "Incremental development is a way of writing programs by making small changes and testing.",
         "A pure function does not print anything or have any effect other than a return value."
       ],
-      "_end_line": 438
+      "_end_line": 404
     },
     {
       "question_text": "What is the result of calling this function with the values `x=1.5` and `y=1.6`?\n\n```\ndef is_close(x, y):\nreturn abs(x - y) < 0.2\n```",
@@ -51,7 +51,7 @@
         "The absolute difference between `1.5` and `1.6` is `0.1`, which is less than `0.2`.",
         "The absolute difference between `1.5` and `1.6` is `0.1`, which is less than `0.2`."
       ],
-      "_end_line": 460
+      "_end_line": 424
     }
   ]
 }

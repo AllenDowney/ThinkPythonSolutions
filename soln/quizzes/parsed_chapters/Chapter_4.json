@@ -17,7 +17,7 @@
         "There is an error!",
         "The size is always `50` -- the value of `length` is never used."
       ],
-      "_end_line": 252
+      "_end_line": 234
     },
     {
       "question_text": "What is it called when you put working statements into a new function definition?",
@@ -34,10 +34,10 @@
         "If the statements are working, they don't have to be debugged.",
         "Encapsulation is the process of transforming a sequence of statements into a function definition."
       ],
-      "_end_line": 269
+      "_end_line": 249
     },
     {
-      "question_text": "Here are two versions of the `circle` function.\n\n```\ndef circle(radius):\ncircumference = 2 * math.pi * radius\nn = 30\nlength = circumference / n\npolygon(n, length)\n\ndef circle(radius):\narc(radius,  360)\n```\n\nWhat can we say about these functions?",
+      "question_text": "Here are two versions of the `circle` function.\n\n```\ndef circle(radius):\ncircumference = 2 * math.pi * radius\nn = 30\nlength = circumference / n\npolygon(n, length)\n\ndef circle(radius):\narc(radius, 360)\n```\n\nWhat can we say about these functions?",
       "options": [
         "They have the same implementation, but different interfaces.",
         "They have the same interface _and_ the same implementation.",
@@ -51,7 +51,7 @@
         "They take the same parameter and have the same effect, so they have the same interface -- but they accomplish the effect in different ways, so they have different implementations.",
         "They take the same parameter and have the same effect, so they have the same interface -- but they accomplish the effect in different ways, so they have different implementations."
       ],
-      "_end_line": 300
+      "_end_line": 278
     }
   ]
 }

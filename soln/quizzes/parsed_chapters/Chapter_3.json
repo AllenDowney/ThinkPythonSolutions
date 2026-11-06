@@ -17,7 +17,7 @@
         "A function object is the result of defining a new function.",
         "A parameter is a variable that gets a value when the function is called."
       ],
-      "_end_line": 179
+      "_end_line": 167
     },
     {
       "question_text": "Which kind of statement can be used to run a line of code more than once?",
@@ -34,7 +34,7 @@
         "A print statement displays the value of an expression.",
         "A `for` statement can run a line of code, or multiple lines, more than once."
       ],
-      "_end_line": 196
+      "_end_line": 182
     },
     {
       "question_text": "What is wrong with this function, if anything?\n\n```\ndef bottle_line(n, suffix):\nprint(n)\nprint('bottles of beer')\nprint(suffix)\n```",
@@ -51,7 +51,7 @@
         "All of the statements in the body of the function should be indented.",
         "There is nothing wrong with this function."
       ],
-      "_end_line": 221
+      "_end_line": 205
     }
   ]
 }

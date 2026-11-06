@@ -17,7 +17,7 @@
         "A static method is associated with a class, rather than an object.",
         "A function that works with more than one type is polymorphic."
       ],
-      "_end_line": 1146
+      "_end_line": 1054
     },
     {
       "question_text": "What is wrong with this class definition?\n\n```\nclass Point:\n\"\"\"Represents a point in 2-D space.\"\"\"\n\ndef __init__(self, x, y):\nx = self.x\ny = self.y\n```",
@@ -29,12 +29,12 @@
       ],
       "correct_answer_index": 3,
       "rationales": [
-        "The names of special methods like `__init__` begin and end with a two underscore characters.",
+        "The names of special methods like `__init__` begin and end with two underscore characters.",
         "A triple-quoted string inside a class definition is a docstring that provides information about the class.",
         "The first parameter of a method is conventionally named `self`.",
         "The assignment statements should be the other way around, as in `self.x = x` and `self.y = y`."
       ],
-      "_end_line": 1174
+      "_end_line": 1080
     },
     {
       "question_text": "Suppose we define a `Line` class so that each `Line` object has two attributes that refer to `Point` objects.\n\n```\nclass Line:\ndef __init__(self, p1, p2):\nself.p1 = p1\nself.p2 = p2\n```\n\nIf we import the `copy` function from the `copy` module and use it to make a copy of a `Line` object, which of these statements is true?",
@@ -51,7 +51,7 @@
         "The `copy` function copies the `Line` object but not the `Point` objects it contains.",
         "The `copy` function makes a shallow copy, which copies the `Line` object but not the `Point` objects it contains."
       ],
-      "_end_line": 1201
+      "_end_line": 1105
     }
   ]
 }
