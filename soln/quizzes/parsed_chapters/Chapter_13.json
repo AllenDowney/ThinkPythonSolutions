@@ -1,0 +1,57 @@
+{
+  "title": "Chapter 13",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "If the current working directory is `/home/dinsdale/photos` and you open a file using the relative path `mar-2023/photo1.jpg`, which of these expressions computes the absolute path of the file that gets opened?",
+      "options": [
+        "`''.join('/home/dinsdale/photos', 'mar-2023/photo1.jpg')`",
+        "`'mar-2023/photo1.jpg' + '/home/dinsdale/photos'`",
+        "`'/home/dinsdale/photos' + 'mar-2023/photo1.jpg'`",
+        "`os.path.join('/home/dinsdale/photos', 'mar-2023/photo1.jpg')`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "This way of using the string `join` method does not put a slash between the directories in the path.",
+        "The order of the working directory and the relative path is reversed. Also, this way of using the string concatenation does not put a slash between the directories in the path.",
+        "This way of using the string concatenation does not put a slash between the directories in the path.",
+        "The `os.path.join` function joins the two paths with either a forward or backward slash, depending on which operating system is running."
+      ],
+      "_end_line": 930
+    },
+    {
+      "question_text": "After these statements run, what is the value of `s`?\n\n```\nx = 1\nt = 1,\ns = f'x is an int, {x}. t is a tuple, {t}'\n```",
+      "options": [
+        "This is an error because `{x}` and `{t}` are not valid dictionaries.",
+        "This is an error because a tuple can't be used as a value in an f-string.",
+        "`'x is an int, {x}. t is a tuple, {t}'`",
+        "`'x is an int, 1. t is a tuple, (1,)'`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "`{x}` and `{t}` are not dictionaries -- the curly braces indicate that they are expressions that get replaced with string representations of their values.",
+        "Any valid expression can be used in an f-string.",
+        "Inside the f-string, the expressions in curly braces are replaced with string representations of their values.",
+        "Inside the f-string, the expressions in curly braces are replaced with string representations of their values."
+      ],
+      "_end_line": 953
+    },
+    {
+      "question_text": "After these statements run, what is the value of `db[key]`?\n\n```\ndb = shelve.open('anagram_map', 'n')\nkey = 'opst'\ndb[key] = []\ndb[key].append('stop')\n```",
+      "options": [
+        "`['stop']`",
+        "`'stop'`",
+        "`[], 'stop'`",
+        "`[]`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The `append` method does not work as intended here because it modifies only the list in memory, not the one in the database.",
+        "The `append` method does not work as intended here because it modifies only the list in memory, not the one in the database.",
+        "The `append` method does not work as intended here because it modifies only the list in memory, not the one in the database.",
+        "The `append` method does not work as intended here because it modifies only the list in memory, not the one in the database."
+      ],
+      "_end_line": 978
+    }
+  ]
+}

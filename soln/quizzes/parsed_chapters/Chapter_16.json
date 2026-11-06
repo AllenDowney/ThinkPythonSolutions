@@ -1,0 +1,57 @@
+{
+  "title": "Chapter 16",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "Which of these is the term for a function or method that works with more than one type of object?",
+      "options": [
+        "pure",
+        "equivalent",
+        "static",
+        "polymorphic"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "A pure function or method does not modify the parameters or have other effects.",
+        "If two values are considered equal, they are equivalent.",
+        "A static method is associated with a class, rather than an object.",
+        "A function that works with more than one type is polymorphic."
+      ],
+      "_end_line": 1146
+    },
+    {
+      "question_text": "What is wrong with this class definition?\n\n```\nclass Point:\n\"\"\"Represents a point in 2-D space.\"\"\"\n\ndef __init__(self, x, y):\nx = self.x\ny = self.y\n```",
+      "options": [
+        "`__init__` is not a legal name for a method because it does not start with a letter.",
+        "The triple-quoted string has to be inside a method definition.",
+        "The first parameter of the method should be called `point`, not `self`.",
+        "The assignment statements should be the other way around, as in `self.x = x` and `self.y = y`."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The names of special methods like `__init__` begin and end with a two underscore characters.",
+        "A triple-quoted string inside a class definition is a docstring that provides information about the class.",
+        "The first parameter of a method is conventionally named `self`.",
+        "The assignment statements should be the other way around, as in `self.x = x` and `self.y = y`."
+      ],
+      "_end_line": 1174
+    },
+    {
+      "question_text": "Suppose we define a `Line` class so that each `Line` object has two attributes that refer to `Point` objects.\n\n```\nclass Line:\ndef __init__(self, p1, p2):\nself.p1 = p1\nself.p2 = p2\n```\n\nIf we import the `copy` function from the `copy` module and use it to make a copy of a `Line` object, which of these statements is true?",
+      "options": [
+        "The result is a deep copy that copies the `Line` object and the `Point` objects it contains.",
+        "The result is a deep copy that copies the `Line` object but not the `Point` objects it contains.",
+        "The result is a shallow copy that copies the `Line` object and the `Point` objects it contains.",
+        "The result is a shallow copy that copies the `Line` object but not the `Point` objects it contains."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The `copy` function copies the `Line` object but not the `Point` objects it contains.",
+        "The `copy` function makes a shallow copy.",
+        "The `copy` function copies the `Line` object but not the `Point` objects it contains.",
+        "The `copy` function makes a shallow copy, which copies the `Line` object but not the `Point` objects it contains."
+      ],
+      "_end_line": 1201
+    }
+  ]
+}

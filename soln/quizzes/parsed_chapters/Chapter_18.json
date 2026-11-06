@@ -1,0 +1,108 @@
+{
+  "title": "Chapter 18",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "What is the result of this operation?\n\n```\nset('abba') <= set('abc')\n```",
+      "options": [
+        "`False` because `'abba'` is longer than `'abc'`.",
+        "A runtime error because `'abba'` contains duplicate elements, so it is not a `set`.",
+        "A runtime error because a string is immutable, so it cannot be transformed into a `set`.",
+        "`True` because the elements of `'abba'` are a subset of the elements of `'abc'`."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "With `set` objects, the `<=` operator checks whether one set is a subset of another -- it does not compare the length of the strings.",
+        "When the set is create, the duplicate elements of the string are removed.",
+        "The `set` function creates a new set -- it does not modify the string.",
+        "With `set` objects, the `<=` operator checks whether one set is a subset of another -- including the possibility that they are equal."
+      ],
+      "_end_line": 1319
+    },
+    {
+      "question_text": "What is the value of counter after these statements run?\n\n```\nfrom collections import Counter\n\nt = (1, 1, 1, 2, 2, 3)\ncounter = Counter(t)\n```",
+      "options": [
+        "`(1, 1, 1, 2, 2, 3)`",
+        "`{1: 3, 2: 2, 3: 1}`",
+        "`Counter(1, 1, 1, 2, 2, 3)`",
+        "`Counter({1: 3, 2: 2, 3: 1})`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The result is a `Counter` object, not a tuple.",
+        "The result is a `Counter` object, not a dictionary.",
+        "The result is a `Counter` object that contains items like a dictionary, not a tuple.",
+        "The result is a `Counter` object that contains the elements of the list and the number of times each one appears."
+      ],
+      "_end_line": 1342
+    },
+    {
+      "question_text": "Which comment about this class definition is correct?\n\n```\nclass Game:\n\"\"\"Represents a game with a dictionary that maps from teams to scores.\"\"\"\n\ndef __init__(self, scores={}):\nself.scores = score\n```",
+      "options": [
+        "All `Game` objects refer to different dictionaries.",
+        "All `Game` objects refer to the same dictionary.",
+        "All `Game` objects created with the default value of `scores` refer to an empty dictionary.",
+        "All `Game` objects created with the default value of `scores` refer to the same dictionary."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The default value of `scores` is a dictionary that is created when the function is defined. All `Game` objects created with the default value get a reference to it.",
+        "All `Game` objects created with the default value get a reference to it, but a `Game` object that overrides `scores` will refer to a different dictionary.",
+        "The initial value of `scores` is an empty dictionary, but items might be added to it later.",
+        "All `Game` objects created with the default value get a reference to the same dictionary -- so if any of them modify it, they all see the change."
+      ],
+      "_end_line": 1365
+    },
+    {
+      "question_text": "What is the value of this expression?\n\n```\nall(number < 10 for number in [2, 4, 6, 8])\n```",
+      "options": [
+        "`[2, 4, 6, 8]`, which contains all numbers in the list less than `10`.",
+        "An error because the list comprehension has to be in square brackets.",
+        "`False` because there are not any numbers in the list that are not less than `10`.",
+        "`True` because all numbers in the list are less than `10`."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The `all` function returns `True` if all elements of a sequence are `True`, and `False` otherwise.",
+        "The expression in parentheses is correct -- it is a generator expression, not a list comprehension.",
+        "The values produced by the generator expression are all `True`.",
+        "The values produced by the generator expression are all `True`, so the result from the `all` function is `True`."
+      ],
+      "_end_line": 1387
+    },
+    {
+      "question_text": "What is the value of `d[key]` after these statements run, or is there an error?\n\n```\nfrom collections import defaultdict\n\nd = defaultdict(list)\nkey = ('into', 'the')\nd[key].append('woods')\n```",
+      "options": [
+        "An error because a tuple cannot be used as a key in a `defaultdict`.",
+        "An error because we have to add the key to the `defaultdict` before we can look it up.",
+        "`'woods'`",
+        "`['woods']`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "A tuple can appear as a key in a `defaultdict`, same as in a dictionary.",
+        "When you look up a key that is not already in this `defaultdict`, the key is added with a new empty list as the value.",
+        "When the key is added to the `defaultdict`, the corresponding value is an empty list. Then the `append` method add an element to the list.",
+        "When the key is added to the `defaultdict`, the corresponding value is an empty list. After the `append` method is invoked, the list contains a single element, the string `'woods'`."
+      ],
+      "_end_line": 1412
+    },
+    {
+      "question_text": "What value is printed when this function runs?\n\n```\ndef pack_and_print(**kwargs):\nprint(kwargs)\n\npack_and_print(a=1, b=2)\n```",
+      "options": [
+        "This is an error because the exponentiation operator `**` can't appear in a list of parameters.",
+        "`[(a, 1), (b, 2)]`",
+        "`{'a', 'b'}, [1, 2]`",
+        "`{'a': 1, 'b': 2}`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "In a parameter list, `**` is the pack operator, not the exponentiation operator.",
+        "The pack operator, `**`, packs the keyword arguments into a dictionary, not a list of tuples.",
+        "The pack operator, `**`, packs the keyword arguments into a dictionary, not a set and a list.",
+        "The pack operator, `**`, packs the keyword arguments into a dictionary that maps from keyword names to values."
+      ],
+      "_end_line": 1441
+    }
+  ]
+}

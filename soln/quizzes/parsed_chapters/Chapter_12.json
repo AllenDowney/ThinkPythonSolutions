@@ -1,0 +1,57 @@
+{
+  "title": "Chapter 12",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "Assuming that `t` is a list of strings, what does the following line of code do?\n```\nsorted(t, key=len)\n```",
+      "options": [
+        "Modifies `t` and sorts the elements in alphabetical order.",
+        "Makes a new list that contains the elements in alphabetical order.",
+        "Modifies `t` and sorts the elements from shortest to longest",
+        "Makes a new list that contains the elements in order from shortest to longest."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "`sorted` makes a new list -- it doesn't modify `t` -- and `key=len` sorts the elements from shortest to longest.",
+        "With `key=len`, `sorted` sorts the elements from shortest to longest.",
+        "`sorted` makes a new list -- it doesn't modify `t`.",
+        "`sorted` makes a new list, and `key=len` sorts the elements from shortest to longest."
+      ],
+      "_end_line": 858
+    },
+    {
+      "question_text": "What is the effect of running this program?\n\n```\nword_counter = {}\nfor line in open(filename):\nfor word in split_line(line):\nword_counter[word] += 1\n```",
+      "options": [
+        "It makes a dictionary that maps from each word to the number of times it appears.",
+        "It has a syntax error because the indentation is not correct.",
+        "It has a semantic error because all the keys in `word_counter` map to the value `1`.",
+        "It causes a `KeyError` when it tries to increment a value in `word_counter`."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "Because `word_counter` is initially empty, the program causes a `KeyError` when it tries to increment a value in `word_counter`.",
+        "The indentation is correct, but the program causes a `KeyError` when it tries to increment a value in `word_counter`.",
+        "Because `word_counter` is initially empty, the program causes a `KeyError` when it tries to increment a value in `word_counter`.",
+        "Because `word_counter` is initially empty, the program causes a `KeyError` when it tries to increment a value in `word_counter`."
+      ],
+      "_end_line": 882
+    },
+    {
+      "question_text": "If we run the following lines of code, what is the probability that the result is `'a'`?\n\n```\nletters = ['a', 'b', 'c']\nweights = [1, 2, 3]\nrandom.choices(letters, weights=weights)\n```",
+      "options": [
+        "1/3",
+        "1/4",
+        "1/5",
+        "1/6"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The weight associated with `'a'` is `1` and the total of the weights is `6`.",
+        "The weight associated with `'a'` is `1` and the total of the weights is `6`.",
+        "The weight associated with `'a'` is `1` and the total of the weights is `6`.",
+        "The weight associated with `'a'` is `1` and the total of the weights is `6`, so the probability of choosing `'a'` is `1/6`."
+      ],
+      "_end_line": 907
+    }
+  ]
+}

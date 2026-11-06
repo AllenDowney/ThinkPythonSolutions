@@ -1,0 +1,57 @@
+{
+  "title": "Chapter 3",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "When you define a function, what are the variables that appear in parentheses?",
+      "options": [
+        "arguments",
+        "local variables",
+        "function objects",
+        "parameters"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "An argument is a value you provide when you call a function.",
+        "A local variable is a variable that gets assigned a value inside a function.",
+        "A function object is the result of defining a new function.",
+        "A parameter is a variable that gets a value when the function is called."
+      ],
+      "_end_line": 179
+    },
+    {
+      "question_text": "Which kind of statement can be used to run a line of code more than once?",
+      "options": [
+        "assignment statement",
+        "import statement",
+        "print statement",
+        "`for` statement"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "An assignment statement assigns a value to a variable.",
+        "An import statement makes it possible to use functions in a module.",
+        "A print statement displays the value of an expression.",
+        "A `for` statement can run a line of code, or multiple lines, more than once."
+      ],
+      "_end_line": 196
+    },
+    {
+      "question_text": "What is wrong with this function, if anything?\n\n```\ndef bottle_line(n, suffix):\nprint(n)\nprint('bottles of beer')\nprint(suffix)\n```",
+      "options": [
+        "Instead of `def`, the first word should be `define`.",
+        "You can't have more than one parameter in parentheses.",
+        "Only the first statement of the body should be indented.",
+        "There are no errors in this function."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "`def` is the right keyword to define a new function, although some other languages use `define`.",
+        "You can have any number of parameters in parentheses, including none.",
+        "All of the statements in the body of the function should be indented.",
+        "There is nothing wrong with this function."
+      ],
+      "_end_line": 221
+    }
+  ]
+}

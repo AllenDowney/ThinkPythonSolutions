@@ -1,0 +1,57 @@
+{
+  "title": "Chapter 6",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "What is the return value if we call this function with the value `3`?\n\n```\ndef collatz(x):\nif x % 2 == 0:\nreturn x // 2\nelse:\nreturn x * 3 + 1\n```",
+      "options": [
+        "`1`",
+        "`1.5`",
+        "It causes an error.",
+        "`10`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "Because `3 % 2` is `1`, the second branch of the conditional runs.",
+        "Because `3 % 2` is `1`, the second branch of the conditional runs. Also, because `//` does integer division, `3 // 2` is `1`.",
+        "This function works. Because `3 % 2` is `1`, the second branch of the conditional runs, and the result is `3 * 3 + 1`, which is `10`.",
+        "Because `3 % 2` is `1`, the second branch of the conditional runs, and the result is `3 * 3 + 1`, which is `10`."
+      ],
+      "_end_line": 421
+    },
+    {
+      "question_text": "What do we call a function that does not print anything or have any effect other than a return value?",
+      "options": [
+        "recursive",
+        "dead code",
+        "incremental",
+        "pure function"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "A recursive function calls itself, but it might print something or have some other effect.",
+        "Dead code is code that can never run, often because it appears after a `return` statement.",
+        "Incremental development is a way of writing programs by making small changes and testing.",
+        "A pure function does not print anything or have any effect other than a return value."
+      ],
+      "_end_line": 438
+    },
+    {
+      "question_text": "What is the result of calling this function with the values `x=1.5` and `y=1.6`?\n\n```\ndef is_close(x, y):\nreturn abs(x - y) < 0.2\n```",
+      "options": [
+        "There is a syntax error.",
+        "There is a runtime error.",
+        "`False`",
+        "`True`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The syntax of the function is correct.",
+        "The function is correct as long as the values of `x` and `y` are numbers.",
+        "The absolute difference between `1.5` and `1.6` is `0.1`, which is less than `0.2`.",
+        "The absolute difference between `1.5` and `1.6` is `0.1`, which is less than `0.2`."
+      ],
+      "_end_line": 460
+    }
+  ]
+}

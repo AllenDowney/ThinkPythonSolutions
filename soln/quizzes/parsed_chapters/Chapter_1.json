@@ -1,0 +1,74 @@
+{
+  "title": "Chapter 1",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "Which of these types is used to represent a number with a fraction part?",
+      "options": [
+        "`int`",
+        "`real`",
+        "`string`",
+        "`float`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "`int` values can only be integers.",
+        "Python does not have a type called `real`.",
+        "`string` values contain a sequence of characters.",
+        "`float` values represent floating-point numbers, which can have a fraction part."
+      ],
+      "_end_line": 35
+    },
+    {
+      "question_text": "Which of these is a legal expression?",
+      "options": [
+        "`'1' / '2'`",
+        "`'1' * '2'`",
+        "`'1' / 2`",
+        "`'1' * 2`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The division operator does not work with strings.",
+        "With the multiplication operator, the first value can be a string, but the second cannot.",
+        "The division operator does not work with strings.",
+        "When the first operator is a string, the multiplication operator repeats the string, so the result is `'11'`."
+      ],
+      "_end_line": 53
+    },
+    {
+      "question_text": "Which of these is the general word for any value used in a mathematical operation like addition or multiplication?",
+      "options": [
+        "term",
+        "factor",
+        "divisor",
+        "operand"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "A \"term\" is a value used in addition, but it is not the general word for any value used in an operation.",
+        "A \"factor\" is a value used in multiplication, but it is not the general word for any value used in an operation.",
+        "A \"divisor\" is one of the values used in division, but it is not the general word for any value used in an operation.",
+        "An \"operand\" is a value used in an operation."
+      ],
+      "_end_line": 70
+    },
+    {
+      "question_text": "On the internet, people sometimes argue about the value of an ambiguous mathematical expression like $8 ÷ 2(2+2)$. How do we write this expression in Python?",
+      "options": [
+        "`8 ÷ 2 (2 + 2)`",
+        "`8 / 2 (2 + 2)`",
+        "`8 ÷ 2 * (2 + 2)`",
+        "`8 / 2 * (2 + 2)`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The operator for division is `/`, not `÷`. Also, there is no implicit multiplication in Python -- you have to use the `*` operator.",
+        "There is no implicit multiplication in Python -- you have to use the `*` operator.",
+        "The operator for division is `/`, not `÷`.",
+        "An alternative is to put `8 / 2` in parentheses so the order of operations is clear."
+      ],
+      "_end_line": 86
+    }
+  ]
+}

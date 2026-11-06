@@ -1,0 +1,57 @@
+{
+  "title": "Chapter 15",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "Suppose `time` is a `Time` object, and `increment` is an instance method defined in the `Time` class.\nWhat happens when we invoke `increment` like this?\n\n```\ntime.increment(42)\n```",
+      "options": [
+        "`42` is assigned to the first parameter of the method, and `time` is assigned to the second.",
+        "This is an error because `increment` requires one arguments and two are provided.",
+        "This is an error because `increment` requires two argument and only one is provided.",
+        "`time` is assigned to the first parameter of the method and `42` is assigned to the second."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "`time` is assigned to the first parameter of the method.",
+        "This method requires two arguments -- `time` is the first and `42` is the second.",
+        "Only one argument appears in parentheses, but `time` is passed to `increment` as the first argument.",
+        "`time` is assigned to the first parameter of the method, which is conventionally called `self`, and `42` is assigned to the second."
+      ],
+      "_end_line": 1082
+    },
+    {
+      "question_text": "Suppose `time` is a `Time` object, and `int_to_time` is a static method defined in the `Time` class.\nWhat happens when we invoke `int_to_time` like this?\n\n```\nstart = Time.int_to_time(34800)\n```",
+      "options": [
+        "This is an error because `int_to_time` requires one argument and two are provided.",
+        "The `Time` class object is assigned to the first parameter of the method and `34800` is assigned to the second.",
+        "`34800` is assigned to the first parameter of the method and the `Time` class object is assigned to the second.",
+        "`34800` is assigned to the first parameter of `int_to_time`."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "There is only one argument here, `34800`.",
+        "Because `Time` is a class, it is not passed as an argument.",
+        "Because `Time` is a class, it is not passed as an argument.",
+        "`34800` is assigned to the first parameter of `int_to_time`. Because `Time` is a class, it is not passed as an argument."
+      ],
+      "_end_line": 1105
+    },
+    {
+      "question_text": "Which of the following statements is NOT correct?",
+      "options": [
+        "When we instantiate an object, its `__init__` method is invoked.",
+        "When we use the `+` operator with an object, its `__add__` method is invoked.",
+        "When we print an object, its `__str__` method is invoked.",
+        "When we define a new class, its `__init__` method is invoked."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "This statement is correct.",
+        "This statement is correct.",
+        "This statement is correct.",
+        "Defining a new class does not invoke its `__init__` method."
+      ],
+      "_end_line": 1123
+    }
+  ]
+}

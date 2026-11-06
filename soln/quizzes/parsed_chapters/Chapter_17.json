@@ -1,0 +1,74 @@
+{
+  "title": "Chapter 17",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "Which of the following is NOT a correct statement about class variables.",
+      "options": [
+        "They are defined inside a class definition, but not inside a method definition.",
+        "They can be accessed using a class object.",
+        "They can have any type.",
+        "They are immutable."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "It is true that class variables are defined inside a class definition, but not inside a method definition",
+        "It is true that class variables can be accessed using a class object.",
+        "It is true that class variables can have any type.",
+        "This statement is false -- that is, class variables are mutable."
+      ],
+      "_end_line": 1224
+    },
+    {
+      "question_text": "Suppose we define a `Card` class like this:\n\n```\nclass Card:\n\ndef __init__(self, suit, rank):\nself.suit = suit\nself.rank = rank\n```\n\nIf this class does not provide an `__eq__` method, what happens if we compare two cards using the `==` operator.",
+      "options": [
+        "That's an error.",
+        "By default, only the first attribute is compared.",
+        "By default, all of the attributes are compared as if they were in a tuple.",
+        "By default, the objects are equal only if they are identical."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "It is not an error -- if a class provides no `__eq__`, the `==` operator has a default behavior.",
+        "If a class provides no `__eq__`, the `==` operator checks whether objects are identical.",
+        "If a class provides no `__eq__`, the `==` operator checks whether objects are identical.",
+        "If a class provides no `__eq__`, the `==` operator checks whether objects are identical."
+      ],
+      "_end_line": 1252
+    },
+    {
+      "question_text": "Which of the following statements is true when one class inherits from another, like this:\n\n```\nclass Hand(Deck):\n\"\"\"Represents a hand of playing cards.\"\"\"\n```",
+      "options": [
+        "`Hand` is a parent class and `Deck` is a child class.",
+        "Every function that works with `Hand` should also work with `Deck`.",
+        "Every `Hand` object has the same attributes as every `Deck` object, no more or less.",
+        "Every method defined in the `Deck` class can also be invoked on a `Hand` object."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "In this example, `Hand` inherits from `Deck`, so `Hand` is the child class and `Deck` is the parent.",
+        "If `Hand` inherits from `Deck`, it could have additional methods that don't work with `Deck`.",
+        "If `Hand` inherits from `Deck`, a `Hand` object should have all of the attributes of a `Deck` object, but it can have more.",
+        "If `Hand` inherits from `Deck`, every method defined in the `Deck` class should work with a `Hand` object."
+      ],
+      "_end_line": 1275
+    },
+    {
+      "question_text": "What do we call it when one method invokes another to do most or all of the work?",
+      "options": [
+        "inheritance",
+        "generalization",
+        "specialization",
+        "delegation"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "Inheritance is the ability to define a new class that is a modified version of a previously defined class.",
+        "Generalization is when we add a parameter to a function to make its capabilities more general.",
+        "Specialization is a way of using inheritance to create a new class that is a specialized version of an existing class.",
+        "Delegation is when one method passes responsibility to another method to do most or all of the work."
+      ],
+      "_end_line": 1291
+    }
+  ]
+}

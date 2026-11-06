@@ -1,0 +1,57 @@
+{
+  "title": "Chapter 4",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "What is wrong with this function, if anything?\n\n```\ndef square(length):\nfor i in range(4):\nforward(50)\nleft(90)\n```",
+      "options": [
+        "The indentation of the statements in the `for` loop is incorrect.",
+        "It does not bring the Turtle back to where it started.",
+        "There are no errors in this function.",
+        "It always draws the same size square, regardless of `length`."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The indentation in this function is correct.",
+        "The `Turtle` ends where it started, facing in the same direction.",
+        "There is an error!",
+        "The size is always `50` -- the value of `length` is never used."
+      ],
+      "_end_line": 252
+    },
+    {
+      "question_text": "What is it called when you put working statements into a new function definition?",
+      "options": [
+        "generalization",
+        "indentation",
+        "debugging",
+        "encapsulation"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "Generalization is when you add a parameter to a function to make it more general.",
+        "You might have to indent the statements when you put them in a function definition, but that's not what the whole process is called.",
+        "If the statements are working, they don't have to be debugged.",
+        "Encapsulation is the process of transforming a sequence of statements into a function definition."
+      ],
+      "_end_line": 269
+    },
+    {
+      "question_text": "Here are two versions of the `circle` function.\n\n```\ndef circle(radius):\ncircumference = 2 * math.pi * radius\nn = 30\nlength = circumference / n\npolygon(n, length)\n\ndef circle(radius):\narc(radius,  360)\n```\n\nWhat can we say about these functions?",
+      "options": [
+        "They have the same implementation, but different interfaces.",
+        "They have the same interface _and_ the same implementation.",
+        "They have neither the same interface nor the same implementation.",
+        "They have the same interface, but different implementations."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "They take the same parameter and have the same effect, so they have the same interface -- but they accomplish the effect in different ways, so they have different implementations.",
+        "They take the same parameter and have the same effect, so they have the same interface -- but they accomplish the effect in different ways, so they have different implementations.",
+        "They take the same parameter and have the same effect, so they have the same interface -- but they accomplish the effect in different ways, so they have different implementations.",
+        "They take the same parameter and have the same effect, so they have the same interface -- but they accomplish the effect in different ways, so they have different implementations."
+      ],
+      "_end_line": 300
+    }
+  ]
+}

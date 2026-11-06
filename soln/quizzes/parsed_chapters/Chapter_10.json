@@ -1,0 +1,57 @@
+{
+  "title": "Chapter 10",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "What is the value of the dictionary `d` after these statements run?\n\n```\nd = {'a': 1, 'b': 2}\nd['a'] = 3\n```",
+      "options": [
+        "`{'a': 1, 'b': 2, 'a': 3}`",
+        "`{'a': 1, 'b': 2}`",
+        "These statements cause a runtime error",
+        "`{'a': 3, 'b': 2}`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "Each key can only appear once in a dictionary.",
+        "The second assignment statement changes the value associated with the key `'a'`.",
+        "This code runs without causing an error.",
+        "The second assignment statement updates the value associated with the key `'a'`."
+      ],
+      "_end_line": 699
+    },
+    {
+      "question_text": "What is the value of the dictionary `d` after running these statements?\n\n```\nd = {'a': 1, 'b': 2}\nd['c'] += 1\n```",
+      "options": [
+        "`{'a': 1, 'b': 2}`",
+        "`{'a': 1, 'b': 2, 'c': 1}`",
+        "`{'a': 1, 'b': 2, 'c': 3}`",
+        "These statements cause a runtime error."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The `+=` operator looks up the key to get the old value before adding `1`.",
+        "The `+=` operator looks up the key to get the old value before adding `1`.",
+        "The `+=` operator looks up the key to get the old value before adding `1`.",
+        "Because `c` does not appear as a key in the dictionary, the second statement causes a `KeyError`."
+      ],
+      "_end_line": 720
+    },
+    {
+      "question_text": "What happens when the following statements run?\n\n```\nd1 = {'a': 1, 'b': 2}\nd2 = {d1: 3}\n```",
+      "options": [
+        "They add `d1` as a key in `d3`.",
+        "They cause a `KeyError` because `d1` is not in `d2`.",
+        "They cause a `ValueError` because `3` cannot appear as a value in a dictionary.",
+        "They cause a `TypeError` because a dictionary cannot appear as a key in a dictionary."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary.",
+        "Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary, but that's not a `KeyError.`",
+        "Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary, but that's not a `ValueError.`",
+        "Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary."
+      ],
+      "_end_line": 742
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "title": "Chapter 11",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "Which one of these expressions is NOT a tuple?",
+      "options": [
+        "`tuple('abc')`",
+        "`'abc',`",
+        "`('abc',)`",
+        "`('abc')`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The value of this expression is a tuple with the elements `'a'`, `'b'`, and `'c'`.",
+        "Because of the comma at the end, the value if this expression is a tuple with on element, `'abc'`.",
+        "Because of the comma, the value if this expression is a tuple with on element, `'abc'`. The parentheses are not required.",
+        "The parentheses alone do not make a tuple, so the value of this expression is just the string `'abc'`."
+      ],
+      "_end_line": 765
+    },
+    {
+      "question_text": "What is the result of these statements?\n\n```\nt = tuple('abc')\ns = [1, 2, 3]\nd = {t: s}\n```",
+      "options": [
+        "A `TypeError` because a tuple can't appear as a key in a dictionary.",
+        "A `TypeError` because a list can't appear as a value in a dictionary.",
+        "A syntax error because there should be a comma before the closing brace on the third line.",
+        "A dictionary with one item that maps from a tuple to a list."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "A tuple is immutable, so it can appear as a key in a dictionary -- as long as its elements are also immutable.",
+        "Any type can appear as a value in a dictionary, including lists.",
+        "The syntax is correct -- if there is a single item in a dictionary, a comma is legal but not required.",
+        "These statements create a dictionary with one item that maps from a tuple to a list."
+      ],
+      "_end_line": 789
+    },
+    {
+      "question_text": "What does this function do?\n\n```\ndef printall(*args):\nfor value in reversed(args):\nprint(value)\n```",
+      "options": [
+        "It has a syntax error because the `*` operator is not legal before a parameter.",
+        "It causes a `TypeError` because `args` is a tuple, which is immutable and cannot be reversed.",
+        "It takes a single list or tuple and prints the values in reversed order.",
+        "It takes any number of arguments and prints them in reversed order."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "When the `*` operator appears before a parameter, it \"packs\" any number of arguments into a tuple.",
+        "It's true that `args` is a tuple, which is immutable, but `reversed` does not modify the tuple, it makes a new object that loops through the tuple in reverse order.",
+        "This function can take any number of arguments, not just a single argument.",
+        "It takes any number of arguments and \"packs\" them into a tuple, then loops through the tuple in reverse order and prints the elements."
+      ],
+      "_end_line": 812
+    },
+    {
+      "question_text": "What is the value of this expression?\n\n```\n('a', 3) < ('b', 1)\n```",
+      "options": [
+        "`False` because `3` is greater than `1`.",
+        "These values can't be compared because `'a'` is less than `'b'`, but `3` is greater than `1`.",
+        "A `TypeError` because the `<` operator doesn't work with tuples.",
+        "`True` because `'a'` is less than `'b'`."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "When tuples are compared, the first elements are compared first. The other elements are only compared if the first elements are the same.",
+        "When tuples are compared, the first elements are compared first. The other elements are only compared if the first elements are the same.",
+        "The `<` operator compares the first elements of each tuple, and then compares other elements in the event of a tie.",
+        "When tuples are compared, the first elements are compared first."
+      ],
+      "_end_line": 834
+    }
+  ]
+}

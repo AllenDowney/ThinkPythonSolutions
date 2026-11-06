@@ -1,0 +1,57 @@
+{
+  "title": "Chapter 7",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "This function is supposed to return `True` if `word` contains with `'A'` or `'a'`, and `False` otherwise. But it doesn't work -- What's wrong?\n\n```\ndef has_a(word):\nfor letter in word.lower():\nif letter == 'a':\nreturn True\nelse:\nreturn False\nreturn False\n```",
+      "options": [
+        "The first line of the for statement has a syntax error.",
+        "It only checks for lowercase `'a'`, not uppercase `'A'`.",
+        "It causes a runtime error if `word` is an empty string.",
+        "It only checks the first letter of `word`."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The syntax of the function is correct.",
+        "It uses `lower` to convert `word` to lowercase, so if uppercase `'A'` is in the string, it would be found.",
+        "If `word` is an empty string, the body of the loop never runs and the function returns `False`, which is correct.",
+        "Both branches of the conditional have `return` statements, so this function ends after checking the first letter."
+      ],
+      "_end_line": 494
+    },
+    {
+      "question_text": "Which of these is a legal way to increment `x`, assuming it has already been assigned a value.",
+      "options": [
+        "`x++`",
+        "`x + 1 = x`",
+        "`x = +1`",
+        "`x = x + 1`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "Some programming languages use the `++` operator to increment a variable, but not Python.",
+        "The left side of an assignment can't be an expression like `x + 1`.",
+        "The value `+1` is the same as `1`, so this statement assigns the value `1` to`x`.",
+        "This is a legal way to update the value of `x`."
+      ],
+      "_end_line": 511
+    },
+    {
+      "question_text": "What does this function do?\n\n```\ndef check(word, letters):\nfor letter in word.lower():\nif letter in letters.lower():\nreturn False\nreturn True\n```",
+      "options": [
+        "Returns `True` if any of the letters in `letters` appear in `word`.",
+        "Returns `True` if any of the letters in `word` appear in `letter`.",
+        "Returns `True` if none of the letters in `word` appear in `letter`.",
+        "Returns `True` if none of the letters in `letters` appear in `word`."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "It only returns `True` if it gets to the end of `word` and exits the loop having found none of the letters in `letters`.",
+        "It only returns `True` if it gets to the end of `word` and exits the loop having found none of the letters in `letters`.",
+        "It only returns `True` if it gets to the end of `word` and exits the loop having found none of the letters in `letters`.",
+        "It returns `True` if it gets to the end of `word` and exits the loop having found none of the letters in `letters`."
+      ],
+      "_end_line": 536
+    }
+  ]
+}

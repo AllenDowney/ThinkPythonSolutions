@@ -1,0 +1,74 @@
+{
+  "title": "Chapter 5",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "What is the result of these assignment statements?\n\n```\na = 25 // 10\nb = 25 % 10\n```",
+      "options": [
+        "`a` is `2.5` and `b` is `5`",
+        "`a` is `2` and `b` is `250`",
+        "`a` is `2.5` and `b` is `250`",
+        "`a` is `2` and `b` is `5`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The `//` operator does integer division, so `25 // 10` is `2`.",
+        "The `%` operator computes the remainder after division, so `25 % 10` is `5`.",
+        "The `//` operator does integer division, so `25 // 10` is `2`, and the `%` operator computes the remainder after division, so `25 % 10` is `5`.",
+        "The `//` operator does integer division and the `%` operator computes the remainder after division."
+      ],
+      "_end_line": 328
+    },
+    {
+      "question_text": "What is the result of these statements?\n```\nx = 5\nprint(x > 5)\nprint(x <= 5)\n```",
+      "options": [
+        "They print the values `True` and `True`",
+        "They print the values `True` and `False`",
+        "They print the values `False` and `False`",
+        "They print the values `False` and `True`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "If `x` is `5`, `x > 5` is the same as `5 > 5`, which is `False`.",
+        "If `x` is `5`, `x > 5` is the same as `5 > 5`, which is `False`; also, `x <= 5` is the same as `5 <= 5`, which is `True`.",
+        "If `x` is `5`, `x <= 5` is the same as `5 <= 5`, which is `True`.",
+        "If `x` is `5`, `x > 5` is `False` and `x <= 5` is `True`."
+      ],
+      "_end_line": 350
+    },
+    {
+      "question_text": "What is the result of calling this function?\n```\ndef hello():\nprint('hello')\nhello()\n```",
+      "options": [
+        "It prints `hello` once.",
+        "It prints `hello` forever.",
+        "It causes an error the first time `hello` tries to call itself.",
+        "It prints `hello` many times and then causes an error."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "After it prints `hello` once, it calls itself, which prints `hello` many times and then causes a `RecursionError`.",
+        "After printing `hello` many times, it causes a `RecursionError`.",
+        "After printing `hello` many times, it causes a `RecursionError`.",
+        "After printing `hello` many times, it causes a `RecursionError`."
+      ],
+      "_end_line": 372
+    },
+    {
+      "question_text": "What kind of operator is `or`?",
+      "options": [
+        "arithmetic",
+        "bitwise",
+        "relational",
+        "logical"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "`or` is a logical operator, along with `and` and `not`.",
+        "`or` is a logical operator, along with `and` and `not`.",
+        "`or` is a logical operator, along with `and` and `not`.",
+        "`or` is a logical operator, along with `and` and `not`."
+      ],
+      "_end_line": 389
+    }
+  ]
+}

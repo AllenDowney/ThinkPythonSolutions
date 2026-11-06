@@ -1,0 +1,57 @@
+{
+  "title": "Chapter 14",
+  "quiz_type": "Formative",
+  "questions": [
+    {
+      "question_text": "To create an instance of a programmer-defined type, what is the correct order for these steps?",
+      "options": [
+        "Assign values to attributes, define a class, instantiate an object.",
+        "Instantiate an object, define a class, assign values to attributes.",
+        "Define a class, assign values to attributes, instantiate an object.",
+        "Define a class, instantiate an object, assign values to attributes."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "You can't assign attributes before you instantiate an object.",
+        "You can't instantiate an object before you define its class.",
+        "You can't assign attributes before you instantiate an object.",
+        "You have to define a class, instantiate an object, and assign values to attributes, in that order."
+      ],
+      "_end_line": 1001
+    },
+    {
+      "question_text": "These statements are intended to define a `Date` class and create a `Date` object. What is wrong with them?\n\n```\ndef Date:\n\"\"\"Represents a day of the year.\"\"\"\n\ndate = Date()\ndate.year = 2024\ndate.month = 'January'\ndate.day = 11\n```",
+      "options": [
+        "You can't have a class named `Date` and a variable named `date`.",
+        "All of the attributes have to have the same type.",
+        "The syntax is not correct for adding attributes to the object.",
+        "A class definition has to start with `class`, not `def`."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "It is legal -- and common -- for a class name and a variable to be the same word, but the class name starts with an uppercase letter.",
+        "The attributes of an object can be any type, and they don't have to be the same.",
+        "Dot notation is used to set the value of an attribute and to read the value.",
+        "A class definition has to start with `class`. A function definition starts with `def`."
+      ],
+      "_end_line": 1029
+    },
+    {
+      "question_text": "Which of these is a correct description of this function? You can assume that `date` is a `Date` object that has a `day` attribute.\n\n```\ndef increment_day(date):\ndate.day += 1\nreturn date\n```",
+      "options": [
+        "It is a pure function that returns `None`.",
+        "It is an impure function that returns `None`.",
+        "It is a pure function that returns a `Date` object.",
+        "It is an impure function that returns a `Date` object."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "This function modifies an attribute of the `Date` object it gets as a parameter, so it is an impure function. And it returns a reference to the same object, not `None`.",
+        "This function returns a reference to a `Date` object, not `None`.",
+        "This function modifies an attribute of the `Date` object it gets as a parameter, so it is an impure function.",
+        "This function modifies an attribute of the `Date` object it gets as a parameter, so it is an impure function -- and it returns a reference to the same `Date` object."
+      ],
+      "_end_line": 1053
+    }
+  ]
+}
