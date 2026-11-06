@@ -117,9 +117,10 @@ def parse_question(lines: List[str], start_idx: int) -> Optional[Dict[str, Any]]
         if line.startswith('- ['):
             break
         
-        # Collect question text (skip empty lines at start)
+        # Collect question text (skip empty lines at start). Keep the leading
+        # whitespace: it is the indentation inside code blocks.
         if line or question_text_parts:
-            question_text_parts.append(line)
+            question_text_parts.append(lines[i].rstrip())
         
         i += 1
     

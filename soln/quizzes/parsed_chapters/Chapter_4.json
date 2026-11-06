@@ -3,7 +3,7 @@
   "quiz_type": "Formative",
   "questions": [
     {
-      "question_text": "What is wrong with this function, if anything?\n\n```\ndef square(length):\nfor i in range(4):\nforward(50)\nleft(90)\n```",
+      "question_text": "What is wrong with this function, if anything?\n\n```\ndef square(length):\n    for i in range(4):\n        forward(50)\n        left(90)\n```",
       "options": [
         "The indentation of the statements in the `for` loop is incorrect.",
         "It does not bring the Turtle back to where it started.",
@@ -37,7 +37,7 @@
       "_end_line": 249
     },
     {
-      "question_text": "Here are two versions of the `circle` function.\n\n```\ndef circle(radius):\ncircumference = 2 * math.pi * radius\nn = 30\nlength = circumference / n\npolygon(n, length)\n\ndef circle(radius):\narc(radius, 360)\n```\n\nWhat can we say about these functions?",
+      "question_text": "Here are two versions of the `circle` function.\n\n```\ndef circle(radius):\n    circumference = 2 * math.pi * radius\n    n = 30\n    length = circumference / n\n    polygon(n, length)\n\ndef circle(radius):\n    arc(radius, 360)\n```\n\nWhat can we say about these functions?",
       "options": [
         "They have the same implementation, but different interfaces.",
         "They have the same interface _and_ the same implementation.",

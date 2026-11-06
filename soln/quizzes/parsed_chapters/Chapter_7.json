@@ -3,7 +3,7 @@
   "quiz_type": "Formative",
   "questions": [
     {
-      "question_text": "This function is supposed to return `True` if `word` contains `'A'` or `'a'`, and `False` otherwise. But it doesn't work -- what's wrong?\n\n```\ndef has_a(word):\nfor letter in word.lower():\nif letter == 'a':\nreturn True\nelse:\nreturn False\nreturn False\n```",
+      "question_text": "This function is supposed to return `True` if `word` contains `'A'` or `'a'`, and `False` otherwise. But it doesn't work -- what's wrong?\n\n```\ndef has_a(word):\n    for letter in word.lower():\n        if letter == 'a':\n            return True\n        else:\n            return False\n        return False\n```",
       "options": [
         "The first line of the for statement has a syntax error.",
         "It only checks for lowercase `'a'`, not uppercase `'A'`.",
@@ -37,7 +37,7 @@
       "_end_line": 471
     },
     {
-      "question_text": "What does this function do?\n\n```\ndef check(word, letters):\nfor letter in word.lower():\nif letter in letters.lower():\nreturn False\nreturn True\n```",
+      "question_text": "What does this function do?\n\n```\ndef check(word, letters):\n    for letter in word.lower():\n        if letter in letters.lower():\n            return False\n    return True\n```",
       "options": [
         "Returns `True` if any of the letters in `letters` appear in `word`.",
         "Returns `True` if all of the letters in `letters` appear in `word`.",

@@ -176,7 +176,7 @@
         ]
       },
       {
-        "question_text": "What is wrong with this function, if anything?\n\n```\ndef bottle_line(n, suffix):\nprint(n)\nprint('bottles of beer')\nprint(suffix)\n```",
+        "question_text": "What is wrong with this function, if anything?\n\n```\ndef bottle_line(n, suffix):\n    print(n)\n    print('bottles of beer')\n    print(suffix)\n```",
         "options": [
           "Instead of `def`, the first word should be `define`.",
           "You can't have more than one parameter in parentheses.",
@@ -198,7 +198,7 @@
     "quiz_type": "Formative",
     "questions": [
       {
-        "question_text": "What is wrong with this function, if anything?\n\n```\ndef square(length):\nfor i in range(4):\nforward(50)\nleft(90)\n```",
+        "question_text": "What is wrong with this function, if anything?\n\n```\ndef square(length):\n    for i in range(4):\n        forward(50)\n        left(90)\n```",
         "options": [
           "The indentation of the statements in the `for` loop is incorrect.",
           "It does not bring the Turtle back to where it started.",
@@ -230,7 +230,7 @@
         ]
       },
       {
-        "question_text": "Here are two versions of the `circle` function.\n\n```\ndef circle(radius):\ncircumference = 2 * math.pi * radius\nn = 30\nlength = circumference / n\npolygon(n, length)\n\ndef circle(radius):\narc(radius, 360)\n```\n\nWhat can we say about these functions?",
+        "question_text": "Here are two versions of the `circle` function.\n\n```\ndef circle(radius):\n    circumference = 2 * math.pi * radius\n    n = 30\n    length = circumference / n\n    polygon(n, length)\n\ndef circle(radius):\n    arc(radius, 360)\n```\n\nWhat can we say about these functions?",
         "options": [
           "They have the same implementation, but different interfaces.",
           "They have the same interface _and_ the same implementation.",
@@ -284,7 +284,7 @@
         ]
       },
       {
-        "question_text": "What is the result of calling this function?\n```\ndef hello():\nprint('hello')\nhello()\n```",
+        "question_text": "What is the result of calling this function?\n```\ndef hello():\n    print('hello')\n    hello()\n```",
         "options": [
           "It prints `hello` once.",
           "It prints `hello` forever.",
@@ -322,7 +322,7 @@
     "quiz_type": "Formative",
     "questions": [
       {
-        "question_text": "What is the return value if we call this function with the value `3`?\n\n```\ndef collatz(x):\nif x % 2 == 0:\nreturn x // 2\nelse:\nreturn x * 3 + 1\n```",
+        "question_text": "What is the return value if we call this function with the value `3`?\n\n```\ndef collatz(x):\n    if x % 2 == 0:\n        return x // 2\n    else:\n        return x * 3 + 1\n```",
         "options": [
           "`1`",
           "`1.5`",
@@ -354,7 +354,7 @@
         ]
       },
       {
-        "question_text": "What is the result of calling this function with the values `x=1.5` and `y=1.6`?\n\n```\ndef is_close(x, y):\nreturn abs(x - y) < 0.2\n```",
+        "question_text": "What is the result of calling this function with the values `x=1.5` and `y=1.6`?\n\n```\ndef is_close(x, y):\n    return abs(x - y) < 0.2\n```",
         "options": [
           "There is a syntax error.",
           "There is a runtime error.",
@@ -376,7 +376,7 @@
     "quiz_type": "Formative",
     "questions": [
       {
-        "question_text": "This function is supposed to return `True` if `word` contains `'A'` or `'a'`, and `False` otherwise. But it doesn't work -- what's wrong?\n\n```\ndef has_a(word):\nfor letter in word.lower():\nif letter == 'a':\nreturn True\nelse:\nreturn False\nreturn False\n```",
+        "question_text": "This function is supposed to return `True` if `word` contains `'A'` or `'a'`, and `False` otherwise. But it doesn't work -- what's wrong?\n\n```\ndef has_a(word):\n    for letter in word.lower():\n        if letter == 'a':\n            return True\n        else:\n            return False\n        return False\n```",
         "options": [
           "The first line of the for statement has a syntax error.",
           "It only checks for lowercase `'a'`, not uppercase `'A'`.",
@@ -408,7 +408,7 @@
         ]
       },
       {
-        "question_text": "What does this function do?\n\n```\ndef check(word, letters):\nfor letter in word.lower():\nif letter in letters.lower():\nreturn False\nreturn True\n```",
+        "question_text": "What does this function do?\n\n```\ndef check(word, letters):\n    for letter in word.lower():\n        if letter in letters.lower():\n            return False\n    return True\n```",
         "options": [
           "Returns `True` if any of the letters in `letters` appear in `word`.",
           "Returns `True` if all of the letters in `letters` appear in `word`.",
@@ -624,7 +624,7 @@
         ]
       },
       {
-        "question_text": "What does this function do?\n\n```\ndef printall(*args):\nfor value in reversed(args):\nprint(value)\n```",
+        "question_text": "What does this function do?\n\n```\ndef printall(*args):\n    for value in reversed(args):\n        print(value)\n```",
         "options": [
           "It has a syntax error because the `*` operator is not legal before a parameter.",
           "It causes a `TypeError` because `args` is a tuple, which is immutable and cannot be reversed.",
@@ -678,7 +678,7 @@
         ]
       },
       {
-        "question_text": "What is the effect of running this program?\n\n```\nword_counter = {}\nfor line in open(filename):\nfor word in split_line(line):\nword_counter[word] += 1\n```",
+        "question_text": "What is the effect of running this program?\n\n```\nword_counter = {}\nfor line in open(filename):\n    for word in split_line(line):\n        word_counter[word] += 1\n```",
         "options": [
           "It makes a dictionary that maps from each word to the number of times it appears.",
           "It has a syntax error because the indentation is not correct.",
@@ -786,7 +786,7 @@
         ]
       },
       {
-        "question_text": "These statements are intended to define a `Date` class and create a `Date` object. What is wrong with them?\n\n```\ndef Date:\n\"\"\"Represents a day of the year.\"\"\"\n\ndate = Date()\ndate.year = 2024\ndate.month = 'January'\ndate.day = 11\n```",
+        "question_text": "These statements are intended to define a `Date` class and create a `Date` object. What is wrong with them?\n\n```\ndef Date:\n    \"\"\"Represents a day of the year.\"\"\"\n\ndate = Date()\ndate.year = 2024\ndate.month = 'January'\ndate.day = 11\n```",
         "options": [
           "You can't have a class named `Date` and a variable named `date`.",
           "All of the attributes have to have the same type.",
@@ -802,7 +802,7 @@
         ]
       },
       {
-        "question_text": "Which of these is a correct description of this function? You can assume that `date` is a `Date` object that has a `day` attribute.\n\n```\ndef increment_day(date):\ndate.day += 1\nreturn date\n```",
+        "question_text": "Which of these is a correct description of this function? You can assume that `date` is a `Date` object that has a `day` attribute.\n\n```\ndef increment_day(date):\n    date.day += 1\n    return date\n```",
         "options": [
           "It is a pure function that returns `None`.",
           "It is an impure function that returns `None`.",
@@ -894,7 +894,7 @@
         ]
       },
       {
-        "question_text": "What is wrong with this class definition?\n\n```\nclass Point:\n\"\"\"Represents a point in 2-D space.\"\"\"\n\ndef __init__(self, x, y):\nx = self.x\ny = self.y\n```",
+        "question_text": "What is wrong with this class definition?\n\n```\nclass Point:\n    \"\"\"Represents a point in 2-D space.\"\"\"\n\n    def __init__(self, x, y):\n        x = self.x\n        y = self.y\n```",
         "options": [
           "`__init__` is not a legal name for a method because it does not start with a letter.",
           "The triple-quoted string has to be inside a method definition.",
@@ -910,7 +910,7 @@
         ]
       },
       {
-        "question_text": "Suppose we define a `Line` class so that each `Line` object has two attributes that refer to `Point` objects.\n\n```\nclass Line:\ndef __init__(self, p1, p2):\nself.p1 = p1\nself.p2 = p2\n```\n\nIf we import the `copy` function from the `copy` module and use it to make a copy of a `Line` object, which of these statements is true?",
+        "question_text": "Suppose we define a `Line` class so that each `Line` object has two attributes that refer to `Point` objects.\n\n```\nclass Line:\n    def __init__(self, p1, p2):\n        self.p1 = p1\n        self.p2 = p2\n```\n\nIf we import the `copy` function from the `copy` module and use it to make a copy of a `Line` object, which of these statements is true?",
         "options": [
           "The result is a deep copy that copies the `Line` object and the `Point` objects it contains.",
           "The result is a deep copy that copies the `Line` object but not the `Point` objects it contains.",
@@ -948,7 +948,7 @@
         ]
       },
       {
-        "question_text": "Suppose we define a `Card` class like this:\n\n```\nclass Card:\n\ndef __init__(self, suit, rank):\nself.suit = suit\nself.rank = rank\n```\n\nIf this class does not provide an `__eq__` method, what happens if we compare two cards using the `==` operator?",
+        "question_text": "Suppose we define a `Card` class like this:\n\n```\nclass Card:\n\n    def __init__(self, suit, rank):\n        self.suit = suit\n        self.rank = rank\n```\n\nIf this class does not provide an `__eq__` method, what happens if we compare two cards using the `==` operator?",
         "options": [
           "That's an error.",
           "By default, only the first attribute is compared.",
@@ -964,7 +964,7 @@
         ]
       },
       {
-        "question_text": "Which of the following statements is true when one class inherits from another, like this:\n\n```\nclass Hand(Deck):\n\"\"\"Represents a hand of playing cards.\"\"\"\n```",
+        "question_text": "Which of the following statements is true when one class inherits from another, like this:\n\n```\nclass Hand(Deck):\n    \"\"\"Represents a hand of playing cards.\"\"\"\n```",
         "options": [
           "`Hand` is a parent class and `Deck` is a child class.",
           "Every function that works with `Hand` should also work with `Deck`.",
@@ -1034,7 +1034,7 @@
         ]
       },
       {
-        "question_text": "Which comment about this class definition is correct?\n\n```\nclass Game:\n\"\"\"Represents a game with a dictionary that maps from teams to scores.\"\"\"\n\ndef __init__(self, scores={}):\nself.scores = scores\n```",
+        "question_text": "Which comment about this class definition is correct?\n\n```\nclass Game:\n    \"\"\"Represents a game with a dictionary that maps from teams to scores.\"\"\"\n\n    def __init__(self, scores={}):\n        self.scores = scores\n```",
         "options": [
           "All `Game` objects refer to different dictionaries.",
           "All `Game` objects refer to the same dictionary.",
@@ -1082,7 +1082,7 @@
         ]
       },
       {
-        "question_text": "What value is printed when this function runs?\n\n```\ndef pack_and_print(**kwargs):\nprint(kwargs)\n\npack_and_print(a=1, b=2)\n```",
+        "question_text": "What value is printed when this function runs?\n\n```\ndef pack_and_print(**kwargs):\n    print(kwargs)\n\npack_and_print(a=1, b=2)\n```",
         "options": [
           "This is an error because the exponentiation operator `**` can't appear in a list of parameters.",
           "`[(a, 1), (b, 2)]`",
@@ -1120,7 +1120,7 @@
         ]
       },
       {
-        "question_text": "For this function to work without causing an error, what are the preconditions for `n`?\n\n```\ndef countdown(n):\nif n == 0:\nprint('Blastoff!')\nelse:\nprint(n)\ncountdown(n-1)\n```",
+        "question_text": "For this function to work without causing an error, what are the preconditions for `n`?\n\n```\ndef countdown(n):\n    if n == 0:\n        print('Blastoff!')\n    else:\n        print(n)\n        countdown(n-1)\n```",
         "options": [
           "`n` must be a `float`.",
           "`n` must be negative.",
@@ -1136,7 +1136,7 @@
         ]
       },
       {
-        "question_text": "What is wrong with the following program?\n\n```\ndef compare(x, y):\nif x < y:\nreturn -1\nelse:\nreturn 1\nreturn 0\n```",
+        "question_text": "What is wrong with the following program?\n\n```\ndef compare(x, y):\n    if x < y:\n        return -1\n    else:\n        return 1\n    return 0\n```",
         "options": [
           "It has a syntax error because the last line is not indented.",
           "It has a runtime error because the return value cannot be negative.",
@@ -1152,7 +1152,7 @@
         ]
       },
       {
-        "question_text": "What is the output of this program, or is there an error?\n```\ndef rectangle_area(length, width):\nreturn length * width\n\narea = rectangle_area(3, 5)\nprint(length)\n```",
+        "question_text": "What is the output of this program, or is there an error?\n```\ndef rectangle_area(length, width):\n    return length * width\n\narea = rectangle_area(3, 5)\nprint(length)\n```",
         "options": [
           "`3` because the first argument gets assigned to `length`.",
           "`5` because the second argument gets assigned to `length`.",
@@ -1168,7 +1168,7 @@
         ]
       },
       {
-        "question_text": "What is wrong with the following program?\n\n```\ns = int('123')\nfor digit in s:\nprint(digit)\n```",
+        "question_text": "What is wrong with the following program?\n\n```\ns = int('123')\nfor digit in s:\n    print(digit)\n```",
         "options": [
           "There is nothing wrong -- the program is correct.",
           "`digit` is not a legal name for a loop variable.",
@@ -1200,7 +1200,7 @@
         ]
       },
       {
-        "question_text": "The following function takes two strings as parameters and returns a string.\nWhich of the following docstrings is a correct description of what this function does?\n\n```\ndef compute(word1, word2):\nt = []\nfor letter in word1:\nif letter in word2:\nt.append(letter)\nreturn ''.join(t)\n```",
+        "question_text": "The following function takes two strings as parameters and returns a string.\nWhich of the following docstrings is a correct description of what this function does?\n\n```\ndef compute(word1, word2):\n    t = []\n    for letter in word1:\n        if letter in word2:\n            t.append(letter)\n    return ''.join(t)\n```",
         "options": [
           "Returns the letters that appear in either `word1` or `word2` or both.",
           "Returns the letters that appear in either `word1` or `word2` but not both.",
@@ -1216,7 +1216,7 @@
         ]
       },
       {
-        "question_text": "This function is intended to convert the first letter of a word to lowercase and the rest of the letters to uppercase.\n\n```\ndef lower_upper(word):\nfirst = word[0]\nrest = word[1:]\nword = first.lower() + rest.upper()\n```\n\nWhat is the value of `word` if we call this function like this -- or is there an error?\n\n```\nword = lower_upper('Python')\n```",
+        "question_text": "This function is intended to convert the first letter of a word to lowercase and the rest of the letters to uppercase.\n\n```\ndef lower_upper(word):\n    first = word[0]\n    rest = word[1:]\n    word = first.lower() + rest.upper()\n```\n\nWhat is the value of `word` if we call this function like this -- or is there an error?\n\n```\nword = lower_upper('Python')\n```",
         "options": [
           "The result is a syntax error because a `:` character cannot appear inside the bracket operator.",
           "The result is a runtime error because `0` is not a valid index.",
@@ -1344,7 +1344,7 @@
         ]
       },
       {
-        "question_text": "What does the following function do?\n```\ndef compute(d1, d2):\nres = {}\nfor key in d1:\nres[key] = d1[key]\nfor key in d2:\nres[key] = d2[key]\nreturn res\n```",
+        "question_text": "What does the following function do?\n```\ndef compute(d1, d2):\n    res = {}\n    for key in d1:\n        res[key] = d1[key]\n    for key in d2:\n        res[key] = d2[key]\n    return res\n```",
         "options": [
           "Adds the keys from `d1` to `d2`.",
           "Adds the keys from `d2` to `d1`.",
@@ -1376,7 +1376,7 @@
         ]
       },
       {
-        "question_text": "What is the result of this program?\n```\nclass Day:\ndef __init__(self, day):\nself.day = day\n\ndef __str__(date):\nreturn f'Today is {date.day}'\n\nprint(Day('Wednesday'))\n```",
+        "question_text": "What is the result of this program?\n```\nclass Day:\n    def __init__(self, day):\n        self.day = day\n\n    def __str__(date):\n        return f'Today is {date.day}'\n\nprint(Day('Wednesday'))\n```",
         "options": [
           "`f'Today is Wednesday'`",
           "`Today is {Wednesday}`",
@@ -1392,7 +1392,7 @@
         ]
       },
       {
-        "question_text": "Assuming that the `Animal` class exists, what is the output of this program?\n\n```\nclass Cat(Animal):\n\"\"\"Represents a cat.\"\"\"\n\ncat = Cat()\nisinstance(cat, Animal)\n```",
+        "question_text": "Assuming that the `Animal` class exists, what is the output of this program?\n\n```\nclass Cat(Animal):\n    \"\"\"Represents a cat.\"\"\"\n\ncat = Cat()\nisinstance(cat, Animal)\n```",
         "options": [
           "`False` because an instance of a parent class is not an instance of the child class.",
           "`False` because an instance of a child class is not an instance of the parent class.",

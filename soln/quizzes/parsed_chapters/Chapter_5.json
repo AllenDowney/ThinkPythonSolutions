@@ -37,7 +37,7 @@
       "_end_line": 324
     },
     {
-      "question_text": "What is the result of calling this function?\n```\ndef hello():\nprint('hello')\nhello()\n```",
+      "question_text": "What is the result of calling this function?\n```\ndef hello():\n    print('hello')\n    hello()\n```",
       "options": [
         "It prints `hello` once.",
         "It prints `hello` forever.",

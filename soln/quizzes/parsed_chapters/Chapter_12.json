@@ -20,7 +20,7 @@
       "_end_line": 790
     },
     {
-      "question_text": "What is the effect of running this program?\n\n```\nword_counter = {}\nfor line in open(filename):\nfor word in split_line(line):\nword_counter[word] += 1\n```",
+      "question_text": "What is the effect of running this program?\n\n```\nword_counter = {}\nfor line in open(filename):\n    for word in split_line(line):\n        word_counter[word] += 1\n```",
       "options": [
         "It makes a dictionary that maps from each word to the number of times it appears.",
         "It has a syntax error because the indentation is not correct.",

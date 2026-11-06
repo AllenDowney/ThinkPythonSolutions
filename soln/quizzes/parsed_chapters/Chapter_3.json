@@ -37,7 +37,7 @@
       "_end_line": 182
     },
     {
-      "question_text": "What is wrong with this function, if anything?\n\n```\ndef bottle_line(n, suffix):\nprint(n)\nprint('bottles of beer')\nprint(suffix)\n```",
+      "question_text": "What is wrong with this function, if anything?\n\n```\ndef bottle_line(n, suffix):\n    print(n)\n    print('bottles of beer')\n    print(suffix)\n```",
       "options": [
         "Instead of `def`, the first word should be `define`.",
         "You can't have more than one parameter in parentheses.",

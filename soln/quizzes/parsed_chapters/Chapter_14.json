@@ -20,7 +20,7 @@
       "_end_line": 921
     },
     {
-      "question_text": "These statements are intended to define a `Date` class and create a `Date` object. What is wrong with them?\n\n```\ndef Date:\n\"\"\"Represents a day of the year.\"\"\"\n\ndate = Date()\ndate.year = 2024\ndate.month = 'January'\ndate.day = 11\n```",
+      "question_text": "These statements are intended to define a `Date` class and create a `Date` object. What is wrong with them?\n\n```\ndef Date:\n    \"\"\"Represents a day of the year.\"\"\"\n\ndate = Date()\ndate.year = 2024\ndate.month = 'January'\ndate.day = 11\n```",
       "options": [
         "You can't have a class named `Date` and a variable named `date`.",
         "All of the attributes have to have the same type.",
@@ -37,7 +37,7 @@
       "_end_line": 947
     },
     {
-      "question_text": "Which of these is a correct description of this function? You can assume that `date` is a `Date` object that has a `day` attribute.\n\n```\ndef increment_day(date):\ndate.day += 1\nreturn date\n```",
+      "question_text": "Which of these is a correct description of this function? You can assume that `date` is a `Date` object that has a `day` attribute.\n\n```\ndef increment_day(date):\n    date.day += 1\n    return date\n```",
       "options": [
         "It is a pure function that returns `None`.",
         "It is an impure function that returns `None`.",

@@ -37,7 +37,7 @@
       "_end_line": 1234
     },
     {
-      "question_text": "Which comment about this class definition is correct?\n\n```\nclass Game:\n\"\"\"Represents a game with a dictionary that maps from teams to scores.\"\"\"\n\ndef __init__(self, scores={}):\nself.scores = scores\n```",
+      "question_text": "Which comment about this class definition is correct?\n\n```\nclass Game:\n    \"\"\"Represents a game with a dictionary that maps from teams to scores.\"\"\"\n\n    def __init__(self, scores={}):\n        self.scores = scores\n```",
       "options": [
         "All `Game` objects refer to different dictionaries.",
         "All `Game` objects refer to the same dictionary.",
@@ -88,7 +88,7 @@
       "_end_line": 1300
     },
     {
-      "question_text": "What value is printed when this function runs?\n\n```\ndef pack_and_print(**kwargs):\nprint(kwargs)\n\npack_and_print(a=1, b=2)\n```",
+      "question_text": "What value is printed when this function runs?\n\n```\ndef pack_and_print(**kwargs):\n    print(kwargs)\n\npack_and_print(a=1, b=2)\n```",
       "options": [
         "This is an error because the exponentiation operator `**` can't appear in a list of parameters.",
         "`[(a, 1), (b, 2)]`",

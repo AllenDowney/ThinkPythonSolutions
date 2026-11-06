@@ -20,7 +20,7 @@
       "_end_line": 1350
     },
     {
-      "question_text": "For this function to work without causing an error, what are the preconditions for `n`?\n\n```\ndef countdown(n):\nif n == 0:\nprint('Blastoff!')\nelse:\nprint(n)\ncountdown(n-1)\n```",
+      "question_text": "For this function to work without causing an error, what are the preconditions for `n`?\n\n```\ndef countdown(n):\n    if n == 0:\n        print('Blastoff!')\n    else:\n        print(n)\n        countdown(n-1)\n```",
       "options": [
         "`n` must be a `float`.",
         "`n` must be negative.",
@@ -37,7 +37,7 @@
       "_end_line": 1376
     },
     {
-      "question_text": "What is wrong with the following program?\n\n```\ndef compare(x, y):\nif x < y:\nreturn -1\nelse:\nreturn 1\nreturn 0\n```",
+      "question_text": "What is wrong with the following program?\n\n```\ndef compare(x, y):\n    if x < y:\n        return -1\n    else:\n        return 1\n    return 0\n```",
       "options": [
         "It has a syntax error because the last line is not indented.",
         "It has a runtime error because the return value cannot be negative.",
@@ -54,7 +54,7 @@
       "_end_line": 1401
     },
     {
-      "question_text": "What is the output of this program, or is there an error?\n```\ndef rectangle_area(length, width):\nreturn length * width\n\narea = rectangle_area(3, 5)\nprint(length)\n```",
+      "question_text": "What is the output of this program, or is there an error?\n```\ndef rectangle_area(length, width):\n    return length * width\n\narea = rectangle_area(3, 5)\nprint(length)\n```",
       "options": [
         "`3` because the first argument gets assigned to `length`.",
         "`5` because the second argument gets assigned to `length`.",
@@ -71,7 +71,7 @@
       "_end_line": 1423
     },
     {
-      "question_text": "What is wrong with the following program?\n\n```\ns = int('123')\nfor digit in s:\nprint(digit)\n```",
+      "question_text": "What is wrong with the following program?\n\n```\ns = int('123')\nfor digit in s:\n    print(digit)\n```",
       "options": [
         "There is nothing wrong -- the program is correct.",
         "`digit` is not a legal name for a loop variable.",
@@ -105,7 +105,7 @@
       "_end_line": 1462
     },
     {
-      "question_text": "The following function takes two strings as parameters and returns a string.\nWhich of the following docstrings is a correct description of what this function does?\n\n```\ndef compute(word1, word2):\nt = []\nfor letter in word1:\nif letter in word2:\nt.append(letter)\nreturn ''.join(t)\n```",
+      "question_text": "The following function takes two strings as parameters and returns a string.\nWhich of the following docstrings is a correct description of what this function does?\n\n```\ndef compute(word1, word2):\n    t = []\n    for letter in word1:\n        if letter in word2:\n            t.append(letter)\n    return ''.join(t)\n```",
       "options": [
         "Returns the letters that appear in either `word1` or `word2` or both.",
         "Returns the letters that appear in either `word1` or `word2` but not both.",
@@ -122,7 +122,7 @@
       "_end_line": 1487
     },
     {
-      "question_text": "This function is intended to convert the first letter of a word to lowercase and the rest of the letters to uppercase.\n\n```\ndef lower_upper(word):\nfirst = word[0]\nrest = word[1:]\nword = first.lower() + rest.upper()\n```\n\nWhat is the value of `word` if we call this function like this -- or is there an error?\n\n```\nword = lower_upper('Python')\n```",
+      "question_text": "This function is intended to convert the first letter of a word to lowercase and the rest of the letters to uppercase.\n\n```\ndef lower_upper(word):\n    first = word[0]\n    rest = word[1:]\n    word = first.lower() + rest.upper()\n```\n\nWhat is the value of `word` if we call this function like this -- or is there an error?\n\n```\nword = lower_upper('Python')\n```",
       "options": [
         "The result is a syntax error because a `:` character cannot appear inside the bracket operator.",
         "The result is a runtime error because `0` is not a valid index.",
@@ -258,7 +258,7 @@
       "_end_line": 1641
     },
     {
-      "question_text": "What does the following function do?\n```\ndef compute(d1, d2):\nres = {}\nfor key in d1:\nres[key] = d1[key]\nfor key in d2:\nres[key] = d2[key]\nreturn res\n```",
+      "question_text": "What does the following function do?\n```\ndef compute(d1, d2):\n    res = {}\n    for key in d1:\n        res[key] = d1[key]\n    for key in d2:\n        res[key] = d2[key]\n    return res\n```",
       "options": [
         "Adds the keys from `d1` to `d2`.",
         "Adds the keys from `d2` to `d1`.",
@@ -292,7 +292,7 @@
       "_end_line": 1697
     },
     {
-      "question_text": "What is the result of this program?\n```\nclass Day:\ndef __init__(self, day):\nself.day = day\n\ndef __str__(date):\nreturn f'Today is {date.day}'\n\nprint(Day('Wednesday'))\n```",
+      "question_text": "What is the result of this program?\n```\nclass Day:\n    def __init__(self, day):\n        self.day = day\n\n    def __str__(date):\n        return f'Today is {date.day}'\n\nprint(Day('Wednesday'))\n```",
       "options": [
         "`f'Today is Wednesday'`",
         "`Today is {Wednesday}`",
@@ -309,7 +309,7 @@
       "_end_line": 1721
     },
     {
-      "question_text": "Assuming that the `Animal` class exists, what is the output of this program?\n\n```\nclass Cat(Animal):\n\"\"\"Represents a cat.\"\"\"\n\ncat = Cat()\nisinstance(cat, Animal)\n```",
+      "question_text": "Assuming that the `Animal` class exists, what is the output of this program?\n\n```\nclass Cat(Animal):\n    \"\"\"Represents a cat.\"\"\"\n\ncat = Cat()\nisinstance(cat, Animal)\n```",
       "options": [
         "`False` because an instance of a parent class is not an instance of the child class.",
         "`False` because an instance of a child class is not an instance of the parent class.",

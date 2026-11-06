@@ -37,7 +37,7 @@
       "_end_line": 726
     },
     {
-      "question_text": "What does this function do?\n\n```\ndef printall(*args):\nfor value in reversed(args):\nprint(value)\n```",
+      "question_text": "What does this function do?\n\n```\ndef printall(*args):\n    for value in reversed(args):\n        print(value)\n```",
       "options": [
         "It has a syntax error because the `*` operator is not legal before a parameter.",
         "It causes a `TypeError` because `args` is a tuple, which is immutable and cannot be reversed.",

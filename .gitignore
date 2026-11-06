@@ -14,6 +14,7 @@ __pycache__/
 soln/chap*.md
 soln/header.md
 soln/footer.md
+soln/quizzes.md
 
 # ---------------------------------------------------------------------------
 # Support files the notebooks download from the ThinkPython repo at run time.
@@ -95,3 +96,7 @@ soln/jupyturtle_*.svg
 soln/chap04.pdf
 soln/config.yaml
 latex/config.yaml
+
+# Generated LMS packages (export_text2qti.py); the published copies go to ThinkPython/quizzes/
+soln/quizzes/build/
+soln/quizzes/__pycache__/

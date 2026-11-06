@@ -20,7 +20,7 @@
       "_end_line": 1054
     },
     {
-      "question_text": "What is wrong with this class definition?\n\n```\nclass Point:\n\"\"\"Represents a point in 2-D space.\"\"\"\n\ndef __init__(self, x, y):\nx = self.x\ny = self.y\n```",
+      "question_text": "What is wrong with this class definition?\n\n```\nclass Point:\n    \"\"\"Represents a point in 2-D space.\"\"\"\n\n    def __init__(self, x, y):\n        x = self.x\n        y = self.y\n```",
       "options": [
         "`__init__` is not a legal name for a method because it does not start with a letter.",
         "The triple-quoted string has to be inside a method definition.",
@@ -37,7 +37,7 @@
       "_end_line": 1080
     },
     {
-      "question_text": "Suppose we define a `Line` class so that each `Line` object has two attributes that refer to `Point` objects.\n\n```\nclass Line:\ndef __init__(self, p1, p2):\nself.p1 = p1\nself.p2 = p2\n```\n\nIf we import the `copy` function from the `copy` module and use it to make a copy of a `Line` object, which of these statements is true?",
+      "question_text": "Suppose we define a `Line` class so that each `Line` object has two attributes that refer to `Point` objects.\n\n```\nclass Line:\n    def __init__(self, p1, p2):\n        self.p1 = p1\n        self.p2 = p2\n```\n\nIf we import the `copy` function from the `copy` module and use it to make a copy of a `Line` object, which of these statements is true?",
       "options": [
         "The result is a deep copy that copies the `Line` object and the `Point` objects it contains.",
         "The result is a deep copy that copies the `Line` object but not the `Point` objects it contains.",

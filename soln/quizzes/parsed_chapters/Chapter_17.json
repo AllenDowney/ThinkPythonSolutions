@@ -20,7 +20,7 @@
       "_end_line": 1126
     },
     {
-      "question_text": "Suppose we define a `Card` class like this:\n\n```\nclass Card:\n\ndef __init__(self, suit, rank):\nself.suit = suit\nself.rank = rank\n```\n\nIf this class does not provide an `__eq__` method, what happens if we compare two cards using the `==` operator?",
+      "question_text": "Suppose we define a `Card` class like this:\n\n```\nclass Card:\n\n    def __init__(self, suit, rank):\n        self.suit = suit\n        self.rank = rank\n```\n\nIf this class does not provide an `__eq__` method, what happens if we compare two cards using the `==` operator?",
       "options": [
         "That's an error.",
         "By default, only the first attribute is compared.",
@@ -37,7 +37,7 @@
       "_end_line": 1152
     },
     {
-      "question_text": "Which of the following statements is true when one class inherits from another, like this:\n\n```\nclass Hand(Deck):\n\"\"\"Represents a hand of playing cards.\"\"\"\n```",
+      "question_text": "Which of the following statements is true when one class inherits from another, like this:\n\n```\nclass Hand(Deck):\n    \"\"\"Represents a hand of playing cards.\"\"\"\n```",
       "options": [
         "`Hand` is a parent class and `Deck` is a child class.",
         "Every function that works with `Hand` should also work with `Deck`.",

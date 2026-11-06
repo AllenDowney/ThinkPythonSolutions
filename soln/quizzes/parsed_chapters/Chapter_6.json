@@ -3,7 +3,7 @@
   "quiz_type": "Formative",
   "questions": [
     {
-      "question_text": "What is the return value if we call this function with the value `3`?\n\n```\ndef collatz(x):\nif x % 2 == 0:\nreturn x // 2\nelse:\nreturn x * 3 + 1\n```",
+      "question_text": "What is the return value if we call this function with the value `3`?\n\n```\ndef collatz(x):\n    if x % 2 == 0:\n        return x // 2\n    else:\n        return x * 3 + 1\n```",
       "options": [
         "`1`",
         "`1.5`",
@@ -37,7 +37,7 @@
       "_end_line": 404
     },
     {
-      "question_text": "What is the result of calling this function with the values `x=1.5` and `y=1.6`?\n\n```\ndef is_close(x, y):\nreturn abs(x - y) < 0.2\n```",
+      "question_text": "What is the result of calling this function with the values `x=1.5` and `y=1.6`?\n\n```\ndef is_close(x, y):\n    return abs(x - y) < 0.2\n```",
       "options": [
         "There is a syntax error.",
         "There is a runtime error.",
