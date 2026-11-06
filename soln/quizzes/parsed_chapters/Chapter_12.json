@@ -17,7 +17,7 @@
         "`sorted` makes a new list -- it doesn't modify `t`.",
         "`sorted` makes a new list, and `key=len` sorts the elements from shortest to longest."
       ],
-      "_end_line": 904
+      "_end_line": 936
     },
     {
       "question_text": "What is the effect of running this program?\n\n```\nword_counter = {}\nfor line in open(filename):\n    for word in split_line(line):\n        word_counter[word] += 1\n```",
@@ -34,7 +34,7 @@
         "Because `word_counter` is initially empty, the program causes a `KeyError` when it tries to increment a value in `word_counter`.",
         "Because `word_counter` is initially empty, the program causes a `KeyError` when it tries to increment a value in `word_counter`."
       ],
-      "_end_line": 926
+      "_end_line": 958
     },
     {
       "question_text": "If we run the following lines of code, what is the probability that the result is `'a'`?\n\n```\nletters = ['a', 'b', 'c']\nweights = [1, 2, 3]\nrandom.choices(letters, weights=weights)\n```",
@@ -51,7 +51,7 @@
         "The weight associated with `'a'` is `1` and the total of the weights is `6`.",
         "The weight associated with `'a'` is `1` and the total of the weights is `6`, so the probability of choosing `'a'` is `1/6`."
       ],
-      "_end_line": 949
+      "_end_line": 981
     }
   ]
 }

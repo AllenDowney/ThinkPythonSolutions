@@ -17,7 +17,7 @@
         "This code runs without causing an error.",
         "The second assignment statement updates the value associated with the key `'a'`."
       ],
-      "_end_line": 739
+      "_end_line": 771
     },
     {
       "question_text": "What is the value of the dictionary `d` after running these statements?\n\n```\nd = {'a': 1, 'b': 2}\nd['c'] += 1\n```",
@@ -34,7 +34,7 @@
         "The `+=` operator looks up the key to get the old value before adding `1`.",
         "Because `c` does not appear as a key in the dictionary, the second statement causes a `KeyError`."
       ],
-      "_end_line": 760
+      "_end_line": 792
     },
     {
       "question_text": "What happens when the following statements run?\n\n```\nd1 = {'a': 1, 'b': 2}\nd2 = {d1: 3}\n```",
@@ -51,7 +51,7 @@
         "Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary, but that's not a `ValueError`.",
         "Dictionaries are mutable, so they are not hashable, so they cannot appear as a key in a dictionary."
       ],
-      "_end_line": 780
+      "_end_line": 812
     },
     {
       "question_text": "A dictionary is like a list, but more general. Which words complete this sentence?\n\n\"The ________ of a dictionary are like the indices of a list, and the ________ of a dictionary are like the elements of a list.\"",
@@ -68,7 +68,7 @@
         "The keys are like indices, but an item is a whole key-value pair, not the thing you look up.",
         "We use a key to look up its value, just as we use an index to look up an element. Indices have to be integers, but keys can be (almost) any type."
       ],
-      "_end_line": 797
+      "_end_line": 829
     }
   ]
 }

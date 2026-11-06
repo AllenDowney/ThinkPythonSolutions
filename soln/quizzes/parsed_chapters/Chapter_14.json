@@ -17,7 +17,7 @@
         "You can't assign attributes before you instantiate an object.",
         "You have to define a class, instantiate an object, and assign values to attributes, in that order."
       ],
-      "_end_line": 1035
+      "_end_line": 1067
     },
     {
       "question_text": "These statements are intended to define a `Date` class and create a `Date` object. What is wrong with them?\n\n```\ndef Date:\n    \"\"\"Represents a day of the year.\"\"\"\n\ndate = Date()\ndate.year = 2024\ndate.month = 'January'\ndate.day = 11\n```",
@@ -34,7 +34,7 @@
         "Dot notation is used to set the value of an attribute and to read the value.",
         "A class definition has to start with `class`. A function definition starts with `def`."
       ],
-      "_end_line": 1061
+      "_end_line": 1093
     },
     {
       "question_text": "Which of these is a correct description of this function? You can assume that `date` is a `Date` object that has a `day` attribute.\n\n```\ndef increment_day(date):\n    date.day += 1\n    return date\n```",
@@ -51,7 +51,7 @@
         "This function modifies an attribute of the `Date` object it gets as a parameter, so it is an impure function.",
         "This function modifies an attribute of the `Date` object it gets as a parameter, so it is an impure function -- and it returns a reference to the same `Date` object."
       ],
-      "_end_line": 1083
+      "_end_line": 1115
     },
     {
       "question_text": "Suppose `today` refers to a `Date` object, and we run this code:\n\n```\ndef set_date(date, val):\n    date.date = val\n\nset_date(today, 27)\n```\n\nWhich of these is true afterward?",
@@ -68,7 +68,7 @@
         "`date.date = val` does not change the parameter `date` -- it still refers to the `Date` object -- and because `date` and `today` refer to the same object, the change is visible through `today`.",
         "Inside the function, `date` refers to the same object as `today`, so `date.date = val` creates an attribute of that object. Functions like `make_time` in this chapter use the same names for parameters and attributes on purpose."
       ],
-      "_end_line": 1108
+      "_end_line": 1140
     }
   ]
 }

@@ -52,6 +52,23 @@
         "It returns `True` if it gets to the end of `word` and exits the loop having found none of the letters in `letters`."
       ],
       "_end_line": 575
+    },
+    {
+      "question_text": "A loop that stops as soon as it finds what it is looking for, like the one in `uses_any`, is an example of a pattern called",
+      "options": [
+        "a counter",
+        "an update",
+        "a doctest",
+        "a linear search"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "A counter is a variable used to count something, like `total` in the loop that counts the words in `words.txt`; that loop goes all the way through the file.",
+        "An update is an assignment that gives a new value to a variable that already exists, like `x = x + 1`.",
+        "A doctest is a test in a docstring; it checks a function, but it isn't a kind of loop.",
+        "A linear search goes through a sequence of elements and stops when it finds what it is looking for."
+      ],
+      "_end_line": 591
     }
   ]
 }

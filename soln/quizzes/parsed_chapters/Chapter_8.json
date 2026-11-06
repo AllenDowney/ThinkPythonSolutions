@@ -17,7 +17,7 @@
         "It's legal to compare any two strings.",
         "When we compare characters, the uppercase `'O'` comes before the lowercase `'a'`."
       ],
-      "_end_line": 596
+      "_end_line": 612
     },
     {
       "question_text": "Which of these is the correct way to invoke the `lower` method on a string called `s`?",
@@ -34,7 +34,7 @@
         "The `lower` method doesn't take an argument in parentheses.",
         "This is the correct syntax for invoking a method on an object."
       ],
-      "_end_line": 611
+      "_end_line": 627
     },
     {
       "question_text": "If we use the `search` function in the `re` module, which of the following strings matches this pattern: `r'ab?c$'`?",
@@ -51,7 +51,24 @@
         "The pattern `b?` means that `b` is optional, but it cannot be repeated.",
         "It's OK to have extra letters at the beginning, and the `b` is not required."
       ],
-      "_end_line": 626
+      "_end_line": 642
+    },
+    {
+      "question_text": "If `s = 'apple'`, which slice is `'ppl'`?",
+      "options": [
+        "`s[1:3]`",
+        "`s[2:4]`",
+        "`s[2:5]`",
+        "`s[1:4]`"
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "The slice `s[1:3]` stops before index 3, so it is `'pp'`. The second index is not included.",
+        "Indices start at `0`, so index 2 is the second `'p'`, and `s[2:4]` is `'pl'`.",
+        "Indices start at `0`, so `s[2:5]` starts at the second `'p'` and is `'ple'`.",
+        "The slice starts at index 1 (the first `'p'`) and goes up to, but not including, index 4 (the `'e'`)."
+      ],
+      "_end_line": 658
     }
   ]
 }

@@ -17,7 +17,7 @@
         "`t.pop(1)` removes the second element, which is `2`. `t.append(2)` adds `2` to the end of the list, and `t.remove(3)` removes `3`.",
         "`t.pop(1)` removes the second element, which is `2`. `t.append(2)` adds `2` to the end of the list, and `t.remove(3)` removes `3`."
       ],
-      "_end_line": 654
+      "_end_line": 686
     },
     {
       "question_text": "What is the value of `b` after running these statements?\n\n```\na = [1, 2, 3]\nb = a\na.remove(2)\n```",
@@ -34,7 +34,7 @@
         "These statements run without causing an error.",
         "`a` and `b` refer to the same object, so when we modify `a`, the value of `b` also changes."
       ],
-      "_end_line": 675
+      "_end_line": 707
     },
     {
       "question_text": "What can we say about two lists created like this:\n\n```\na = [1, 2, 3]\nb = [1, 2, 3]\n```",
@@ -51,7 +51,7 @@
         "`a` and `b` refer to lists with the same value, so they are equivalent, but they refer to different lists, so they are not identical.",
         "`a` and `b` refer to lists with the same value, so they are equivalent, but they refer to different lists, so they are not identical."
       ],
-      "_end_line": 697
+      "_end_line": 729
     },
     {
       "question_text": "Having more than one name for the same object can lead to subtle bugs, but it is relatively safe with strings. Why?",
@@ -68,7 +68,7 @@
         "The `is` operator works with any objects, including strings.",
         "Strings are immutable, so a string that has two names can't be changed through either one."
       ],
-      "_end_line": 713
+      "_end_line": 745
     }
   ]
 }

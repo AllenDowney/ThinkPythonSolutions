@@ -573,6 +573,22 @@ def check(word, letters):
 - It returns `True` if it gets to the end of `word` and exits the loop having found none of the letters in `letters`.
 
 
+### Question
+A loop that stops as soon as it finds what it is looking for, like the one in `uses_any`, is an example of a pattern called
+
+- [ ] a counter
+- [ ] an update
+- [ ] a doctest
+- [X] a linear search
+
+
+### Rationale
+- A counter is a variable used to count something, like `total` in the loop that counts the words in `words.txt`; that loop goes all the way through the file.
+- An update is an assignment that gives a new value to a variable that already exists, like `x = x + 1`.
+- A doctest is a test in a docstring; it checks a function, but it isn't a kind of loop.
+- A linear search goes through a sequence of elements and stops when it finds what it is looking for.
+
+
 # Title
 Chapter 8
 
@@ -622,6 +638,22 @@ If we use the `search` function in the `re` module, which of the following strin
 - The pattern `c$` requires the letter `c` at the end of the string.
 - The pattern `b?` means that `b` is optional, but it cannot be repeated.
 - It's OK to have extra letters at the beginning, and the `b` is not required.
+
+
+### Question
+If `s = 'apple'`, which slice is `'ppl'`?
+
+- [ ] `s[1:3]`
+- [ ] `s[2:4]`
+- [ ] `s[2:5]`
+- [X] `s[1:4]`
+
+
+### Rationale
+- The slice `s[1:3]` stops before index 3, so it is `'pp'`. The second index is not included.
+- Indices start at `0`, so index 2 is the second `'p'`, and `s[2:4]` is `'pl'`.
+- Indices start at `0`, so `s[2:5]` starts at the second `'p'` and is `'ple'`.
+- The slice starts at index 1 (the first `'p'`) and goes up to, but not including, index 4 (the `'e'`).
 
 
 # Title

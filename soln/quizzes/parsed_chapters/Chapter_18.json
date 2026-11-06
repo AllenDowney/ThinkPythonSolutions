@@ -17,7 +17,7 @@
         "The `set` function creates a new set -- it does not modify the string.",
         "With `set` objects, the `<=` operator checks whether one set is a subset of another -- including the possibility that they are equal."
       ],
-      "_end_line": 1377
+      "_end_line": 1409
     },
     {
       "question_text": "What is the value of `counter` after these statements run?\n\n```\nfrom collections import Counter\n\nt = (1, 1, 1, 2, 2, 3)\ncounter = Counter(t)\n```",
@@ -34,7 +34,7 @@
         "The result is a `Counter` object that contains items like a dictionary, not a tuple.",
         "The result is a `Counter` object that contains the elements of the tuple and the number of times each one appears."
       ],
-      "_end_line": 1398
+      "_end_line": 1430
     },
     {
       "question_text": "Which comment about this class definition is correct?\n\n```\nclass Game:\n    \"\"\"Represents a game with a dictionary that maps from teams to scores.\"\"\"\n\n    def __init__(self, scores={}):\n        self.scores = scores\n```",
@@ -51,7 +51,7 @@
         "The initial value of `scores` is an empty dictionary, but items might be added to it later.",
         "All `Game` objects created with the default value get a reference to the same dictionary -- so if any of them modify it, they all see the change."
       ],
-      "_end_line": 1421
+      "_end_line": 1453
     },
     {
       "question_text": "What is the value of this expression?\n\n```\nall(number < 10 for number in [2, 4, 6, 8])\n```",
@@ -68,7 +68,7 @@
         "The values produced by the generator expression are all `True`.",
         "The values produced by the generator expression are all `True`, so the result from the `all` function is `True`."
       ],
-      "_end_line": 1441
+      "_end_line": 1473
     },
     {
       "question_text": "What is the value of `d[key]` after these statements run, or is there an error?\n\n```\nfrom collections import defaultdict\n\nd = defaultdict(list)\nkey = ('into', 'the')\nd[key].append('woods')\n```",
@@ -85,7 +85,7 @@
         "When the key is added to the `defaultdict`, the corresponding value is an empty list. Then the `append` method adds an element to the list.",
         "When the key is added to the `defaultdict`, the corresponding value is an empty list. After the `append` method is invoked, the list contains a single element, the string `'woods'`."
       ],
-      "_end_line": 1464
+      "_end_line": 1496
     },
     {
       "question_text": "What value is printed when this function runs?\n\n```\ndef pack_and_print(**kwargs):\n    print(kwargs)\n\npack_and_print(a=1, b=2)\n```",
@@ -102,7 +102,7 @@
         "The pack operator, `**`, packs the keyword arguments into a dictionary, not a set and a list.",
         "The pack operator, `**`, packs the keyword arguments into a dictionary that maps from keyword names to values."
       ],
-      "_end_line": 1487
+      "_end_line": 1519
     }
   ]
 }
