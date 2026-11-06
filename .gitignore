@@ -78,3 +78,20 @@ latex/camel-spotting-book.txt
 latex/*.bak
 latex/*.dat
 latex/*.dir
+
+# ---------------------------------------------------------------------------
+# Google API credentials for the quiz scripts. Never commit these.
+# ---------------------------------------------------------------------------
+soln/quizzes/credentials.json
+soln/quizzes/token.pickle
+
+# ---------------------------------------------------------------------------
+# Files the chapters write when they run (chap03, chap04, chap13).
+# ---------------------------------------------------------------------------
+soln/chap03_stack_diagram.png
+soln/chap06_stack_diagram.png
+soln/state_diagram_list.png
+soln/jupyturtle_*.svg
+soln/chap04.pdf
+soln/config.yaml
+latex/config.yaml
