@@ -1081,6 +1081,31 @@ def increment_day(date):
 - This function modifies an attribute of the `Date` object it gets as a parameter, so it is an impure function -- and it returns a reference to the same `Date` object.
 
 
+### Question
+Suppose `today` refers to a `Date` object, and we run this code:
+
+```
+def set_date(date, val):
+    date.date = val
+
+set_date(today, 27)
+```
+
+Which of these is true afterward?
+
+- [ ] It caused an error, because `date` is already the name of a parameter.
+- [ ] `today` now refers to the integer `27`.
+- [ ] The parameter `date` was changed to `27`, but `today` is unchanged.
+- [X] The `Date` object that `today` refers to has an attribute called `date` whose value is `27`.
+
+
+### Rationale
+- A parameter and an attribute can have the same name without conflict: the parameter is a variable in the function's frame and the attribute belongs to the object.
+- The function never assigns a new value to `today` or to `date`; it assigns to an attribute of the object they both refer to.
+- `date.date = val` does not change the parameter `date` -- it still refers to the `Date` object -- and because `date` and `today` refer to the same object, the change is visible through `today`.
+- Inside the function, `date` refers to the same object as `today`, so `date.date = val` creates an attribute of that object. Functions like `make_time` in this chapter use the same names for parameters and attributes on purpose.
+
+
 # Title
 Chapter 15
 
@@ -1298,6 +1323,31 @@ What do we call it when one method invokes another to do most or all of the work
 - Generalization is when we add a parameter to a function to make its capabilities more general.
 - Specialization is a way of using inheritance to create a new class that is a specialized version of an existing class.
 - Delegation is when one method passes responsibility to another method to do most or all of the work.
+
+### Question
+The `Hand` class in this chapter inherits from `Deck` and defines its own `__init__`:
+
+```
+class Hand(Deck):
+    def __init__(self, label=''):
+        self.label = label
+        self.cards = []
+```
+
+When we create a `Hand` with `Hand('player 1')`, which `__init__` methods run?
+
+- [ ] `Deck.__init__` runs first, then `Hand.__init__`.
+- [ ] Only `Deck.__init__` runs, because `Hand` inherits it.
+- [ ] Neither -- it's an error, because `Deck.__init__` requires a `cards` argument.
+- [X] Only `Hand.__init__`, which overrides `Deck.__init__`, so it has to create all the attributes a `Hand` needs.
+
+
+### Rationale
+- Python doesn't run the parent's `__init__` automatically -- if the child class defines `__init__`, only the child's version runs.
+- `Hand` would inherit `Deck.__init__` only if it didn't define its own; because it does, its version overrides the one in `Deck`.
+- `Deck.__init__` is never called, so its parameters don't matter -- `Hand('player 1')` works and the `Hand` gets the label `'player 1'`.
+- `Hand.__init__` overrides `Deck.__init__`, so `Deck.__init__` doesn't run -- that's why `Hand.__init__` creates the `cards` attribute itself.
+
 
 # Title
 Chapter 18

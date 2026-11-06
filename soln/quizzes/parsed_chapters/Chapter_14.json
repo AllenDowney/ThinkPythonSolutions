@@ -52,6 +52,23 @@
         "This function modifies an attribute of the `Date` object it gets as a parameter, so it is an impure function -- and it returns a reference to the same `Date` object."
       ],
       "_end_line": 1083
+    },
+    {
+      "question_text": "Suppose `today` refers to a `Date` object, and we run this code:\n\n```\ndef set_date(date, val):\n    date.date = val\n\nset_date(today, 27)\n```\n\nWhich of these is true afterward?",
+      "options": [
+        "It caused an error, because `date` is already the name of a parameter.",
+        "`today` now refers to the integer `27`.",
+        "The parameter `date` was changed to `27`, but `today` is unchanged.",
+        "The `Date` object that `today` refers to has an attribute called `date` whose value is `27`."
+      ],
+      "correct_answer_index": 3,
+      "rationales": [
+        "A parameter and an attribute can have the same name without conflict: the parameter is a variable in the function's frame and the attribute belongs to the object.",
+        "The function never assigns a new value to `today` or to `date`; it assigns to an attribute of the object they both refer to.",
+        "`date.date = val` does not change the parameter `date` -- it still refers to the `Date` object -- and because `date` and `today` refer to the same object, the change is visible through `today`.",
+        "Inside the function, `date` refers to the same object as `today`, so `date.date = val` creates an attribute of that object. Functions like `make_time` in this chapter use the same names for parameters and attributes on purpose."
+      ],
+      "_end_line": 1108
     }
   ]
 }
