@@ -46,6 +46,11 @@ def quiz_names(quiz):
             f"Summative quiz covering Chapters 1-18. {CREDIT}")
 
 
+def escape_blanks(text):
+    """Escape fill-in blanks like ________, which Markdown reads as bold and italic."""
+    return re.sub(r"(?<![\w`])_{3,}(?![\w`])", lambda m: r"\_" * len(m[0]), text)
+
+
 def indent(text, first, rest):
     """Prefix the first line with `first` and indent the rest to match."""
     lines = text.split("\n")
@@ -62,7 +67,7 @@ def to_text2qti(quiz):
              ""]
     for qnum, q in enumerate(quiz["questions"], 1):
         label = f"{qnum}.  "
-        parts.append(indent(q["question_text"], label, " " * len(label)))
+        parts.append(indent(escape_blanks(q["question_text"]), label, " " * len(label)))
         for k, (option, rationale) in enumerate(zip(q["options"], q["rationales"])):
             mark = "*" if k == q["correct_answer_index"] else ""
             label = f"{mark}{'abcd'[k]}) ".ljust(4)   # 'a)  ' or '*d) '

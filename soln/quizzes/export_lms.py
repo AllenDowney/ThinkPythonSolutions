@@ -26,14 +26,14 @@ from xml.sax.saxutils import escape
 
 import markdown
 
-from export_text2qti import quiz_names
+from export_text2qti import escape_blanks, quiz_names
 
 HERE = Path(__file__).parent
 
 
 def to_html(text):
     """Markdown to HTML. Fenced code blocks keep their indentation."""
-    return markdown.markdown(text, extensions=["fenced_code"]).strip()
+    return markdown.markdown(escape_blanks(text), extensions=["fenced_code"]).strip()
 
 
 def inline_html(text):
